@@ -6,10 +6,10 @@
 - **Niche:** surprising truths about food: where a food or recipe really comes from, what it does, and who eats the most of it today.
 - **Shorts (daily):** one food, one shocking true fact, 45–70 s. Each short is built as a self-contained module.
 - **Long form (weekly or every two weeks):** 4–6 related shorts packaged as a list, ranking, countdown or tier list, 8–12 min (e.g. "5 Fruits You Didn't Know Could Be Poisonous"). Add an intro hook, short bridges with a running ranking, bonus facts, a final verdict and a comment question.
-- **Language: French**, for a Senegalese / West African francophone audience. Narration, captions, on-screen text and post texts in French. Voice: **Bill speaking French** (the user's choice; see `BRAND.md`). Captions: French + English.
+- **Language: French**, for a Senegalese / West African francophone audience. Narration, captions, on-screen text and post texts in French. Voice: **David Tyserre** (native French narrator; see `BRAND.md`). Captions: French + English.
 - **Audience angle:** mix world food truths with West African and Senegalese foods (thiéboudienne, yassa, mafé, bissap, café Touba, baobab, fonio, peanuts, rice) so viewers see their own plate in the stories.
 - **Look:** a new food-themed look is still to be designed. Until then the map-on-desk house style below is the technical reference only.
-- **Voice:** Bill (`pqHfZKP75CvOlQylNhV4`) speaking French, speed 1.1; score takes in French; address the viewer with "tu". **Captions:** French + English (see `BRAND.md`).
+- **Voice:** David Tyserre (`iKX6IXB415Hh5bn2eNhP`), speed 1.1; score takes in French; address the viewer with "tu". **Captions:** French + English (see `BRAND.md`).
 - **NO MUSIC, EVER** (the user's halal rule): no melodies, chords, pads, instruments or beats. Only voice + sound effects + non-melodic ambience. This overrides every music instruction below.
 - The rest of this playbook (fact-checking, shocking hook, voice pipeline, QA) applies, except where `BRAND.md` says otherwise.
 
@@ -43,7 +43,7 @@ The look is fixed: read **`STYLE_BIBLE.md`** before anything else. Reference vid
 - Show the user the script and beat table. If they asked for full autopilot, continue.
 
 ## 2. Voice
-- Use Bill, with the Salee pipeline (best so far):
+- Use **David Tyserre** (`iKX6IXB415Hh5bn2eNhP`), with the Salee pipeline (best so far):
   1. `tools/salee_takes.py`: one TTS call per line, with previous_text/next_text. Lines with foreign names get spelling variants × seeds 11/29.
   2. `tools/salee_score.py`: Whisper large-v3 transcribes each take in English **and** in the name's own language (nl/tr/fr/ar/pt...). Pick the highest score.
   3. `tools/salee_assemble.py`: trim each line, cap internal pauses at 0.3 s, level every line to −22 LUFS, then add the gaps between lines.
@@ -53,7 +53,7 @@ The look is fixed: read **`STYLE_BIBLE.md`** before anything else. Reference vid
 - **Music:** NOT USED on this channel (see top). Old note from the template, ignore: never stack short chord changes (under ~3 s each) during fast sequences of events; use one or two long, overlapping chords (attack 1.5 s or more). The user hears rapid pad changes as "weird".
 - **Word clock pitfall:** every time narration changes, re-check the nth occurrence of common words ("then", "and", "muslim", "dutch") in both `Salee.tsx` and `sound_<slug>.py`; a new sentence shifts the counts.
 - **Pacing:** the title card ("A TRUE STORY / <TITLE>") must stay on screen about 2.5–3 s, as in The Lost Imam, because it doubles as the thumbnail. Give life events (birth, marriage, voyages) breathing room: 1–1.3 s gaps and slower ship legs. Don't rush them.
-- Get word timings with `scripts/transcribe.sh` (faster-whisper small) for the rough text. Then **always** run `tools/align_words_fr.py <voice> <captions.json>` for exact word times, because the highlighted word must hit each spoken word. Needs `pip install torch torchaudio --index-url https://download.pytorch.org/whl/cpu`.
+- Get word timings with `scripts/transcribe.sh` (faster-whisper small) for the rough text. Then **always** run `tools/align_words_fr.py <voice> <captions.json>` for exact word times, because the highlighted word must hit each spoken word.
 
 ## 3. Visuals: copy `src/imam/` to `src/<slug>/` and adapt
 - `tools/build_map.mjs`: set the projection and crop for the region of the story. Add the places and routes.

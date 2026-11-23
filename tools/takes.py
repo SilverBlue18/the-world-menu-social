@@ -9,7 +9,7 @@ def _eleven_key():
 """Generate candidate takes for lines with foreign words (same voice, with previous/next text for prosody)."""
 import json, subprocess, sys, urllib.request, os
 LINES = [l.strip() for l in open("/home/user/studio/projects/imam/narration.txt") if l.strip()]
-VOICE = "pqHfZKP75CvOlQylNhV4"
+VOICE = "iKX6IXB415Hh5bn2eNhP"
 OUT = "/home/user/studio/projects/imam/takes"
 def tts(text, prev, nxt, out, seed):
     body = {"text": text, "model_id": "eleven_multilingual_v2", "previous_text": prev, "next_text": nxt, "seed": seed,

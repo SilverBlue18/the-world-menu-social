@@ -31,8 +31,8 @@ Visual world: a **geographic world map** (the Earth), one continuous camera, foo
 - `TheWorldMenu_watermark_icon_256.png`: transparent icon for video corners.
 
 ## Voice and writing (chosen 2026-11-23)
-- Narrator: **Bill** (ElevenLabs voice_id `pqHfZKP75CvOlQylNhV4`) **speaking French**, chosen by the user 2026-11-23 over native French voices. Model `eleven_multilingual_v2`; stability .55, similarity .75, style .15, speaker boost on, **speed 1.1**.
-- Bill has a light English accent in French. Run every line through the takes + Whisper-scoring pipeline in **French** and pick the cleanest take; watch liaisons like "à Dakar" (heard once as "Adakar"): use phonetic spellings or a comma if needed. Never time-stretch.
+- Narrator: **David Tyserre – Documentary Narrator** (ElevenLabs voice_id `iKX6IXB415Hh5bn2eNhP`, native French, calm and wise), chosen by the user 2026-11-23. Model `eleven_multilingual_v2`; stability .55, similarity .75, style .15, speaker boost on, **speed 1.1**. (Bill was chosen first, then replaced by this voice.)
+- Run every line through the takes + Whisper-scoring pipeline in French and pick the cleanest take. Never time-stretch.
 - Address the viewer with **"tu"** ("Tu manges ça tous les jours… mais tu sais d'où ça vient ?").
 - Captions: **French on top, English below** (spoken French word highlighted in mustard `#F2B134`).
 

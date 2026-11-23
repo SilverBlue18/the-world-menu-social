@@ -10,7 +10,7 @@ def _eleven_key():
 import json, os, sys, urllib.request
 ROOT = "/home/user/studio/projects/salee"
 LINES = [l.strip() for l in open(f"{ROOT}/narration.txt") if l.strip()]
-VOICE = "pqHfZKP75CvOlQylNhV4"
+VOICE = "iKX6IXB415Hh5bn2eNhP"
 def tts(text, prev, nxt, out, seed):
     if os.path.exists(out): return
     body = {"text": text, "model_id": "eleven_multilingual_v2", "previous_text": prev, "next_text": nxt, "seed": seed,
