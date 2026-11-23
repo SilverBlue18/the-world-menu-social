@@ -1,0 +1,9 @@
+TheWorldMenu_profile_1080 1080 1080
+TheWorldMenu_profile_800 800 800
+TheWorldMenu_profile_400 400 400
+TheWorldMenu_lockup_horizontal_dark 1800 600
+TheWorldMenu_lockup_horizontal_light 1800 600
+TheWorldMenu_lockup_stacked_dark 1200 1200
+TheWorldMenu_youtube_banner_2560x1440 2560 1440
+TheWorldMenu_facebook_cover_1640x624 1640 624
+TheWorldMenu_watermark_icon_256 256 256

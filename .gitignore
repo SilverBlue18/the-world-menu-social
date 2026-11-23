@@ -1,0 +1,17 @@
+node_modules/
+bin/
+out/
+.env*
+*.log
+public/imam/mix_raw.wav
+public/imam/music.wav
+public/imam/sfx.wav
+public/imam/voice_v*.wav
+public/imam/voice_v*.mp3
+public/imam/voice4src.wav
+*.zip
+projects/*/source.wav
+public/*/mix_raw.wav
+public/*/music.wav
+public/*/sfx.wav
+public/*/voice_raw.wav
