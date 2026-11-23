@@ -1,6 +1,6 @@
 # The World Menu: brand (work in progress)
 
-Channel: **The World Menu** (@theworldmenu). Language: French, for a Senegalese / West African francophone audience.
+Channel: **The World Menu** (@theworldmenu). Language: French, for a general French-speaking audience worldwide. Topic mix: ~80% world food stories, ~20% West African / Senegalese.
 Visual world: a **geographic world map** (the Earth), one continuous camera, food stories travelling across it.
 
 ## Palette: "Sahel" (chosen by the user, 2026-11-23)

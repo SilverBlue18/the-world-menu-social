@@ -15,15 +15,15 @@ Images (in `brand/twm/kit/`):
 **Handle:** @theworldmenu
 **Description:**
 > Tu manges ça tous les jours… mais tu sais vraiment d'où ça vient ? 🌍🍴
-> Sur The World Menu, on raconte la vraie histoire de ce qu'on mange : d'où vient chaque aliment, comment il a voyagé jusqu'à ton assiette, et qui en mange le plus dans le monde. Du riz du thiéb à l'arachide du mafé, du piment au café Touba.
+> Sur The World Menu, on raconte la vraie histoire de ce qu'on mange : d'où vient chaque aliment, comment il a voyagé jusqu'à ton assiette, et qui en mange le plus dans le monde. Du chocolat des Aztèques au piment, du café au riz, de Paris à Tokyo, de Mexico à Dakar.
 >
 > 🎬 Shorts chaque jour · Classements et grands dossiers chaque semaine
 > ✅ Des faits vérifiés, avec les sources en description.
 >
 > EN: The true stories behind the food on your plate, in French with English subtitles.
 
-**Keywords (Settings → Channel → Basic info):** histoire de la nourriture, origine des aliments, cuisine sénégalaise, cuisine africaine, thiéboudienne, food history, le savais-tu, culture générale, classement, top 5
-**Country:** Senegal · **Video language:** French
+**Keywords (Settings → Channel → Basic info):** histoire de la nourriture, origine des aliments, cuisine du monde, anecdotes culinaires, food history, le savais-tu, culture générale, classement, top 5
+**Country:** your country of residence (it does not limit who sees the videos) · **Video language:** French
 
 ## TikTok
 **Name:** The World Menu
@@ -38,7 +38,7 @@ Images (in `brand/twm/kit/`):
 **Category:** Education (or "Digital creator")
 **Bio (150 characters max):**
 > 🌍 D'où vient ce que tu manges ?
-> 🍴 La vraie histoire des aliments, de Dakar au monde
+> 🍴 La vraie histoire des aliments du monde entier
 > 🎬 Un short par jour · FR / EN subs
 **Link:** YouTube channel.
 

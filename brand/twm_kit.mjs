@@ -41,20 +41,21 @@ function mapSVG(w, h, { center = [5, 18], scale, dakarAt } = {}) {
   const pr = geoMercator().center(center).scale(scale).translate(dakarAt ?? [w / 2, h / 2]);
   const p = geoPath(pr);
   const DAKAR = [-17.45, 14.69];
-  const from = [[-60, -8], [-95, 18], [105, 14], [78, 20], [12, 45], [40, 5]];
-  const routes = from.map((a) => {
-    const f = geoInterpolate(a, DAKAR);
+  const pairs = [[[-99, 19.4], [-9.1, 38.7]], [[-9.1, 38.7], [-17.45, 14.69]], [[39, 9], [44, 15]], [[44, 15], [12.3, 45.4]], [[78, 20], [-0.1, 51.5]], [[105, 14], [-60, -8]], [[-60, -8], [8, 6]], [[118, 32], [139.7, 35.7]]];
+  const from = pairs.map((p) => p[0]);
+  const routes = pairs.map(([a, b]) => {
+    const f = geoInterpolate(a, b);
     return p({ type: "LineString", coordinates: Array.from({ length: 81 }, (_, i) => f(i / 80)) });
   });
-  const d = pr(DAKAR);
-  const starts = from.map((a) => pr(a));
+  const d = null;
+  const starts = [...new Set(pairs.flat().map((x) => x.join()))].map((k) => pr(k.split(",").map(Number)));
   return `<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" style="position:absolute;inset:0">
   <rect width="${w}" height="${h}" fill="${C.sea}"/>
   <path d="${p(geoGraticule10())}" fill="none" stroke="${C.cream}" stroke-opacity=".07" stroke-width="2"/>
   <path d="${p(land)}" fill="${C.land}" stroke="${C.coast}" stroke-width="2.2" stroke-linejoin="round"/>
   ${routes.map((r) => `<path d="${r}" fill="none" stroke="${C.red}" stroke-width="5" stroke-linecap="round" stroke-dasharray="2 14" opacity=".9"/>`).join("")}
-  ${starts.map(([x, y]) => `<circle cx="${x}" cy="${y}" r="8" fill="${C.cream}" stroke="${C.red}" stroke-width="4"/>`).join("")}
-  <circle cx="${d[0]}" cy="${d[1]}" r="16" fill="${C.red}" stroke="${C.cream}" stroke-width="6"/>
+  ${starts.map(([x, y]) => `<circle cx="${x}" cy="${y}" r="11" fill="${C.red}" stroke="${C.cream}" stroke-width="4"/>`).join("")}
+
   </svg>`;
 }
 const shade = (x = "50%", y = "50%", rx = 34, ry = 30) => `<div style="position:absolute;inset:0;background:radial-gradient(ellipse 85% 80% at 50% 50%, rgba(10,46,51,0) 55%, rgba(10,46,51,.55))"></div>
@@ -72,17 +73,17 @@ pages.TheWorldMenu_lockup_stacked_dark = [1200, 1200, page(1200, 1200, C.night, 
 
 // YouTube banner 2560x1440. Safe area (all devices) = 1546x423 centred.
 pages.TheWorldMenu_youtube_banner_2560x1440 = [2560, 1440, page(2560, 1440, C.sea, `
-  ${mapSVG(2560, 1440, { center: [-17.45, 14.69], scale: 620, dakarAt: [700, 700] })}
-  ${shade("56%", "50%")}
-  <div style="position:absolute;left:${(2560 - 1546) / 2}px;top:${(1440 - 423) / 2}px;width:1546px;height:423px;display:flex;align-items:center;justify-content:flex-start;padding-left:330px">
+  ${mapSVG(2560, 1440, { center: [20, 22], scale: 520, dakarAt: [1280, 760] })}
+  ${shade("50%", "50%", 30, 32)}
+  <div style="position:absolute;left:${(2560 - 1546) / 2}px;top:${(1440 - 423) / 2}px;width:1546px;height:423px;display:flex;align-items:center;justify-content:center">
     ${lockup({ icon: 360, name: 150, tag: 36 })}
   </div>`)];
 
 // Facebook cover 1640x624 (keep content in the central ~1200x450 for mobile crops).
 pages.TheWorldMenu_facebook_cover_1640x624 = [1640, 624, page(1640, 624, C.sea, `
-  ${mapSVG(1640, 624, { center: [-17.45, 14.69], scale: 365, dakarAt: [430, 320] })}
-  ${shade("60%", "52%", 40, 62)}
-  <div style="position:absolute;left:220px;top:87px;width:1200px;height:450px;display:flex;align-items:center;justify-content:flex-start;padding-left:300px">
+  ${mapSVG(1640, 624, { center: [20, 22], scale: 300, dakarAt: [820, 330] })}
+  ${shade("50%", "50%", 38, 62)}
+  <div style="position:absolute;left:220px;top:87px;width:1200px;height:450px;display:flex;align-items:center;justify-content:center">
     ${lockup({ icon: 300, name: 124, tag: 30 })}
   </div>`)];
 

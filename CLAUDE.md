@@ -6,8 +6,8 @@
 - **Niche:** surprising truths about food: where a food or recipe really comes from, what it does, and who eats the most of it today.
 - **Shorts (daily):** one food, one shocking true fact, 45–70 s. Each short is built as a self-contained module.
 - **Long form (weekly or every two weeks):** 4–6 related shorts packaged as a list, ranking, countdown or tier list, 8–12 min (e.g. "5 Fruits You Didn't Know Could Be Poisonous"). Add an intro hook, short bridges with a running ranking, bonus facts, a final verdict and a comment question.
-- **Language: French**, for a Senegalese / West African francophone audience. Narration, captions, on-screen text and post texts in French. Voice: **David Tyserre** (native French narrator; see `BRAND.md`). Captions: French + English.
-- **Audience angle:** mix world food truths with West African and Senegalese foods (thiéboudienne, yassa, mafé, bissap, café Touba, baobab, fonio, peanuts, rice) so viewers see their own plate in the stories.
+- **Language: French**, for a **general French-speaking audience worldwide** (France, Belgium, Switzerland, Canada, Africa...). Narration, captions, on-screen text and post texts in French. Voice: **David Tyserre** (native French narrator; see `BRAND.md`). Captions: French + English.
+- **Topic mix:** about **80% world food stories** (any country, any era) and about **20% West African / Senegalese** stories (thiéboudienne, yassa, mafé, bissap, café Touba, baobab, fonio...). Never frame the channel, bios or titles as Senegal-only.
 - **Look:** Sahel world map + French/English captions, as in the style frames described in `BRAND.md` (`brand/twm/frames/`). `BRAND.md` overrides the colours, fonts and captions of the old STYLE_BIBLE (which stays as the technical reference for camera, QA and motion).
 - **Voice:** David Tyserre (`iKX6IXB415Hh5bn2eNhP`), speed 1.1; score takes in French; address the viewer with "tu". **Captions:** French + English (see `BRAND.md`).
 - **NO MUSIC, EVER** (the user's halal rule): no melodies, chords, pads, instruments or beats. Only voice + sound effects + non-melodic ambience. This overrides every music instruction below.
