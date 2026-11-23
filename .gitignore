@@ -15,3 +15,5 @@ public/*/mix_raw.wav
 public/*/music.wav
 public/*/sfx.wav
 public/*/voice_raw.wav
+.venv/
+public/*/amb.wav
