@@ -17,3 +17,4 @@ public/*/sfx.wav
 public/*/voice_raw.wav
 .venv/
 public/*/amb.wav
+sfx_lib/**/*.wav
