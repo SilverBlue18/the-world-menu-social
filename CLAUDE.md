@@ -6,10 +6,10 @@
 - **Niche:** surprising truths about food: where a food or recipe really comes from, what it does, and who eats the most of it today.
 - **Shorts (daily):** one food, one shocking true fact, 45–70 s. Each short is built as a self-contained module.
 - **Long form (weekly or every two weeks):** 4–6 related shorts packaged as a list, ranking, countdown or tier list, 8–12 min (e.g. "5 Fruits You Didn't Know Could Be Poisonous"). Add an intro hook, short bridges with a running ranking, bonus facts, a final verdict and a comment question.
-- **Language: French**, for a Senegalese / West African francophone audience. Narration, captions, on-screen text and post texts in French. Use a native French ElevenLabs voice (not Bill, whose accent is English); voice choice still to be confirmed with the user. Second caption line: to be decided (none, English, or Wolof only if a native speaker checks it).
+- **Language: French**, for a Senegalese / West African francophone audience. Narration, captions, on-screen text and post texts in French. Voice: **Bill speaking French** (the user's choice; see `BRAND.md`). Second caption line: to be decided (none, English, or Wolof only if a native speaker checks it).
 - **Audience angle:** mix world food truths with West African and Senegalese foods (thiéboudienne, yassa, mafé, bissap, café Touba, baobab, fonio, peanuts, rice) so viewers see their own plate in the stories.
 - **Look:** a new food-themed look is still to be designed. Until then the map-on-desk house style below is the technical reference only.
-- **Voice:** male, standard French narrator; address the viewer with "tu". **Captions:** French + English (see `BRAND.md`).
+- **Voice:** Bill (`pqHfZKP75CvOlQylNhV4`) speaking French, speed 1.1; score takes in French; address the viewer with "tu". **Captions:** French + English (see `BRAND.md`).
 - **NO MUSIC, EVER** (the user's halal rule): no melodies, chords, pads, instruments or beats. Only voice + sound effects + non-melodic ambience. This overrides every music instruction below.
 - The rest of this playbook (fact-checking, shocking hook, voice pipeline, QA) applies, except where `BRAND.md` says otherwise.
 
@@ -29,7 +29,7 @@ The look is fixed: read **`STYLE_BIBLE.md`** before anything else. Reference vid
    - The same for `Systran/faster-whisper-large-v3` into `bin/whisper-large-v3-ct2`, which is needed for Dutch and other non-English sources and for pronunciation scoring.
    - Pass decoded audio (numpy) to `transcribe()`, not a file path: the installed `av` version breaks path decoding.
    - Also `pip install torch torchaudio --index-url https://download.pytorch.org/whl/cpu` for forced alignment.
-4. Check that the ElevenLabs key works: a request to api.elevenlabs.io with `xi-api-key: proxy-injected`. If it fails, ask for the credential with `request_credential` (host api.elevenlabs.io, header xi-api-key). **Never ask for keys in chat.**
+4. Check that the ElevenLabs key works: a request to api.elevenlabs.io with `xi-api-key: proxy-injected`. If it fails, read it from the user's connected folder `studio-secrets/elevenlabs_key.txt` (stage it, copy to `~/.secrets/elevenlabs_key`, chmod 600, send it as the `xi-api-key` header from scripts). **Never print the key, never commit it, never ask for it in chat.**
 
 ## 1. From story to script
 - **The hook must always be SHOCKING** (the user's standing rule). The first line, under 3 s, has to make people stop scrolling: the craziest true contrast in the story (famous descendants, an impossible journey, an identity twist). Write 4–5 hook options and let the user pick before voicing. Shocking, but never false: check the hook against the sources (e.g. "first known Muslim landowner" yes, "first Muslim in America" no).
