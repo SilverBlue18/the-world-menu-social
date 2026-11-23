@@ -8,7 +8,7 @@
 - **Long form (weekly or every two weeks):** 4–6 related shorts packaged as a list, ranking, countdown or tier list, 8–12 min (e.g. "5 Fruits You Didn't Know Could Be Poisonous"). Add an intro hook, short bridges with a running ranking, bonus facts, a final verdict and a comment question.
 - **Language: French**, for a Senegalese / West African francophone audience. Narration, captions, on-screen text and post texts in French. Voice: **David Tyserre** (native French narrator; see `BRAND.md`). Captions: French + English.
 - **Audience angle:** mix world food truths with West African and Senegalese foods (thiéboudienne, yassa, mafé, bissap, café Touba, baobab, fonio, peanuts, rice) so viewers see their own plate in the stories.
-- **Look:** a new food-themed look is still to be designed. Until then the map-on-desk house style below is the technical reference only.
+- **Look:** Sahel world map + French/English captions, as in the style frames described in `BRAND.md` (`brand/twm/frames/`). `BRAND.md` overrides the colours, fonts and captions of the old STYLE_BIBLE (which stays as the technical reference for camera, QA and motion).
 - **Voice:** David Tyserre (`iKX6IXB415Hh5bn2eNhP`), speed 1.1; score takes in French; address the viewer with "tu". **Captions:** French + English (see `BRAND.md`).
 - **NO MUSIC, EVER** (the user's halal rule): no melodies, chords, pads, instruments or beats. Only voice + sound effects + non-melodic ambience. This overrides every music instruction below.
 - The rest of this playbook (fact-checking, shocking hook, voice pipeline, QA) applies, except where `BRAND.md` says otherwise.
@@ -94,4 +94,4 @@ The look is fixed: read **`STYLE_BIBLE.md`** before anything else. Reference vid
 - Mispronounced foreign words.
 
 ## Pending
-- Brand kit for The World Menu is in `BRAND.md` and `brand/twm/kit/` (logo, profile pictures, lockups, banners). Bios still to be written. Never use the old "The Desk Atlas" brand (another channel).
+- Brand kit for The World Menu is in `BRAND.md` and `brand/twm/kit/` (logo, profile pictures, lockups, banners). Bios and platform setup: `brand/SOCIALS.md`. Never use the old "The Desk Atlas" brand (another channel).

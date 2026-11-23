@@ -58,7 +58,7 @@ This is the approved look of the channel. "The Lost Imam" (`src/imam/`, `out/ima
 - The second language is **Arabic by default**. It can change per story if the user asks.
 
 ## Voice
-- ElevenLabs **"Bill"**, voice_id `pqHfZKP75CvOlQylNhV4`, model `eleven_multilingual_v2`.
+- ElevenLabs **"David Tyserre"**, voice_id `iKX6IXB415Hh5bn2eNhP`, model `eleven_multilingual_v2`.
 - Settings: stability .55, similarity .75, style .15, speaker boost on, **speed 1.1** (`TTS_SPEED=1.1 scripts/tts.sh`). The API key is injected by the proxy (`xi-api-key: proxy-injected`).
 - Foreign words must sound native:
   1. Generate several takes of the line with `previous_text`/`next_text` and seeds (`tools/takes.py`).

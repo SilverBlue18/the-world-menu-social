@@ -41,4 +41,11 @@ Visual world: a **geographic world map** (the Earth), one continuous camera, foo
 - Sound = the voice + **sound effects and natural ambience only**: paper, whoosh, stamp, pen, map unfold, pins, cooking sounds (sizzle, pouring, chopping, boiling), market crowd, sea and wind, footsteps, coins.
 - Ambience stays low and non-melodic; effects land on the visual events.
 
-Still to decide: video look (map style in motion), caption design details.
+## Video look (style frames, `brand/twm/frames/`, built by `brand/twm_frames.mjs`)
+- World map in the Sahel palette (Mercator, graticule, soft coastal glow), one continuous camera; red dotted routes and red pins (cream ring) for places; place labels in Special Elite.
+- Top captions: French in Inter 800 58 px cream, spoken word in mustard with a soft glow; English below in Inter 600 36 px sand; optional Oswald tag line in mustard. A soft dark ellipse always sits behind the caption block so it reads over land.
+- Opening/thumbnail: "UNE HISTOIRE VRAIE" (Oswald) + title in Playfair 900 with one key word in mustard + English subtitle + red "DOSSIER #NN" stamp.
+- Hero objects: public-domain archival prints on cream cards (Special Elite caption + Oswald source line), slight rotation, deep shadow.
+- End card: badge + lockup + mustard "Abonne-toi" pill + teaser of the next video.
+- Watermark: "theworld" cream + "menu" mustard, top centre.
+- Social bios and setup: `brand/SOCIALS.md`.

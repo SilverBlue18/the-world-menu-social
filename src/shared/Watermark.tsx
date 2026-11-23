@@ -9,7 +9,7 @@ export const Watermark: React.FC<{ opacity?: number }> = ({ opacity = 1 }) => {
       <div style={line} />
       <div style={{ fontFamily: "Inter", fontWeight: 600, fontSize: 27, letterSpacing: 7, textShadow: "0 1px 4px rgba(0,0,0,.6)", whiteSpace: "nowrap" }}>
         <span style={{ color: "#f2dfb2" }}>theworld</span>
-        <span style={{ color: "#e9b45a" }}>menu</span>
+        <span style={{ color: "#F2B134" }}>menu</span>
       </div>
       <div style={line} />
     </div>
