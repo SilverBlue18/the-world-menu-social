@@ -1,3 +1,11 @@
+import os as _os
+def _eleven_key():
+    # Key from env or ~/.secrets/elevenlabs_key (never committed, never printed).
+    k = _os.environ.get("ELEVENLABS_API_KEY")
+    if not k:
+        with open(_os.path.expanduser("~/.secrets/elevenlabs_key")) as f: k = f.read().strip()
+    return k
+
 """Salee voice: every line generated separately with prev/next context; lines with foreign names get several spelling variants x seeds."""
 import json, os, sys, urllib.request
 ROOT = "/home/user/studio/projects/salee"
@@ -8,7 +16,7 @@ def tts(text, prev, nxt, out, seed):
     body = {"text": text, "model_id": "eleven_multilingual_v2", "previous_text": prev, "next_text": nxt, "seed": seed,
             "voice_settings": {"stability": 0.55, "similarity_boost": 0.75, "style": 0.15, "use_speaker_boost": True, "speed": 1.1}}
     req = urllib.request.Request(f"https://api.elevenlabs.io/v1/text-to-speech/{VOICE}?output_format=mp3_44100_128",
-        data=json.dumps(body).encode(), headers={"xi-api-key": "proxy-injected", "Content-Type": "application/json"})
+        data=json.dumps(body).encode(), headers={"xi-api-key": _eleven_key(), "Content-Type": "application/json"})
     open(out, "wb").write(urllib.request.urlopen(req, timeout=180).read())
 VARIANTS = {
     0: [LINES[0], 'In 1639, a Dutch map of Manhattan lists a farm owned by "Antonee duh Turk." Anthony the Turk.'],
