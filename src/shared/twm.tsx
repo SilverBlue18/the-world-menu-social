@@ -25,7 +25,7 @@ export const TwmCaptions: React.FC<{ t: number; caps: TwmCap[]; showFrom?: numbe
   return (
     <>
       <div style={{ position: "absolute", left: -80, right: -80, top: 140, height: 640, opacity: o,
-        background: "radial-gradient(ellipse 58% 46% at 50% 50%, rgba(10,46,51,.84), rgba(10,46,51,.55) 55%, rgba(10,46,51,0) 100%)" }} />
+        background: "radial-gradient(ellipse 58% 46% at 50% 50%, rgba(0,0,0,.5), rgba(0,0,0,.3) 55%, rgba(0,0,0,0) 100%)" }} />
       <div style={{ position: "absolute", left: 70, right: 70, top: 250, textAlign: "center", opacity: o, transform: `translateY(${(1 - fin) * 10}px)` }}>
         <div style={{ fontFamily: "Inter", fontWeight: 800, fontSize: fs, lineHeight: 1.18, color: C.cream, letterSpacing: -0.3, textShadow: "0 2px 8px rgba(0,0,0,.75)" }}>
           {c.words.map((w, k) => {
