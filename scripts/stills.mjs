@@ -4,7 +4,7 @@ import { renderStill, selectComposition } from "@remotion/renderer";
 import path from "node:path";
 import fs from "node:fs";
 const [comp, prefix, secs, scale = "0.5"] = process.argv.slice(2);
-const chrome = fs.readdirSync("/opt/pw-browsers").filter((d) => d.startsWith("chromium-")).map((d) => `/opt/pw-browsers/${d}/chrome-linux64/chrome`).find((p) => fs.existsSync(p));
+const chrome = !fs.existsSync("/opt/pw-browsers") ? undefined : fs.readdirSync("/opt/pw-browsers").filter((d) => d.startsWith("chromium-")).map((d) => `/opt/pw-browsers/${d}/chrome-linux64/chrome`).find((p) => fs.existsSync(p));
 const serveUrl = await bundle({ entryPoint: path.resolve("src/index.ts") });
 const composition = await selectComposition({ serveUrl, id: comp, browserExecutable: chrome });
 fs.mkdirSync(path.dirname(prefix), { recursive: true });

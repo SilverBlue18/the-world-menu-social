@@ -5,11 +5,13 @@ import { Mock } from "./mock/Mock";
 import { ImamDesk, DESK_S } from "./imam/Desk";
 import { ImamFlow, FLOW_S } from "./imam/MapFlow";
 import { SaleeFlow, SALEE_S } from "./salee/Salee";
+import { PimentFlow, PIMENT_S } from "./piment/Piment";
 
 loadStudioFonts();
 
 export const MyComposition = () => (
   <>
+    <Composition id="PimentFlow" component={PimentFlow} durationInFrames={Math.round(PIMENT_S * 30)} fps={30} width={1080} height={1920} />
     <Composition id="SaleeFlow" component={SaleeFlow} durationInFrames={SALEE_S * 30} fps={30} width={1080} height={1920} />
     <Composition id="ImamFlow" component={ImamFlow} durationInFrames={FLOW_S * 30} fps={30} width={1080} height={1920} />
     <Composition id="ImamDesk" component={ImamDesk} durationInFrames={DESK_S * 30} fps={30} width={1080} height={1920} />

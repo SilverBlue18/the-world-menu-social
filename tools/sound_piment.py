@@ -48,10 +48,14 @@ place(fx, pen(0.8), wt("pimiento") - 0.02, 0.9)
 # "Mauvais pays, mauvais nom." : two stamps
 place(fx, stamp(), wt("mauvais", 1) - 0.03, 0.8, -0.1)
 place(fx, stamp(), wt("mauvais", 2) - 0.03, 0.85, 0.1)
+# "Mais le nom va rester." : the 1543 herbal card ("poivre indien") drops, then the flight back across the Atlantic to Lisbon
+place(fx, paper(), wt("mais") - 0.02, 0.8)
+whoosh_to(wt("ensuite") + 0.4, 1.4, 0.7, 0.3)
 # "marins portugais ... jusqu'à Goa" : the route draws itself down Africa and round to India
 pen_a = wt("portugais"); place(fx, pen(wt("goa", 1) - pen_a), pen_a, 0.55, -0.1)
 place(fx, creak(1.4), wt("marins") - 0.1, 0.5, -0.25)
 place(fx, pin(), wt("goa", 1), 1.0, 0.2)
+place(fx, paper(), wt("goa", 1) + 0.28, 0.8)            # Goa market print
 # "le poivre noir" : black-pepper card + a pepper mill
 place(fx, paper(), wt("poivre", 3) - 0.1, 0.9)
 place(fx, grind(0.9), wt("noir") - 0.05, 0.8, 0.15)
@@ -61,7 +65,10 @@ pen_b = wt("deux"); place(fx, pen(wt("nord") - pen_b + 0.2), pen_b, 0.6)
 place(fx, pin(), wt("nord") + 0.02, 0.9)
 # « poivre de Pernambouc » ... Brésil : whoosh to Brazil, card drops
 whoosh_to(wt("pernambouc"), 1.2, 0.85, -0.3)
-place(fx, paper(), wt("bresil") - 0.04, 0.9, -0.2)
+place(fx, paper(), wt("pernambouc") + 0.33, 0.9, -0.2)   # Pernambuco map card
+# "Aujourd'hui" : the flight from Brazil back to India, then the stats board drops
+whoosh_to(wt("aujourd'hui") + 0.8, 1.6, 0.7, 0.3)
+place(fx, paper(), wt("premier", 1) - 0.77, 0.7)
 # three "premier" : three counters slide in, each with a tick
 for k in (1, 2, 3):
     place(fx, slide(0.4), wt("premier", k) - 0.12, 0.9, (k - 2) * 0.25)
