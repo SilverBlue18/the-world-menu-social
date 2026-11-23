@@ -6,11 +6,15 @@ import { ImamDesk, DESK_S } from "./imam/Desk";
 import { ImamFlow, FLOW_S } from "./imam/MapFlow";
 import { SaleeFlow, SALEE_S } from "./salee/Salee";
 import { PimentFlow, PIMENT_S } from "./piment/Piment";
+import * as Concepts from "./concepts/Concepts";
 
 loadStudioFonts();
 
 export const MyComposition = () => (
   <>
+    {(["ConceptA1", "ConceptA2", "ConceptB1", "ConceptB2", "ConceptC1", "ConceptC2"] as const).map((id) => (
+      <Still key={id} id={id} component={Concepts[id]} width={1080} height={1920} />
+    ))}
     <Composition id="PimentFlow" component={PimentFlow} durationInFrames={Math.round(PIMENT_S * 30)} fps={30} width={1080} height={1920} />
     <Composition id="SaleeFlow" component={SaleeFlow} durationInFrames={SALEE_S * 30} fps={30} width={1080} height={1920} />
     <Composition id="ImamFlow" component={ImamFlow} durationInFrames={FLOW_S * 30} fps={30} width={1080} height={1920} />
