@@ -30,4 +30,14 @@ Visual world: a **geographic world map** (the Earth), one continuous camera, foo
 - `TheWorldMenu_lockup_horizontal_dark.png`, `..._light.png`, `TheWorldMenu_lockup_stacked_dark.png`: name lockups (end cards, thumbnails, docs).
 - `TheWorldMenu_watermark_icon_256.png`: transparent icon for video corners.
 
-Still to decide: voice, tu/vous in narration, sound palette, video look (map style in motion), caption style.
+## Voice and writing (chosen 2026-11-23)
+- Narrator: **male, standard French** ElevenLabs voice (exact voice to be picked by the user from 3 samples).
+- Address the viewer with **"tu"** ("Tu manges ça tous les jours… mais tu sais d'où ça vient ?").
+- Captions: **French on top, English below** (spoken French word highlighted in mustard `#F2B134`).
+
+## Sound: NO MUSIC (user's firm rule, halal)
+- **Never use music of any kind**: no melodies, chords, pads, instruments, beats or musical stingers.
+- Sound = the voice + **sound effects and natural ambience only**: paper, whoosh, stamp, pen, map unfold, pins, cooking sounds (sizzle, pouring, chopping, boiling), market crowd, sea and wind, footsteps, coins.
+- Ambience stays low and non-melodic; effects land on the visual events.
+
+Still to decide: exact voice, video look (map style in motion), caption design details.

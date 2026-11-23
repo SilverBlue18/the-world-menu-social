@@ -9,7 +9,9 @@
 - **Language: French**, for a Senegalese / West African francophone audience. Narration, captions, on-screen text and post texts in French. Use a native French ElevenLabs voice (not Bill, whose accent is English); voice choice still to be confirmed with the user. Second caption line: to be decided (none, English, or Wolof only if a native speaker checks it).
 - **Audience angle:** mix world food truths with West African and Senegalese foods (thiéboudienne, yassa, mafé, bissap, café Touba, baobab, fonio, peanuts, rice) so viewers see their own plate in the stories.
 - **Look:** a new food-themed look is still to be designed. Until then the map-on-desk house style below is the technical reference only.
-- The rest of this playbook (fact-checking, shocking hook, voice pipeline, QA) applies unchanged.
+- **Voice:** male, standard French narrator; address the viewer with "tu". **Captions:** French + English (see `BRAND.md`).
+- **NO MUSIC, EVER** (the user's halal rule): no melodies, chords, pads, instruments or beats. Only voice + sound effects + non-melodic ambience. This overrides every music instruction below.
+- The rest of this playbook (fact-checking, shocking hook, voice pipeline, QA) applies, except where `BRAND.md` says otherwise.
 
 The user runs **The World Menu**, a food-truths channel on YouTube (Shorts + long form), TikTok, Instagram Reels and Facebook Reels. They paste a topic, transcript, article or story into the chat, and **Claude makes the whole video**: script, voice, visuals, sound and the final MP4, plus the post texts.
 
@@ -46,7 +48,7 @@ The look is fixed: read **`STYLE_BIBLE.md`** before anything else. Reference vid
   4. **NEVER time-stretch or speed up the voice afterwards** (rubberband, atempo and the like). The user heard it immediately as an echo or "AI" sound. Use the voice exactly as ElevenLabs generates it (speed 1.1). If it's too long, propose sentences to cut and let the user choose.
   5. Send the user the audio preview (voice + mix as MP3) **in the chat** before rendering. They approve the audio first.
   6. Then render a **preview** first (`--scale 0.5 --crf 23 --x264-preset veryfast`, plus audio) and send it in the chat. Do the full-quality render only after the user approves the preview.
-- **Music:** never stack short chord changes (under ~3 s each) during fast sequences of events; use one or two long, overlapping chords (attack 1.5 s or more). The user hears rapid pad changes as "weird".
+- **Music:** NOT USED on this channel (see top). Old note from the template, ignore: never stack short chord changes (under ~3 s each) during fast sequences of events; use one or two long, overlapping chords (attack 1.5 s or more). The user hears rapid pad changes as "weird".
 - **Word clock pitfall:** every time narration changes, re-check the nth occurrence of common words ("then", "and", "muslim", "dutch") in both `Salee.tsx` and `sound_<slug>.py`; a new sentence shifts the counts.
 - **Pacing:** the title card ("A TRUE STORY / <TITLE>") must stay on screen about 2.5–3 s, as in The Lost Imam, because it doubles as the thumbnail. Give life events (birth, marriage, voyages) breathing room: 1–1.3 s gaps and slower ship legs. Don't rush them.
 - Get word timings with `scripts/transcribe.sh` (faster-whisper small) for the rough text. Then **always** run `tools/align_words.py` on the captions JSON for exact word times, because the green highlight must hit each word. Needs `pip install torch torchaudio --index-url https://download.pytorch.org/whl/cpu`.
@@ -61,7 +63,7 @@ The look is fixed: read **`STYLE_BIBLE.md`** before anything else. Reference vid
 - Keep the desk, parchment, palette, fonts, grade, grain and top caption layout **identical**.
 
 ## 4. Sound
-- Copy `tools/sound_imam.py` to `tools/sound_<slug>.py`. Place SFX at the object and camera event times. Pick a music mode that fits the region.
+- Copy `tools/sound_imam.py` to `tools/sound_<slug>.py`. Place SFX at the object and camera event times. Do NOT generate any music (no `music.wav`); SFX and ambience only.
 - Keep the opening calm.
 - Then run `python3 tools/mix_imam.py -12 -13 /home/user/studio/public/<slug>/` to get −14 LUFS. Check every 3 s window: they should be even, within about 2 dB.
 
