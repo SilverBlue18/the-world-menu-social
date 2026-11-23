@@ -6,7 +6,7 @@
 - **Niche:** surprising truths about food: where a food or recipe really comes from, what it does, and who eats the most of it today.
 - **Shorts (daily):** one food, one shocking true fact, 45–70 s. Each short is built as a self-contained module.
 - **Long form (weekly or every two weeks):** 4–6 related shorts packaged as a list, ranking, countdown or tier list, 8–12 min (e.g. "5 Fruits You Didn't Know Could Be Poisonous"). Add an intro hook, short bridges with a running ranking, bonus facts, a final verdict and a comment question.
-- **Language: French**, for a Senegalese / West African francophone audience. Narration, captions, on-screen text and post texts in French. Voice: **Bill speaking French** (the user's choice; see `BRAND.md`). Second caption line: to be decided (none, English, or Wolof only if a native speaker checks it).
+- **Language: French**, for a Senegalese / West African francophone audience. Narration, captions, on-screen text and post texts in French. Voice: **Bill speaking French** (the user's choice; see `BRAND.md`). Captions: French + English.
 - **Audience angle:** mix world food truths with West African and Senegalese foods (thiéboudienne, yassa, mafé, bissap, café Touba, baobab, fonio, peanuts, rice) so viewers see their own plate in the stories.
 - **Look:** a new food-themed look is still to be designed. Until then the map-on-desk house style below is the technical reference only.
 - **Voice:** Bill (`pqHfZKP75CvOlQylNhV4`) speaking French, speed 1.1; score takes in French; address the viewer with "tu". **Captions:** French + English (see `BRAND.md`).
@@ -28,7 +28,9 @@ The look is fixed: read **`STYLE_BIBLE.md`** before anything else. Reference vid
    - `python3 -c "from huggingface_hub import snapshot_download as s; s('Systran/faster-whisper-small', local_dir='bin/whisper-small-ct2')"`
    - The same for `Systran/faster-whisper-large-v3` into `bin/whisper-large-v3-ct2`, which is needed for Dutch and other non-English sources and for pronunciation scoring.
    - Pass decoded audio (numpy) to `transcribe()`, not a file path: the installed `av` version breaks path decoding.
-   - Also `pip install torch torchaudio --index-url https://download.pytorch.org/whl/cpu` for forced alignment.
+   - Forced alignment for French: `pip install torch torchaudio transformers` (PyPI) and download the French CTC model:
+     `python3 -c "from huggingface_hub import snapshot_download as s; s('jonatasgrosman/wav2vec2-large-xlsr-53-french', local_dir='bin/w2v2-fr', allow_patterns=['*.json','*.txt','pytorch_model.bin'])"`.
+     Then use `tools/align_words_fr.py` (download.pytorch.org, needed by the old MMS_FA `align_words.py`, may be blocked).
 4. Check that the ElevenLabs key works: a request to api.elevenlabs.io with `xi-api-key: proxy-injected`. If it fails, read it from the user's connected folder `studio-secrets/elevenlabs_key.txt` (stage it, copy to `~/.secrets/elevenlabs_key`, chmod 600, send it as the `xi-api-key` header from scripts). **Never print the key, never commit it, never ask for it in chat.**
 
 ## 1. From story to script
@@ -51,7 +53,7 @@ The look is fixed: read **`STYLE_BIBLE.md`** before anything else. Reference vid
 - **Music:** NOT USED on this channel (see top). Old note from the template, ignore: never stack short chord changes (under ~3 s each) during fast sequences of events; use one or two long, overlapping chords (attack 1.5 s or more). The user hears rapid pad changes as "weird".
 - **Word clock pitfall:** every time narration changes, re-check the nth occurrence of common words ("then", "and", "muslim", "dutch") in both `Salee.tsx` and `sound_<slug>.py`; a new sentence shifts the counts.
 - **Pacing:** the title card ("A TRUE STORY / <TITLE>") must stay on screen about 2.5–3 s, as in The Lost Imam, because it doubles as the thumbnail. Give life events (birth, marriage, voyages) breathing room: 1–1.3 s gaps and slower ship legs. Don't rush them.
-- Get word timings with `scripts/transcribe.sh` (faster-whisper small) for the rough text. Then **always** run `tools/align_words.py` on the captions JSON for exact word times, because the green highlight must hit each word. Needs `pip install torch torchaudio --index-url https://download.pytorch.org/whl/cpu`.
+- Get word timings with `scripts/transcribe.sh` (faster-whisper small) for the rough text. Then **always** run `tools/align_words_fr.py <voice> <captions.json>` for exact word times, because the highlighted word must hit each spoken word. Needs `pip install torch torchaudio --index-url https://download.pytorch.org/whl/cpu`.
 
 ## 3. Visuals: copy `src/imam/` to `src/<slug>/` and adapt
 - `tools/build_map.mjs`: set the projection and crop for the region of the story. Add the places and routes.
