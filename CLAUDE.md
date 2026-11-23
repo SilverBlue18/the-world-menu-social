@@ -1,4 +1,4 @@
-# History Shorts Studio: playbook for Claude
+# The World Menu studio: playbook for Claude
 
 **Channel name: The World Menu** (handle `@theworldmenu` on YouTube, TikTok, Instagram and a Facebook Page).
 
@@ -90,4 +90,4 @@ The look is fixed: read **`STYLE_BIBLE.md`** before anything else. Reference vid
 - Mispronounced foreign words.
 
 ## Pending
-- Brand kit for The World Menu is in `BRAND.md` and `brand/twm/kit/` (logo, profile pictures, lockups, banners). Bios still to be written. The old Desk Atlas kit belongs to another channel and is archived in `brand/archive_desk_atlas/`; never use it.
+- Brand kit for The World Menu is in `BRAND.md` and `brand/twm/kit/` (logo, profile pictures, lockups, banners). Bios still to be written. Never use the old "The Desk Atlas" brand (another channel).
