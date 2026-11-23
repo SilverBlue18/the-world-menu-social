@@ -1,0 +1,219 @@
+{
+ "scores": {
+  "L00_s11.mp3": {
+   "line": 0,
+   "score": 0.927,
+   "dur": 4.74,
+   "heard": "Le pays qui mange le plus de piment au monde ne l'a découvert qu'il y a 500 ans."
+  },
+  "L00_s29.mp3": {
+   "line": 0,
+   "score": 0.927,
+   "dur": 4.69,
+   "heard": "Le pays qui mange le plus de piment au monde ne l'a découvert qu'il y a 500 ans."
+  },
+  "L00_s47.mp3": {
+   "line": 0,
+   "score": 0.878,
+   "dur": 5.15,
+   "heard": "Le pays qui mange le plus de piments au monde ne l'a découvert qu'il y a 500 ans."
+  },
+  "L01_s11.mp3": {
+   "line": 1,
+   "score": 1.0,
+   "dur": 1.58,
+   "heard": "Ce pays, c'est l'Inde."
+  },
+  "L01_s29.mp3": {
+   "line": 1,
+   "score": 1.0,
+   "dur": 1.58,
+   "heard": "Ce pays, c'est l'Inde."
+  },
+  "L02_s11.mp3": {
+   "line": 2,
+   "score": 1.0,
+   "dur": 2.41,
+   "heard": "Et le piment, il vient du Mexique."
+  },
+  "L02_s29.mp3": {
+   "line": 2,
+   "score": 1.0,
+   "dur": 2.37,
+   "heard": "Et le piment, il vient du Mexique."
+  },
+  "L03_s11.mp3": {
+   "line": 3,
+   "score": 0.842,
+   "dur": 3.44,
+   "heard": "Là-bas, on le cultive depuis environ 6000 ans."
+  },
+  "L03_s29.mp3": {
+   "line": 3,
+   "score": 0.842,
+   "dur": 3.11,
+   "heard": "Là-bas, on le cultive depuis environ 6000 ans."
+  },
+  "L04_s11.mp3": {
+   "line": 4,
+   "score": 1.0,
+   "dur": 4.13,
+   "heard": "En 1493, Christophe Colomb le goûte aux Caraïbes."
+  },
+  "L04_s29.mp3": {
+   "line": 4,
+   "score": 1.0,
+   "dur": 4.27,
+   "heard": "En 1493, Christophe Colomb le goûte aux Caraïbes."
+  },
+  "L05_s11.mp3": {
+   "line": 5,
+   "score": 1.0,
+   "dur": 6.08,
+   "heard": "Il croit avoir trouvé le poivre des Indes et il l'appelle Pimiento, poivre."
+  },
+  "L05_s29.mp3": {
+   "line": 5,
+   "score": 1.0,
+   "dur": 5.71,
+   "heard": "Il croit avoir trouvé le poivre des Indes et il l'appelle pimiento, poivre."
+  },
+  "L05_s47.mp3": {
+   "line": 5,
+   "score": 1.0,
+   "dur": 5.99,
+   "heard": "Il croit avoir trouvé le poivre des Indes et il l'appelle Pimiento, poivre."
+  },
+  "L06_s11.mp3": {
+   "line": 6,
+   "score": 1.0,
+   "dur": 2.97,
+   "heard": "Mauvais pays, mauvais nom. Mais le nom va rester."
+  },
+  "L06_s29.mp3": {
+   "line": 6,
+   "score": 1.0,
+   "dur": 3.58,
+   "heard": "Mauvais pays, mauvais nom.  Mais le nom va rester."
+  },
+  "L07_s11.mp3": {
+   "line": 7,
+   "score": 1.0,
+   "dur": 3.95,
+   "heard": "Ensuite, ce sont les marins portugais qui l'emportent partout."
+  },
+  "L07_s29.mp3": {
+   "line": 7,
+   "score": 1.0,
+   "dur": 3.58,
+   "heard": "Ensuite, ce sont les marins portugais qui l'emportent partout."
+  },
+  "L08_s11.mp3": {
+   "line": 8,
+   "score": 0.938,
+   "dur": 5.29,
+   "heard": "le long des côtes d'Afrique, jusqu'à Goa, en Inde, au début du 16e siècle."
+  },
+  "L08_s29.mp3": {
+   "line": 8,
+   "score": 0.938,
+   "dur": 5.02,
+   "heard": "le long des côtes d'Afrique, jusqu'à Goa, en Inde, au début du 16e siècle."
+  },
+  "L09_s11.mp3": {
+   "line": 9,
+   "score": 1.0,
+   "dur": 4.23,
+   "heard": "Avant ça, en Inde, ce qui piquait, c'était le poivre noir."
+  },
+  "L09_s29.mp3": {
+   "line": 9,
+   "score": 1.0,
+   "dur": 4.46,
+   "heard": "Avant ça, en Inde, ce qui piquait, c'était le poivre noir."
+  },
+  "L10_s11.mp3": {
+   "line": 10,
+   "score": 1.0,
+   "dur": 6.04,
+   "heard": "Le piment s'installe d'abord dans le sud et il lui faudra deux siècles pour atteindre le nord."
+  },
+  "L10_s29.mp3": {
+   "line": 10,
+   "score": 1.0,
+   "dur": 5.9,
+   "heard": "Le piment s'installe d'abord dans le sud et il lui faudra deux siècles pour atteindre le nord."
+  },
+  "L11_s11.mp3": {
+   "line": 11,
+   "score": 0.941,
+   "dur": 5.39,
+   "heard": "À Goa, on l'appelait même le poivre de Pernambuque, du nom d'une région du Brésil."
+  },
+  "L11_s29.mp3": {
+   "line": 11,
+   "score": 0.941,
+   "dur": 5.48,
+   "heard": "À Goa, on l'appelait même le poivre de Pernambuque, du nom d'une région du Brésil."
+  },
+  "L11_s47.mp3": {
+   "line": 11,
+   "score": 0.941,
+   "dur": 5.43,
+   "heard": "À Goa, on l'appelait même le poivre de Pernambuque, du nom d'une région du Brésil."
+  },
+  "L12_s11.mp3": {
+   "line": 12,
+   "score": 0.947,
+   "dur": 6.97,
+   "heard": "Aujourd'hui, l'Inde est le premier producteur, le premier consommateur et le premier exportateur de piments au monde."
+  },
+  "L12_s29.mp3": {
+   "line": 12,
+   "score": 0.947,
+   "dur": 6.78,
+   "heard": "Aujourd'hui, l'Inde est le premier producteur, le premier consommateur et le premier exportateur de piments au monde."
+  },
+  "L13_s11.mp3": {
+   "line": 13,
+   "score": 1.0,
+   "dur": 2.93,
+   "heard": "Alors, la prochaine fois qu'un plat te brûle la bouche,"
+  },
+  "L13_s29.mp3": {
+   "line": 13,
+   "score": 1.0,
+   "dur": 2.97,
+   "heard": "Alors, la prochaine fois qu'un plat te brûle la bouche,"
+  },
+  "L14_s11.mp3": {
+   "line": 14,
+   "score": 1.0,
+   "dur": 1.39,
+   "heard": "Remercie le Mexique."
+  },
+  "L14_s29.mp3": {
+   "line": 14,
+   "score": 1.0,
+   "dur": 1.49,
+   "heard": "Remercie le Mexique."
+  }
+ },
+ "order": [
+  "L00_s29.mp3",
+  "L01_s11.mp3",
+  "L02_s29.mp3",
+  "L03_s29.mp3",
+  "L04_s11.mp3",
+  "L05_s29.mp3",
+  "L06_s11.mp3",
+  "L07_s29.mp3",
+  "L08_s29.mp3",
+  "L09_s11.mp3",
+  "L10_s29.mp3",
+  "L11_s11.mp3",
+  "L12_s29.mp3",
+  "L13_s11.mp3",
+  "L14_s11.mp3"
+ ]
+}

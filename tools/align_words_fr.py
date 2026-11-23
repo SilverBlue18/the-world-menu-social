@@ -78,11 +78,18 @@ for i in range(len(words)):
     cand = [o for o in onsets if prev_end - 0.02 <= o <= st[i] + 0.03 and st[i] - o < 0.4]
     if cand: st[i] = cand[-1] if cand[-1] <= st[i] else min(st[i], cand[0])
 
+# words with no letters (e.g. "1493"): place them between their aligned neighbours
+for i in range(len(words)):
+    if i in st: continue
+    a = en.get(i - 1, 0.0) + 0.04
+    nxt = next((st[j] for j in range(i + 1, len(words)) if j in st), a + 0.6)
+    st[i], en[i] = a, max(a + 0.1, nxt - 0.04)
 old = [(w.get("s", 0), w.get("e", 0)) for w in words]
 missing = 0
 for i, w in enumerate(words):
     if i in st: w["s"], w["e"] = round(st[i], 3), round(en[i], 3)
     else: missing += 1
+    if not any(ch.isalpha() for ch in w["t"]): missing += 1
 d = [abs(w["s"] - o[0]) for w, o in zip(words, old)]
-print(f"{len(words)} words aligned ({missing} without letters kept as-is); shift vs old: mean {sum(d)/len(d)*1000:.0f} ms, max {max(d)*1000:.0f} ms")
+print(f"{len(words)} words aligned ({missing} without letters placed between neighbours); shift vs old: mean {sum(d)/len(d)*1000:.0f} ms, max {max(d)*1000:.0f} ms")
 json.dump(caps, open(cap_path, "w"), ensure_ascii=False, indent=1)
