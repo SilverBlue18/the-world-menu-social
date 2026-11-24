@@ -1,5 +1,8 @@
 # House Style: "Map on the Desk" history shorts (channel: The World Menu, @theworldmenu)
 
+> **Superseded for The World Menu (2026-11-24):** the look, palette, fonts, captions and sound below are the old template's. The current look and sound are in `BRAND.md` ("Video look v2: A + B" and "Sound"). This file is kept only for the technical rules that still apply: one continuous camera, Gaussian-smoothed motion, safe zones, QA steps.
+
+
 This is the approved look of the channel. "The Lost Imam" (`src/imam/`, `out/imam/The_Lost_Imam_FINAL.mp4`) is the reference video: new videos must look, move and sound like it. The topic is **history in general**, not only Islamic history.
 
 ## Format

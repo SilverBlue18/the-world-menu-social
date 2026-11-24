@@ -8,7 +8,7 @@
 - **Long form (weekly or every two weeks):** 4–6 related shorts packaged as a list, ranking, countdown or tier list, 8–12 min (e.g. "5 Fruits You Didn't Know Could Be Poisonous"). Add an intro hook, short bridges with a running ranking, bonus facts, a final verdict and a comment question.
 - **Language: French**, for a **general French-speaking audience worldwide** (France, Belgium, Switzerland, Canada, Africa...). Narration, captions, on-screen text and post texts in French. Voice: **David Tyserre** (native French narrator; see `BRAND.md`). Captions: French + English.
 - **Topic mix:** about **80% world food stories** (any country, any era) and about **20% West African / Senegalese** stories (thiéboudienne, yassa, mafé, bissap, café Touba, baobab, fonio...). Never frame the channel, bios or titles as Senegal-only.
-- **Look:** Sahel world map + French/English captions, as in the style frames described in `BRAND.md` (`brand/twm/frames/`). `BRAND.md` overrides the colours, fonts and captions of the old STYLE_BIBLE (which stays as the technical reference for camera, QA and motion).
+- **Look:** "A + B" (food cut-out on colour fields + the logo globe as the stage), see `BRAND.md` "Video look v2". The old map/parchment/archival-card look is rejected. STYLE_BIBLE.md now only holds technical rules (camera smoothing, safe zones, QA).
 - **Voice:** David Tyserre (`iKX6IXB415Hh5bn2eNhP`), speed 1.1; score takes in French; address the viewer with "tu". **Captions:** French + English (see `BRAND.md`).
 - **NO MUSIC, EVER** (the user's halal rule): no melodies, chords, pads, instruments or beats. Only voice + sound effects + non-melodic ambience. This overrides every music instruction below.
 - The rest of this playbook (fact-checking, shocking hook, voice pipeline, QA) applies, except where `BRAND.md` says otherwise.
@@ -32,6 +32,11 @@ The look is fixed: read **`STYLE_BIBLE.md`** before anything else. Reference vid
      `python3 -c "from huggingface_hub import snapshot_download as s; s('jonatasgrosman/wav2vec2-large-xlsr-53-french', local_dir='bin/w2v2-fr', allow_patterns=['*.json','*.txt','pytorch_model.bin'])"`.
      Then use `tools/align_words_fr.py` (download.pytorch.org, needed by the old MMS_FA `align_words.py`, may be blocked).
 4. Check that the ElevenLabs key works: a request to api.elevenlabs.io with `xi-api-key: proxy-injected`. If it fails, read it from the user's connected folder `studio-secrets/elevenlabs_key.txt` (stage it, copy to `~/.secrets/elevenlabs_key`, chmod 600, send it as the `xi-api-key` header from scripts). **Never print the key, never commit it, never ask for it in chat.**
+
+## Mac studio notes (2026-11-24)
+- Repo lives at `~/Desktop/the-world-menu-social`; Python tools run with `.venv/bin/python` (numpy, scipy, pyloudnorm, soundfile, rembg).
+- The Remotion CLI's browser crashes on this Mac: render with `node scripts/render.mjs <Comp> <out.mp4> preview|final` (Node API). Stills: `node scripts/stills.mjs`.
+- Look and sound: follow `BRAND.md` (A + B look, recorded non-tonal SFX). Template: `src/piment/Piment.tsx` + `tools/sound_piment.py`.
 
 ## 1. From story to script
 - **The hook must always be SHOCKING** (the user's standing rule). The first line, under 3 s, has to make people stop scrolling: the craziest true contrast in the story (famous descendants, an impossible journey, an identity twist). Write 4–5 hook options and let the user pick before voicing. Shocking, but never false: check the hook against the sources (e.g. "first known Muslim landowner" yes, "first Muslim in America" no).
