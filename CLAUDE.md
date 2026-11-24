@@ -47,6 +47,13 @@ The look is fixed: read **`STYLE_BIBLE.md`** before anything else. Reference vid
 - Make a list of foreign names and words and their languages, for pronunciation.
 - Show the user the script and beat table. If they asked for full autopilot, continue.
 
+### Script format for animated (3D) videos (adapted from the "ScriptForge" prompt, 2026-11-24)
+- Write `SCRIPT.md` as blocks: `[NARRATION]` (French, spoken, "tu") then `[VISUAL]` (the 3D scene: who, where, what they do, which food is the hero, camera). Every narration line gets a visual. Add (pause) / *emphasis* notes for the voice.
+- Structure. Shorts (45–70 s): Hook (0–3 s) → Setup with an open question (to ~10 s) → 3–4 beats, each ending on a mini-cliffhanger that pulls into the next → Payoff/twist → Outro line + comment question.
+  Long form (3–4 min, 450–600 words; or the 8–12 min compilations): same shape, 3–5 escalating beats.
+- Narration style for food stories: storyteller, opens in the middle of a scene (a person, a place, a date), real names/dates/places, builds tension like a mini-documentary, ends on a surprising truth about what's on the viewer's plate.
+- After the script: 3 alternative titles, a 2–4-word thumbnail text, 5 tags, word count + runtime. Facts: never invent; record disputed claims in RESEARCH.md.
+
 ## 2. Voice
 - Use **David Tyserre** (`iKX6IXB415Hh5bn2eNhP`), with the Salee pipeline (best so far):
   1. `tools/salee_takes.py`: one TTS call per line, with previous_text/next_text. Lines with foreign names get spelling variants × seeds 11/29.
