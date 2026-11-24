@@ -35,7 +35,7 @@ registerShot('s008', {
     s.ship.position.y = Math.sin(t * 1.4) * 0.12; s.ship.rotation.z = Math.sin(t * 1.1) * 0.025; s.ship.rotation.x = Math.sin(t * 0.9) * 0.02;
     T.orbit(s.stage.camera, t, { target: [0.5, 3.4, 0], radius: [22, 18.5], height: [2.6, 2.0], from: -0.45, to: 0.1, dur: info.dur });
   },
-  overlay(g, t) { bigNum(g, t, '1493', E.W / 2, E.H * 0.15, { at: 0.33, size: 170 }); },
+  overlay(g, t) { bigNum(g, t, '1493', E.W / 2, E.H * 0.17, { at: 0.33, size: 170 }); },
 });
 
 // s009 — beach: a Taino host hands Columbus a chili, he bites. "CARAÏBES"
@@ -48,7 +48,7 @@ registerShot('s009', { draw(g, t, info) {
   layer(g, cam, 1, (g) => { drawFigure(g, tai); drawFigure(g, col); if (given) chiliInHand(g, col, 70, t > 0.9 ? -1.57 : -2.6); else chiliInHand(g, tai, 70, -2.6); });
   if (t > 1.0 && t < 1.6) FX.rings(g, CX - 120, GY - 410, t - 1.0, { count: 2, r0: 20, r1: 90, color: '#ffffff', a: 0.6 });
   FX.dust(g, t, { count: 30, color: '#fff6e0', a: 0.3 });
-  pill(g, t, 'CARAÏBES', CX, E.H * 0.16, { at: 0.75 });
+  pill(g, t, 'CARAÏBES', CX, E.H * 0.17, { at: 0.75 });
 } });
 
 // s010 — giant face Columbus thinking, bubble full of black peppercorns
@@ -99,8 +99,8 @@ registerShot('s013', { draw(g, t, info) {
   layer(g, cam, 1, (g) => { drawFigure(g, col); chiliInHand(g, col, 70, -1.57); });
   FX.drops(g, t, { count: 50, color: '#d8ecff', rMax: 9, drift: 3 });
   g.save(); g.globalCompositeOperation = 'soft-light'; g.fillStyle = 'rgba(60,140,170,.4)'; g.fillRect(0, 0, E.W, E.H); g.restore();
-  slam(g, t, 'MAUVAIS PAYS', E.W / 2, E.H * 0.14, { at: 0.13 });
-  slam(g, t, 'MAUVAIS NOM', E.W / 2, E.H * 0.24, { at: 1.08, rot: 0.05 });
+  slam(g, t, 'MAUVAIS PAYS', E.W / 2, E.H * 0.17, { at: 0.13 });
+  slam(g, t, 'MAUVAIS NOM', E.W / 2, E.H * 0.265, { at: 1.08, rot: 0.05 });
 } });
 
 // s014 — today: TOI reads a spice jar "PIMENT", shrugs with a smile

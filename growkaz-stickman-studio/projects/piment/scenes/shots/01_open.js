@@ -34,8 +34,8 @@ registerShot('s002', { draw(g, t, info) {
   const r = 330 * (1 + 0.04 * t), cx = E.W / 2, cy = E.H * 0.47;
   bigFace(g, cx, cy, r, { outfit: TOI, expr: t < 0.5 ? 'surprised' : 'shocked', rimColor: M.rim, rimSide: -1, blink: (t % 2.7) > 2.6, look: [0.3, -0.1] });
   chili(g, cx + r * 0.95, cy + r * 0.35, 260, -2.75 + Math.sin(t * 2) * 0.04, { glowA: 0.3 });
-  countNum(g, t, 0, 500, cx, E.H * 0.14, { at: 1.25, dur: 0.6, suffix: ' ANS', size: 150 });
-  text(g, '500 YEARS', cx, E.H * 0.2, { size: 40, font: FONTS.ui, weight: 900, color: BR.cream, alpha: ease.out(prog(t, 1.8, 2.1)), spacing: 4 });
+  countNum(g, t, 0, 500, cx, E.H * 0.165, { at: 1.25, dur: 0.6, suffix: ' ANS', size: 150 });
+  text(g, '500 YEARS', cx, E.H * 0.222, { size: 40, font: FONTS.ui, weight: 900, color: BR.cream, alpha: ease.out(prog(t, 1.8, 2.1)), spacing: 4 });
 } });
 
 // s003 — "Ce pays, c'est l'Inde." kitchen wide, the cook stirs a red curry
@@ -46,7 +46,7 @@ registerShot('s003', { draw(g, t, info) {
   const cook = { x: CX - 200, y: GY + 40, s: 2.0, facing: -1, outfit: CUISINIERE, pose: breathe(stir, t, 1, 4), expr: 'happy', rim: { color: M.rim, dir: [1, -0.4], w: 5 }, blink: (t % 3.4) > 3.3 };
   layer(g, cam, 1, (g) => { drawFigure(g, cook); seg2(g, cook); basket(g, CX + 260, GY + 30, 260, 120, { seed: 12 }); });
   FX.dust(g, t, { count: 40, color: '#ffe2bd', a: 0.35 });
-  pill(g, t, 'INDE', CX, E.H * 0.16, { at: 1.05 });
+  pill(g, t, 'INDE', CX, E.H * 0.17, { at: 1.05 });
 } });
 function seg2(g, cook) {   // the wooden spoon in the pot
   const s = cook.s, h = cook.pose.hF; const hx = cook.x + h[0] * s * cook.facing, hy = cook.y + h[1] * s;
@@ -58,7 +58,7 @@ registerShot('s004', { draw(g, t, info) {
   const M = mood('void'); g.fillStyle = M.sky[0]; g.fillRect(-E.W, -E.H, E.W * 3, E.H * 3);
   glow(g, E.W / 2, E.H * 0.42, 700, '#c0392b', 0.28);
   chili(g, E.W / 2 - 40, E.H * 0.25, 640, -0.35 + 0.18 * Math.sin(t * 1.4), { glowA: 0.25 });
-  bigNum(g, t, '?', E.W * 0.8, E.H * 0.2, { at: 0.35, size: 260 });
+  bigNum(g, t, '?', E.W * 0.74, E.H * 0.22, { at: 0.35, size: 260 });
   FX.dust(g, t, { count: 30, color: '#ffd0b0', a: 0.3 });
 } });
 
@@ -68,7 +68,7 @@ registerShot('s005', { draw(g, t, info) {
   const { CX } = mexField(g, t, cam);
   fieldForeground(g, t, cam, { plants: [[180, 1.3, 1], [520, 1.0, 3], [900, 1.4, 2]] });
   FX.dust(g, t, { count: 40, color: '#ffe2bd', a: 0.35 });
-  pill(g, t, 'MEXIQUE', CX, E.H * 0.16, { at: 0.55 });
+  pill(g, t, 'MEXIQUE', CX, E.H * 0.17, { at: 0.55 });
 } });
 
 // s006 — farmer picks chilies into a basket
@@ -91,6 +91,6 @@ registerShot('s007', { draw(g, t, info) {
   blurLayer(g, 10, (g) => mexField(g, t, { z: 1.2, x: 0, y: -100 })); veil(g, '#0c0806', 0.45);
   const GY = GROUND(), CX = E.W / 2, gr = ease.out(prog(t, 0.1, 1.6));
   g.save(); g.translate(CX, GY + 80); g.scale(gr * 2.2, gr * 2.2); chiliPlant(g, 0, 0, 1, { seed: 33, t, leaf: '#2f5a2c', pods: Math.round(gr * 9) }); g.restore();
-  countNum(g, t, 0, 6000, CX, E.H * 0.15, { at: 0.1, dur: 1.3, suffix: ' ANS', size: 150 });
-  text(g, '6,000 YEARS', CX, E.H * 0.21, { size: 40, font: FONTS.ui, weight: 900, color: BR.cream, alpha: ease.out(prog(t, 1.4, 1.7)), spacing: 4 });
+  countNum(g, t, 0, 6000, CX, E.H * 0.165, { at: 0.1, dur: 1.3, suffix: ' ANS', size: 150 });
+  text(g, '6,000 YEARS', CX, E.H * 0.222, { size: 40, font: FONTS.ui, weight: 900, color: BR.cream, alpha: ease.out(prog(t, 1.4, 1.7)), spacing: 4 });
 } });

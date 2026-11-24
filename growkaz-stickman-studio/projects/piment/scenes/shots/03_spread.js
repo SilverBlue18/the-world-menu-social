@@ -49,8 +49,8 @@ registerShot('s017', { draw(g, t, info) {
   const cook = { x: CX + 210, y: GY + 50, s: 2.0, facing: -1, outfit: CUISINIERE, pose: breathe(posesAt(t, [[0, POSES.relaxed], [0.9, give]]), t, 1, 2), expr: t > 1.5 ? 'happy' : 'surprised', rim };
   layer(g, cam, 1, (g) => { drawFigure(g, marin); drawFigure(g, cook); basket(g, lerp(CX - 100, CX + 90, k), GY + 50 - 320, 170, 80, { seed: 91 }); });
   FX.dust(g, t, { count: 30, color: '#ffe2bd', a: 0.3 });
-  pill(g, t, 'GOA · INDE', CX, E.H * 0.14, { at: 0.55 });
-  bigNum(g, t, 'XVIe SIÈCLE', CX, E.H * 0.23, { at: 2.3, size: 104 });
+  pill(g, t, 'GOA · INDE', CX, E.H * 0.17, { at: 0.55 });
+  bigNum(g, t, 'XVIe SIÈCLE', CX, E.H * 0.245, { at: 2.3, size: 104 });
 } });
 
 // s018 — before the chili: a dim old kitchen, the cook grinds on a stone
@@ -94,7 +94,7 @@ registerShot('s019', { draw(g, t, info) {
   g.restore();
   seg(g, [[sx + 60, sy - 70], [sx + 150, sy - 130]], 60, '#0a1a1c'); for (let f = 0; f < 4; f++) seg(g, [[sx + 40 + f * 4, sy - 100 + f * 18], [sx + 8 + f * 6, sy - 60 + f * 16]], 20, '#0a1a1c'); seg(g, [[sx + 170, sy - 140], [E.W + 160, sy - 330]], 104, '#f29ac0'); seg(g, [[sx + 175, sy - 150], [E.W + 160, sy - 340]], 14, 'rgba(255,230,240,.35)');
   g.restore();
-  pill(g, t, 'AVANT : POIVRE NOIR', E.W / 2, E.H * 0.1, { at: 0.95, size: 52 });
+  pill(g, t, 'AVANT : POIVRE NOIR', E.W / 2 - 60, E.H * 0.155, { at: 0.95, size: 52 });
 } });
 function rngLocal(seed) { return () => { seed = (seed * 16807) % 2147483647; return seed / 2147483647; }; }
 function brassBowl(g, cx, cy, R, t, fill) {
@@ -139,9 +139,9 @@ registerShot('s021', { draw(g, t, info) {
   const fig = { x, y: GY + 50, s: 2.0, facing: 1, outfit: INK, pose: { ...wp, eF: [20, -196], hF: [16, -236], eB: [-14, -196], hB: [-10, -236] }, expr: 'determined', rim: { color: M.rim, dir: [0.4, -1], w: 5 } };
   layer(g, cam, 1, (g) => { drawFigure(g, fig); basket(g, x + 6, GY + 50 - 236 * 2.0, 150, 60, { seed: 101 }); });
   countUp(g, t, CX);
-  pill(g, t, 'NORD ➜', E.W * 0.74, E.H * 0.25, { at: 2.45 });
+  pill(g, t, 'NORD ➜', E.W * 0.7, E.H * 0.25, { at: 2.45 });
 } });
-function countUp(g, t, CX) { const v = Math.round(ease.out(prog(t, 1.0, 1.9)) * 2); bigNum(g, t, `${v} SIÈCLES`, CX, E.H * 0.14, { at: 1.0, size: 120 }); }
+function countUp(g, t, CX) { const v = Math.round(ease.out(prog(t, 1.0, 1.9)) * 2); bigNum(g, t, `${v} SIÈCLES`, CX, E.H * 0.165, { at: 1.0, size: 120 }); }
 
 // s022 — Goa market: the crate's painted sign "POIVRE DE PERNAMBOUC"
 registerShot('s022', { draw(g, t, info) {
@@ -167,5 +167,5 @@ registerShot('s023', { draw(g, t, info) {
   const m = { x: CX - 20, y: GY + 60, s: 1.9, facing: 1, outfit: MARIN, pose: breathe(lift, t), expr: 'determined', rim: { color: M.rim, dir: [-0.4, -1], w: 5 } };
   layer(g, cam, 1, (g) => { drawFigure(g, m); crate(g, m.x + 74, m.y - 152 * 1.9 + 62, 130, 80, { seed: 141 }); });
   FX.dust(g, t, { count: 30, color: '#ffe2bd', a: 0.3 });
-  pill(g, t, 'PERNAMBOUC · BRÉSIL', CX, E.H * 0.16, { at: 2.1, size: 48 });
+  pill(g, t, 'PERNAMBOUC · BRÉSIL', CX, E.H * 0.17, { at: 2.1, size: 48 });
 } });

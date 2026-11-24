@@ -7,7 +7,7 @@ export const C = { sea: "#12474F", land: "#E6C79C", coast: "#7A4E2A", red: "#C03
 
 // ---------- captions: French on top (spoken word in mustard), English below ----------
 export type TwmCap = { start: number; end: number; en: string; tag?: string; words: { t: string; s: number; e: number }[] };
-export const TwmCaptions: React.FC<{ t: number; caps: TwmCap[]; showFrom?: number; top?: number }> = ({ t, caps, showFrom = 0, top = 250 }) => {
+export const TwmCaptions: React.FC<{ t: number; caps: TwmCap[]; showFrom?: number; top?: number; compact?: boolean }> = ({ t, caps, showFrom = 0, top = 250, compact = false }) => {
   const i = caps.findIndex((x, k) => {
     const next = caps[k + 1]?.start ?? Infinity;
     const until = Math.min(next - 0.08, x.end + 0.9);
@@ -21,12 +21,12 @@ export const TwmCaptions: React.FC<{ t: number; caps: TwmCap[]; showFrom?: numbe
   const o = Math.min(fin, fout) * ramp(t, showFrom, showFrom + 0.3);
   if (o <= 0.001) return null;
   const chars = c.words.map((w) => w.t).join(" ").length;
-  const fs = chars > 95 ? 50 : chars > 72 ? 54 : 58;
+  const fs = compact ? (chars > 95 ? 44 : chars > 72 ? 47 : 50) : chars > 95 ? 50 : chars > 72 ? 54 : 58;
   return (
     <>
       <div style={{ position: "absolute", left: -80, right: -80, top: top - 110, height: 640, opacity: o,
         background: "radial-gradient(ellipse 58% 46% at 50% 50%, rgba(0,0,0,.5), rgba(0,0,0,.3) 55%, rgba(0,0,0,0) 100%)" }} />
-      <div style={{ position: "absolute", left: 70, right: 70, top, textAlign: "center", opacity: o, transform: `translateY(${(1 - fin) * 10}px)` }}>
+      <div style={{ position: "absolute", left: compact ? 80 : 70, right: compact ? 150 : 70, top, textAlign: "center", opacity: o, transform: `translateY(${(1 - fin) * 10}px)` }}>
         <div style={{ fontFamily: "Inter", fontWeight: 800, fontSize: fs, lineHeight: 1.18, color: C.cream, letterSpacing: -0.3, textShadow: "0 2px 8px rgba(0,0,0,.75)" }}>
           {c.words.map((w, k) => {
             const next = c.words[k + 1]?.s ?? c.end;
@@ -39,7 +39,7 @@ export const TwmCaptions: React.FC<{ t: number; caps: TwmCap[]; showFrom?: numbe
             );
           })}
         </div>
-        <div style={{ fontFamily: "Inter", fontWeight: 600, fontSize: 36, lineHeight: 1.3, color: C.land, opacity: 0.88, marginTop: 20, textShadow: "0 2px 6px rgba(0,0,0,.7)" }}>{c.en}</div>
+        <div style={{ fontFamily: "Inter", fontWeight: 600, fontSize: compact ? 31 : 36, lineHeight: 1.3, color: C.land, opacity: 0.88, marginTop: compact ? 12 : 20, textShadow: "0 2px 6px rgba(0,0,0,.7)" }}>{c.en}</div>
         {c.tag && (
           <div style={{ fontFamily: "Oswald", fontWeight: 500, fontSize: 30, letterSpacing: 6, color: C.mustard, marginTop: 24, textShadow: "0 2px 8px rgba(0,0,0,.9)",
             opacity: ramp(t, c.start + 0.25, c.start + 0.6) }}>{c.tag}</div>

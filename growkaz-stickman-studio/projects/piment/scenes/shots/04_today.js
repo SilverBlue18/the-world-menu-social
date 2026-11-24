@@ -10,7 +10,7 @@ import { TOI, COLOMB, MARIN, CUISINIERE, PAYSAN, CAST } from '../cast.js';
 
 const INK = { top: 'none' };
 const holdUp = { ...POSES.cheer, eB: [-7, -136], hB: [-9, -100], eF: [26, -200], hF: [40, -242] };
-function first(g, t, word, at, y = E.H * 0.15) { bigNum(g, t, '1er', E.W / 2, y, { at, size: 140 }); pill(g, t, word, E.W / 2, y + 130, { at: at + 0.15, size: 56 }); }
+function first(g, t, word, at, y = E.H * 0.17) { bigNum(g, t, '1er', E.W / 2, y, { at, size: 140 }); pill(g, t, word, E.W / 2, y + 130, { at: at + 0.15, size: 56 }); }
 
 // s024 — today's Indian fields: red carpets of drying chilies, workers raking. "1er PRODUCTEUR"
 registerShot('s024', { draw(g, t, info) {
@@ -52,8 +52,8 @@ registerShot('s026', { draw(g, t, info) {
     const w = { x: CX + 380, y: GY + 60, s: 1.8, facing: -1, outfit: INK, pose: breathe(POSES.point, t), expr: 'smile', rim: { color: M.rim, dir: [-0.4, -1] } }; drawFigure(g, w); });
   FX.dust(g, t, { count: 30, color: '#ffe2bd', a: 0.25 });
   if (t < 2.0) first(g, t, 'EXPORTATEUR', 0.19);
-  else { const a = ease.out(prog(t, 2.0, 2.4)); bigNum(g, t, '1er ×3', E.W / 2, E.H * 0.12, { at: 2.0, size: 130 });
-    ['PRODUCTEUR', 'CONSOMMATEUR', 'EXPORTATEUR'].forEach((w, i) => pill(g, t, w, E.W / 2, E.H * 0.2 + i * 100, { at: 2.1 + i * 0.12, size: 48 })); }
+  else { const a = ease.out(prog(t, 2.0, 2.4)); bigNum(g, t, '1er ×3', E.W / 2, E.H * 0.165, { at: 2.0, size: 130 });
+    ['PRODUCTEUR', 'CONSOMMATEUR', 'EXPORTATEUR'].forEach((w, i) => pill(g, t, w, E.W / 2, E.H * 0.24 + i * 96, { at: 2.1 + i * 0.12, size: 48 })); }
 } });
 const GROUNDY = () => E.H * 0.68;
 
@@ -80,8 +80,8 @@ registerShot('s028', { draw(g, t, info) {
   layer(g, cam, 1, (g) => { drawFigure(g, pay); drawFigure(g, toi); chiliInHand(g, toi, 110, -2.75, { glowA: 0.35 }); });
   fieldForeground(g, t, cam, { mood: 'dusk', plants: [] });
   FX.dust(g, t, { count: 40, color: '#ffe2bd', a: 0.35 });
-  bigNum(g, t, 'MERCI,', E.W / 2, E.H * 0.12, { at: 0.12, size: 120 });
-  bigNum(g, t, 'MEXIQUE', E.W / 2, E.H * 0.2, { at: 0.7, size: 140 });
+  bigNum(g, t, 'MERCI,', E.W / 2, E.H * 0.165, { at: 0.12, size: 120 });
+  bigNum(g, t, 'MEXIQUE', E.W / 2, E.H * 0.24, { at: 0.7, size: 140 });
 } });
 
 // s029 — end: the whole cast lined up in the field, each with a chili (logo + "Abonne-toi" are added on top in Remotion)
