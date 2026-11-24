@@ -1,0 +1,14 @@
+  sahel: {
+    name: 'Sahel (The World Menu)', desc: 'Brand look: deep teal shadows (#12474F), warm sand light, cream rims, mustard numbers, red accents.',
+    ink: '#0a1a1c', inkFar: '#24403f', feature: '#fbf2dc', rimWidth: 5,
+    ui: { ...UI, card: 'rgba(10,46,51,.94)', cardLine: 'rgba(230,199,156,.3)', text: '#E6C79C', sub: '#a8946e', accent: '#C0392B', gold: '#F2B134', cream: '#F7EBD3', blueprint: '#E6C79C', bpBg: '#0A2E33', good: '#F2B134' },
+    grade: { contrast: 1.08, sat: 1.06, lift: [0.0, 0.03, 0.035], gamma: [1.0, 1.0, 0.98], gain: [1.08, 1.0, 0.88], vignette: 0.55, grain: 0.05, bloom: 0.7 },
+    moods: {
+      golden: { sky: ['#12474F', '#b8683a', '#f2c57a'], key: '#ffd08a', rim: '#ffe4b0', wall: '#2c3a38', floor: '#2a2420', dark: '#14201f', practical: '#ffd28a', grass: '#3a5a34', fog: '#d89a6a' },
+      dusk: { sky: ['#0A2E33', '#12474F', '#b0452e', '#f2b134'], key: '#ffc68a', rim: '#ffe0a8', wall: '#22383a', floor: '#1c2a2a', dark: '#0c1a1b', practical: '#ffd59a', fog: '#7a6a5a' },
+      night: { sky: ['#06191c', '#0A2E33', '#12474F'], rim: '#cfe8e0', practical: '#F2B134', wall: '#16302f', floor: '#0f2020' },
+      interiorWarm: { sky: ['#c0703a', '#f2b97a', '#f7dca8'], rim: '#ffdca0', wall: '#3a3430', floor: '#2a221e', dark: '#161210', practical: '#ffd28a' },
+      void: { sky: ['#0A2E33', '#12474F'], rim: '#E6C79C' },
+      day: { sky: ['#5a9aa8', '#bfd8d4', '#f2e6cc'], rim: '#fff4dc' },
+    },
+  },

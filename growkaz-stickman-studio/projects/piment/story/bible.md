@@ -37,3 +37,6 @@ Background people (Taíno host, market crowd, sailors) are plain ink.
 
 ## Overlays (done in Remotion on top of the stickman render)
 French captions on top with the spoken word in mustard + English below (`TwmCaptions`), `Watermark` at the top centre, end card "Abonne-toi pour le prochain plat". Stickman scenes keep the bottom ~28% of the frame free for captions.
+
+## Custom style
+The brand style "sahel" lives in engine/styles.js (studio, not in Git). A copy is in story/style_sahel.js.txt: paste it into STYLES after a plugin update.
