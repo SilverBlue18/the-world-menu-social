@@ -68,3 +68,4 @@ Alternatives:
 
 ---
 Scheduled via Metricool on 2026-11-24 for 14:00 (Africa/Dakar = GMT): YouTube Short, TikTok (AI label on), Instagram Reel, Facebook Reel.
+v1 had bottom captions covered by platform UI; v2 (finals/piment/Le_Piment_Stickman_FINAL_v2.mp4, safe-zone captions) scheduled via Metricool for 14:25 (GMT) on all 4 platforms; user deletes the v1 posts by hand.
