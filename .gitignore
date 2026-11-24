@@ -18,3 +18,4 @@ public/*/voice_raw.wav
 .venv/
 public/*/amb.wav
 sfx_lib/**/*.wav
+assets3d/
