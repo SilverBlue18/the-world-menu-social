@@ -8,7 +8,7 @@
 - **Long form (weekly or every two weeks):** 4–6 related shorts packaged as a list, ranking, countdown or tier list, 8–12 min (e.g. "5 Fruits You Didn't Know Could Be Poisonous"). Add an intro hook, short bridges with a running ranking, bonus facts, a final verdict and a comment question.
 - **Language: French**, for a **general French-speaking audience worldwide** (France, Belgium, Switzerland, Canada, Africa...). Narration, captions, on-screen text and post texts in French. Voice: **David Tyserre** (native French narrator; see `BRAND.md`). Captions: French + English.
 - **Topic mix:** about **80% world food stories** (any country, any era) and about **20% West African / Senegalese** stories (thiéboudienne, yassa, mafé, bissap, café Touba, baobab, fonio...). Never frame the channel, bios or titles as Senegal-only.
-- **Look:** "A + B" (food cut-out on colour fields + the logo globe as the stage), see `BRAND.md` "Video look v2". The old map/parchment/archival-card look is rejected. STYLE_BIBLE.md now only holds technical rules (camera smoothing, safe zones, QA).
+- **Look (2026-11-24): GrowKaz Stickman style, "Sahel" brand grade** — reference `growkaz-stickman-studio/projects/piment/` (story, scenes) + `src/pimentStick/PimentStick.tsx` (FR/EN captions at the bottom, watermark, end card) + `tools/sound_piment_stick.py`. It replaces the A + B look below. Previous look: "A + B" (food cut-out on colour fields + the logo globe as the stage), see `BRAND.md` "Video look v2". The old map/parchment/archival-card look is rejected. STYLE_BIBLE.md now only holds technical rules (camera smoothing, safe zones, QA).
 - **Voice:** David Tyserre (`iKX6IXB415Hh5bn2eNhP`), speed 1.1; score takes in French; address the viewer with "tu". **Captions:** French + English (see `BRAND.md`).
 - **NO MUSIC, EVER** (the user's halal rule): no melodies, chords, pads, instruments or beats. Only voice + sound effects + non-melodic ambience. This overrides every music instruction below.
 - The rest of this playbook (fact-checking, shocking hook, voice pipeline, QA) applies, except where `BRAND.md` says otherwise.
@@ -98,7 +98,7 @@ The look is fixed: read **`STYLE_BIBLE.md`** before anything else. Reference vid
 
 ## Things the user has rejected (don't do again)
 - Scene cuts or slide switching: use one continuous camera only.
-- Stickman or silhouette figures.
+- ~~Stickman or silhouette figures.~~ (lifted 2026-11-24: the stickman style is now the channel look)
 - Copying the colors of reference videos.
 - Images that don't match the narrated place.
 - A loud storm at the start.

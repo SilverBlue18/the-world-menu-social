@@ -43,7 +43,10 @@ Visual world: a **geographic world map** (the Earth), one continuous camera, foo
 - Build every effect from 2–3 layers (body + top + transient), put them in the shared room (`space()`), spread them in stereo, and pin them to words with `word_clock`. Reference: `tools/sound_piment.py`.
 - Mix with `tools/twm_mix.py <slug> --amb -22`: SFX −13 LU and ambience −22 LU under the voice, ducked; master −14 LUFS, limiter −1.5 dBFS.
 
-## Video look v2: "A + B" (approved 2026-11-24; the first map/parchment look was rejected)
+## Video look v3: GrowKaz Stickman, "Sahel" style (approved 2026-11-24, replaces v2)
+Stick figures with rim light in moody flat-shaded sets, graded with the custom "sahel" style (teal shadows, sand light, mustard numbers, red accents; copy in `growkaz-stickman-studio/projects/piment/story/style_sahel.js.txt`). Main character: mustard `#F2B134` hoodie. Food is the hero of every shot. Maps use real Natural Earth coastlines in brand colours. On-screen text in Oswald/Inter. FR/EN captions at the bottom. Reference: video 1 `finals/piment/Le_Piment_Stickman_FINAL.mp4`.
+
+## Video look v2: "A + B" (superseded) (approved 2026-11-24; the first map/parchment look was rejected)
 The food is the star. One continuous shot, no hard cuts. Reference: `src/piment/Piment.tsx`; concept frames: `src/concepts/Concepts.tsx`.
 - **A, the food on colour:** a big cut-out food photo (public domain / CC0, background removed with `rembg`) on a bold radial colour field (red, teal, green, ochre, gold, night). Bold kinetic type: Oswald 700 for big words and numbers ("PAS INDIEN ?!", "6 000 ANS"), mustard pills for dates/places, red slam banners for punchlines.
 - **B, the globe stage:** the orthographic Earth from the logo (Sahel colours, cream ring, soft mustard glow, stars behind). It spins to each place; red pins with a mustard pulse and Oswald labels; red dotted routes draw themselves; the hero food rides the head of the route.
