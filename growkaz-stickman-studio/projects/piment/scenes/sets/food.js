@@ -75,7 +75,7 @@ export function chiliPlant(g, x, y, s = 1, o = {}) {
 // black peppercorns — the "old heat" in India
 export function peppercorn(g, x, y, rad, o = {}) {
   const { dark = 0 } = o; circle(g, x, y, rad, mix(CHILI.pepper, '#000', dark));
-  g.strokeStyle = alpha('#000', 0.45); g.lineWidth = Math.max(1, rad * 0.12); for (const k of [0.35, 0.7]) { g.beginPath(); g.arc(x + rad * 0.1, y, rad * k, 0.4, 2.6); g.stroke(); }
+  for (const [dx, dy, k] of [[0.3, 0.2, 0.22], [-0.2, 0.35, 0.18], [0.1, -0.3, 0.16], [0.45, -0.1, 0.14], [-0.4, -0.05, 0.15]]) circle(g, x + dx * rad, y + dy * rad, rad * k, alpha('#000', 0.35));
   circle(g, x - rad * 0.35, y - rad * 0.35, rad * 0.25, alpha(CHILI.pepperLight, 0.8 * (1 - dark)));
 }
 export function pepperPile(g, x, y, w, h, o = {}) {
