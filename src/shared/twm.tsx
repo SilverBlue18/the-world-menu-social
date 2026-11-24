@@ -7,7 +7,7 @@ export const C = { sea: "#12474F", land: "#E6C79C", coast: "#7A4E2A", red: "#C03
 
 // ---------- captions: French on top (spoken word in mustard), English below ----------
 export type TwmCap = { start: number; end: number; en: string; tag?: string; words: { t: string; s: number; e: number }[] };
-export const TwmCaptions: React.FC<{ t: number; caps: TwmCap[]; showFrom?: number }> = ({ t, caps, showFrom = 0 }) => {
+export const TwmCaptions: React.FC<{ t: number; caps: TwmCap[]; showFrom?: number; top?: number }> = ({ t, caps, showFrom = 0, top = 250 }) => {
   const i = caps.findIndex((x, k) => {
     const next = caps[k + 1]?.start ?? Infinity;
     const until = Math.min(next - 0.08, x.end + 0.9);
@@ -24,9 +24,9 @@ export const TwmCaptions: React.FC<{ t: number; caps: TwmCap[]; showFrom?: numbe
   const fs = chars > 95 ? 50 : chars > 72 ? 54 : 58;
   return (
     <>
-      <div style={{ position: "absolute", left: -80, right: -80, top: 140, height: 640, opacity: o,
+      <div style={{ position: "absolute", left: -80, right: -80, top: top - 110, height: 640, opacity: o,
         background: "radial-gradient(ellipse 58% 46% at 50% 50%, rgba(0,0,0,.5), rgba(0,0,0,.3) 55%, rgba(0,0,0,0) 100%)" }} />
-      <div style={{ position: "absolute", left: 70, right: 70, top: 250, textAlign: "center", opacity: o, transform: `translateY(${(1 - fin) * 10}px)` }}>
+      <div style={{ position: "absolute", left: 70, right: 70, top, textAlign: "center", opacity: o, transform: `translateY(${(1 - fin) * 10}px)` }}>
         <div style={{ fontFamily: "Inter", fontWeight: 800, fontSize: fs, lineHeight: 1.18, color: C.cream, letterSpacing: -0.3, textShadow: "0 2px 8px rgba(0,0,0,.75)" }}>
           {c.words.map((w, k) => {
             const next = c.words[k + 1]?.s ?? c.end;

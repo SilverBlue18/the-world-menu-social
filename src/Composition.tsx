@@ -6,6 +6,7 @@ import { ImamDesk, DESK_S } from "./imam/Desk";
 import { ImamFlow, FLOW_S } from "./imam/MapFlow";
 import { SaleeFlow, SALEE_S } from "./salee/Salee";
 import { PimentFlow, PIMENT_S } from "./piment/Piment";
+import { PimentStick, STICK_S } from "./pimentStick/PimentStick";
 import * as Concepts from "./concepts/Concepts";
 import { PimentTest3D } from "./three3d/PimentTest3D";
 
@@ -19,6 +20,7 @@ export const MyComposition = () => (
     {(["A", "B"] as const).map((look) => (["field", "ship"] as const).map((scene) => (
       <Composition key={look + scene} id={`Test3D-${scene}-${look}`} component={PimentTest3D} defaultProps={{ look, scene }} durationInFrames={scene === "field" ? 240 : 120} fps={30} width={1080} height={1920} />
     )))}
+    <Composition id="PimentStick" component={PimentStick} durationInFrames={Math.round(STICK_S * 30)} fps={30} width={1080} height={1920} />
     <Composition id="PimentFlow" component={PimentFlow} durationInFrames={Math.round(PIMENT_S * 30)} fps={30} width={1080} height={1920} />
     <Composition id="SaleeFlow" component={SaleeFlow} durationInFrames={SALEE_S * 30} fps={30} width={1080} height={1920} />
     <Composition id="ImamFlow" component={ImamFlow} durationInFrames={FLOW_S * 30} fps={30} width={1080} height={1920} />
