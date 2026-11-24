@@ -4,7 +4,7 @@ import { drawFigure, POSES, posesAt, breathe, bigFace } from '/engine/rig2d.js';
 import * as FX from '/engine/fx2d.js';
 import { kitchen, mexField, fieldForeground } from '../sets/places.js';
 import { goaHarbour, indiaFields } from '../sets/places2.js';
-import { chili, chiliPile } from '../sets/food.js';
+import { chili, chiliPile, sack, basket } from '../sets/food.js';
 import { BR, pill, bigNum, chiliInHand } from '../sets/brand.js';
 import { TOI, COLOMB, MARIN, CUISINIERE, PAYSAN, CAST } from '../cast.js';
 
@@ -18,7 +18,9 @@ registerShot('s024', { draw(g, t, info) {
   const { GY, CX, M } = indiaFields(g, t, cam);
   const rake = { ...POSES.reach, eF: [34, -150], hF: [62 + Math.sin(t * 3) * 14, -110] };
   layer(g, cam, 1, (g) => { const w = { x: CX + 300, y: GY - 40, s: 1.5, facing: -1, outfit: INK, pose: breathe(rake, t, 1, 2), expr: 'smile', rim: { color: M.rim, dir: [-0.4, -1], w: 4 } }; drawFigure(g, w);
-    seg(g, [[w.x - 62 * 1.5 - Math.sin(t * 3) * 21, w.y - 110 * 1.5], [w.x - 190 - Math.sin(t * 3) * 21, w.y + 10]], 6, '#6a4a2a'); });
+    seg(g, [[w.x - 62 * 1.5 - Math.sin(t * 3) * 21, w.y - 110 * 1.5], [w.x - 190 - Math.sin(t * 3) * 21, w.y + 10]], 6, '#6a4a2a');
+    const head = { ...POSES.stand, eF: [20, -196], hF: [16, -236], eB: [-14, -196], hB: [-10, -236] };
+    for (const [x, y, s2, f, of] of [[CX - 330, GY - 70, 1.35, 1, { top: 'dress', color: '#c0392b', head: 'bun' }], [CX - 60, GY - 130, 1.1, -1, INK]]) { drawFigure(g, { x, y, s: s2, facing: f, outfit: of, pose: breathe(head, t, 1, x), expr: 'smile', rim: { color: M.rim, dir: [0, -1], w: 4 } }); basket(g, x, y - 236 * s2, 120 * s2, 50 * s2, { seed: x }); } });
   FX.dust(g, t, { count: 40, color: '#ffe2bd', a: 0.35 });
   first(g, t, 'PRODUCTEUR', 1.6);
 } });
@@ -45,8 +47,9 @@ registerShot('s026', { draw(g, t, info) {
   const cam = { z: 1.04 + 0.04 * ease.inOut(t / info.dur), x: -60 };
   const { GY, CX, M } = goaHarbour(g, t, cam, { today: true });
   layer(g, cam, 0.3, (g) => { const sw = Math.sin(t * 1.4) * 30, hx = 560 + sw, hy = GROUNDY() - 420 - 160;
-    for (let i = 0; i < 6; i++) { rr(g, hx - 90 + (i % 3) * 60, hy + Math.floor(i / 3) * 56, 58, 54, 14); g.fillStyle = i % 2 ? '#b8321e' : '#a02a18'; g.fill(); } });
-  layer(g, cam, 1, (g) => { for (let i = 0; i < 4; i++) for (let j = 0; j < 2 + (i % 2); j++) { rr(g, CX - 380 + i * 120, GY - 30 - j * 64, 112, 62, 18); g.fillStyle = (i + j) % 2 ? '#b8321e' : '#9a2616'; g.fill(); chili(g, CX - 330 + i * 120, GY - 74 - j * 64, 30, 1.2); } });
+    seg(g, [[hx - 100, hy - 40], [hx + 100, hy - 40]], 4, '#cfcfcf'); for (let i = 0; i < 6; i++) sack(g, hx - 70 + (i % 3) * 70, hy + 60 + Math.floor(i / 3) * 70, 70, 80, { color: '#b8321e' }); });
+  layer(g, cam, 1, (g) => { for (let j = 2; j >= 0; j--) for (let i = 0; i < 5 - j; i++) sack(g, CX - 380 + i * 150 + j * 75, GY + 40 - j * 120, 150, 170, { color: (i + j) % 2 ? '#b08a5a' : '#c09a66', open: j === 0 && i % 2 === 0 });
+    const w = { x: CX + 380, y: GY + 60, s: 1.8, facing: -1, outfit: INK, pose: breathe(POSES.point, t), expr: 'smile', rim: { color: M.rim, dir: [-0.4, -1] } }; drawFigure(g, w); });
   FX.dust(g, t, { count: 30, color: '#ffe2bd', a: 0.25 });
   if (t < 2.0) first(g, t, 'EXPORTATEUR', 0.19);
   else { const a = ease.out(prog(t, 2.0, 2.4)); bigNum(g, t, '1er ×3', E.W / 2, E.H * 0.12, { at: 2.0, size: 130 });

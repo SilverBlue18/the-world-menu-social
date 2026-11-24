@@ -74,9 +74,14 @@ export function chiliPlant(g, x, y, s = 1, o = {}) {
 
 // black peppercorns — the "old heat" in India
 export function peppercorn(g, x, y, rad, o = {}) {
-  const { dark = 0 } = o; circle(g, x, y, rad, mix(CHILI.pepper, '#000', dark));
-  for (const [dx, dy, k] of [[0.3, 0.2, 0.22], [-0.2, 0.35, 0.18], [0.1, -0.3, 0.16], [0.45, -0.1, 0.14], [-0.4, -0.05, 0.15]]) circle(g, x + dx * rad, y + dy * rad, rad * k, alpha('#000', 0.35));
-  circle(g, x - rad * 0.35, y - rad * 0.35, rad * 0.25, alpha(CHILI.pepperLight, 0.8 * (1 - dark)));
+  const { dark = 0, seed = Math.round(x * 7 + y * 13) } = o;
+  g.fillStyle = radGrad(g, x - rad * 0.35, y - rad * 0.4, rad * 0.1, rad * 1.1, [mix('#6a5246', '#000', dark), mix('#2e211b', '#000', dark), mix('#120c0a', '#000', dark)]);
+  g.beginPath(); g.arc(x, y, rad, 0, Math.PI * 2); g.fill();
+  if (rad > 6) { const r = rng(seed); g.lineCap = 'round';
+    for (let i = 0; i < 5; i++) { const a = r() * 6.28, d = r() * rad * 0.6, L = rad * (0.35 + r() * 0.3), x0 = x + Math.cos(a) * d, y0 = y + Math.sin(a) * d, b = r() * 6.28;
+      g.strokeStyle = alpha('#000', 0.5); g.lineWidth = Math.max(1, rad * 0.1); g.beginPath(); g.moveTo(x0, y0); g.quadraticCurveTo(x0 + Math.cos(b) * L * 0.6, y0 + Math.sin(b + 1) * L * 0.6, x0 + Math.cos(b) * L, y0 + Math.sin(b) * L); g.stroke();
+      g.strokeStyle = alpha('#8a7062', 0.35 * (1 - dark)); g.lineWidth = Math.max(0.8, rad * 0.06); g.beginPath(); g.moveTo(x0 - 1, y0 - 1.5); g.lineTo(x0 + Math.cos(b) * L * 0.7 - 1, y0 + Math.sin(b) * L * 0.7 - 1.5); g.stroke(); } }
+  circle(g, x - rad * 0.38, y - rad * 0.42, rad * 0.16, alpha('#fff4e0', 0.55 * (1 - dark)));
 }
 export function pepperPile(g, x, y, w, h, o = {}) {
   const { seed = 4, rad = 12 } = o; const r = rng(seed); const n = Math.round((w * h) / (rad * rad * 2.2)); const pts = [];
@@ -88,4 +93,16 @@ export function pepperPile(g, x, y, w, h, o = {}) {
 export function chiliString(g, x, y, n = 10, len = 60, o = {}) {
   const { t = 0, seed = 2, dark = 0 } = o; const r = rng(seed); seg(g, [[x, y - 30], [x, y + n * len * 0.42]], 2, '#3a2a1a');
   for (let i = 0; i < n; i++) { const yy = y + i * len * 0.42, side = i % 2 ? 1 : -1; chili(g, x, yy, len * (0.85 + r() * 0.3), side * (0.35 + r() * 0.25) + Math.sin(t * 1.2 + i) * 0.04, { dark }); }
+}
+
+// jute sack of dried chilies (tied top, a red chili stencil on the front). (x, y) = bottom centre
+export function sack(g, x, y, w = 120, h = 150, o = {}) {
+  const { color = '#b08a5a', dark = 0, open = false } = o; const c = mix(color, '#000', dark);
+  g.fillStyle = 'rgba(0,0,0,.3)'; g.beginPath(); g.ellipse(x + 6, y, w * 0.55, w * 0.12, 0, 0, 7); g.fill();
+  g.fillStyle = linGrad(g, x - w / 2, 0, x + w / 2, 0, [shade(c, 0.1), c, shade(c, -0.3)]);
+  g.beginPath(); g.moveTo(x - w * 0.38, y - h * 0.86); g.quadraticCurveTo(x - w * 0.62, y - h * 0.4, x - w * 0.5, y); g.lineTo(x + w * 0.5, y); g.quadraticCurveTo(x + w * 0.62, y - h * 0.4, x + w * 0.38, y - h * 0.86); g.closePath(); g.fill();
+  g.strokeStyle = alpha('#000', 0.15); g.lineWidth = 2; for (let k = 0.15; k < 0.9; k += 0.12) { g.beginPath(); g.moveTo(x - w * 0.5, y - h * k); g.lineTo(x + w * 0.5, y - h * k + 3); g.stroke(); }
+  if (open) chiliPile(g, x, y - h * 0.84, w * 0.8, h * 0.3, { seed: Math.round(x), len: w * 0.28, dark });
+  else { g.fillStyle = shade(c, -0.15); g.beginPath(); g.moveTo(x - w * 0.3, y - h * 0.86); g.quadraticCurveTo(x, y - h * 1.08, x + w * 0.3, y - h * 0.86); g.fill(); seg(g, [[x - w * 0.16, y - h * 0.88], [x + w * 0.16, y - h * 0.88]], 6, '#5a3a1e'); }
+  chili(g, x - w * 0.12, y - h * 0.62, h * 0.38, -1.9, { dark: 0.15 + dark, a: 0.85 });
 }

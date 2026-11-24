@@ -40,3 +40,6 @@ French captions on top with the spoken word in mustard + English below (`TwmCapt
 
 ## Custom style
 The brand style "sahel" lives in engine/styles.js (studio, not in Git). A copy is in story/style_sahel.js.txt: paste it into STYLES after a plugin update.
+
+## Brand fonts in the studio
+engine/player.js also loads Oswald 500/700 and Inter 600/800 from node_modules/@fontsource/brand/ (copied from public/fonts). Re-add after a plugin update.

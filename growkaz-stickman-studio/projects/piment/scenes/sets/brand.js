@@ -3,6 +3,9 @@ import { E, ease, prog, clamp, rr, text, measure, alpha, glow, seg, FONTS } from
 import { drawFigure } from '/engine/rig2d.js';
 import { chili } from './food.js';
 
+// brand fonts for every on-screen text in this project (Oswald titles/numbers, Inter labels)
+FONTS.title = 'Oswald'; FONTS.ui = 'Inter';
+
 export const BR = { mustard: '#F2B134', red: '#C0392B', cream: '#F7EBD3', night: '#0A2E33', sea: '#12474F' };
 
 // mustard place pill ("INDE", "GOA"): pops in at `at` (s into the shot), fades before `out`
