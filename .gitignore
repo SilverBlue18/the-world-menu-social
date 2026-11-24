@@ -19,3 +19,11 @@ public/*/voice_raw.wav
 public/*/amb.wav
 sfx_lib/**/*.wav
 assets3d/
+
+# GrowKaz Stickman studio (~1 GB): keep only each project's story + scenes
+growkaz-stickman-studio/*
+!growkaz-stickman-studio/projects/
+growkaz-stickman-studio/projects/*/*
+!growkaz-stickman-studio/projects/*/story/
+!growkaz-stickman-studio/projects/*/scenes/
+!growkaz-stickman-studio/projects/*/config.json

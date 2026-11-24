@@ -1,0 +1,783 @@
+{
+ "title": "Le piment",
+ "duration": 69.0,
+ "shots": [
+  {
+   "id": "s001",
+   "start": 0.0,
+   "end": 2.8,
+   "line": "Le pays qui mange le plus de piment au monde…",
+   "scene": "TITLE over establishing wide: Indian spice market at golden hour, mountains of red chilies in baskets, crowd, hanging chili strings blurred in fg; TOI (mustard) in the middle holding up one big red chili. Title 'LE PIMENT' + 'PAS INDIEN ?!' (thumbnail, no captions)",
+   "set": "indiaMarket",
+   "bars": null,
+   "in": {
+    "type": "fade",
+    "dur": 0.4
+   },
+   "sfx": [
+    {
+     "at": 0.2,
+     "name": "whoosh",
+     "gain": -10
+    },
+    {
+     "at": 1.8,
+     "name": "impact",
+     "gain": -8
+    }
+   ],
+   "notes": "",
+   "amb": {
+    "name": "murmur",
+    "gain": -24
+   },
+   "captions": false
+  },
+  {
+   "id": "s002",
+   "start": 2.8,
+   "end": 5.5,
+   "line": "ne l'a découvert qu'il y a cinq cents ans.",
+   "scene": "giant face TOI shocked, chili in front of his face, market blurred behind; gold '500 ANS' counts up on 'cinq cents'",
+   "set": "indiaMarket",
+   "bars": null,
+   "in": {
+    "type": "cut"
+   },
+   "sfx": [
+    {
+     "at": 1.3,
+     "name": "counter",
+     "gain": -14
+    },
+    {
+     "at": 1.9,
+     "name": "pop",
+     "gain": -10
+    }
+   ],
+   "notes": "",
+   "amb": {
+    "name": "murmur",
+    "gain": -26
+   }
+  },
+  {
+   "id": "s003",
+   "start": 5.5,
+   "end": 7.3,
+   "line": "Ce pays, c'est l'Inde.",
+   "scene": "kitchen wide: CUISINIERE stirring a pot of red curry, chilies drying on the window sill, steam; pill 'INDE' pops on 'l'Inde'",
+   "set": "kitchen",
+   "bars": null,
+   "in": {
+    "type": "whip",
+    "dur": 0.4
+   },
+   "sfx": [
+    {
+     "at": 0.0,
+     "name": "whoosh",
+     "gain": -10
+    },
+    {
+     "at": 1.1,
+     "name": "pop",
+     "gain": -12
+    }
+   ],
+   "notes": "",
+   "amb": {
+    "name": "roomtone",
+    "gain": -24
+   }
+  },
+  {
+   "id": "s004",
+   "start": 7.3,
+   "end": 8.35,
+   "line": "Et le piment ?",
+   "scene": "insert macro: one red chili spinning slowly on dark, red glow, a big '?' fades in",
+   "set": "void",
+   "bars": null,
+   "in": {
+    "type": "cut"
+   },
+   "sfx": [
+    {
+     "at": 0.3,
+     "name": "swish",
+     "gain": -12
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "id": "s005",
+   "start": 8.35,
+   "end": 10.2,
+   "line": "Il vient du Mexique.",
+   "scene": "whip to Mexico: wide field of chili plants with red pods at sunset, mountains; pill 'MEXIQUE' on 'Mexique'",
+   "set": "mexField",
+   "bars": null,
+   "in": {
+    "type": "whip",
+    "dur": 0.4
+   },
+   "sfx": [
+    {
+     "at": 0.0,
+     "name": "whoosh",
+     "gain": -8
+    },
+    {
+     "at": 0.6,
+     "name": "pop",
+     "gain": -12
+    }
+   ],
+   "notes": "",
+   "amb": {
+    "name": "wind",
+    "gain": -24
+   }
+  },
+  {
+   "id": "s006",
+   "start": 10.2,
+   "end": 12.4,
+   "line": "Là-bas, on le cultive depuis environ",
+   "scene": "medium: PAYSAN (green headband) kneels between chili plants, picks red pods into a woven basket, warm rim light",
+   "set": "mexField",
+   "bars": null,
+   "in": {
+    "type": "cut"
+   },
+   "sfx": [
+    {
+     "at": 1.0,
+     "name": "hit",
+     "gain": -18
+    }
+   ],
+   "notes": "",
+   "amb": {
+    "name": "wind",
+    "gain": -24
+   }
+  },
+  {
+   "id": "s007",
+   "start": 12.4,
+   "end": 14.35,
+   "line": "six mille ans.",
+   "scene": "data card: gold '6 000 ANS' counter over a time ribbon, a chili plant growing from seed to fruit beside it",
+   "set": "mexField",
+   "bars": null,
+   "in": {
+    "type": "zoom",
+    "dur": 0.4
+   },
+   "sfx": [
+    {
+     "at": 0.1,
+     "name": "counter",
+     "gain": -14
+    },
+    {
+     "at": 1.6,
+     "name": "impact",
+     "gain": -10
+    }
+   ],
+   "notes": "",
+   "amb": {
+    "name": "wind",
+    "gain": -28
+   }
+  },
+  {
+   "id": "s008",
+   "start": 14.35,
+   "end": 16.1,
+   "line": "En 1493, Christophe Colomb",
+   "scene": "3D: Columbus's caravel on a dusk sea, slow orbit; gold '1493' tag",
+   "set": "sea",
+   "bars": null,
+   "in": {
+    "type": "dip",
+    "dur": 0.4
+   },
+   "sfx": [
+    {
+     "at": 0.3,
+     "name": "whoosh",
+     "gain": -12
+    }
+   ],
+   "notes": "",
+   "amb": {
+    "name": "wind",
+    "gain": -22
+   }
+  },
+  {
+   "id": "s009",
+   "start": 16.1,
+   "end": 17.85,
+   "line": "le goûte aux Caraïbes.",
+   "scene": "beach medium: a Taino host (plain ink) hands COLOMB (purple coat) a red chili; he bites; pill 'CARAÏBES'",
+   "set": "beach",
+   "bars": null,
+   "in": {
+    "type": "cut"
+   },
+   "sfx": [
+    {
+     "at": 0.6,
+     "name": "hit",
+     "gain": -16
+    },
+    {
+     "at": 1.0,
+     "name": "pop",
+     "gain": -12
+    }
+   ],
+   "notes": "",
+   "amb": {
+    "name": "wind",
+    "gain": -26
+   }
+  },
+  {
+   "id": "s010",
+   "start": 17.85,
+   "end": 19.85,
+   "line": "Il croit avoir trouvé le poivre des Indes…",
+   "scene": "giant face COLOMB thinking/smirk, thought bubble showing black peppercorns",
+   "set": "beach",
+   "bars": null,
+   "in": {
+    "type": "cut"
+   },
+   "sfx": [
+    {
+     "at": 0.5,
+     "name": "blip",
+     "gain": -14
+    }
+   ],
+   "notes": "",
+   "amb": {
+    "name": "wind",
+    "gain": -28
+   }
+  },
+  {
+   "id": "s011",
+   "start": 19.85,
+   "end": 22.4,
+   "line": "et il l'appelle « pimiento » :",
+   "scene": "insert: Columbus's hand ties a paper tag 'PIMIENTO' onto the red chili",
+   "set": "beach",
+   "bars": null,
+   "in": {
+    "type": "cut"
+   },
+   "sfx": [
+    {
+     "at": 1.2,
+     "name": "pop",
+     "gain": -12
+    }
+   ],
+   "notes": "",
+   "amb": {
+    "name": "wind",
+    "gain": -28
+   }
+  },
+  {
+   "id": "s012",
+   "start": 22.4,
+   "end": 23.8,
+   "line": "poivre.",
+   "scene": "blueprint split: red chili left, black peppercorn right, '= POIVRE ?' between them",
+   "set": "blueprint",
+   "bars": null,
+   "in": {
+    "type": "zoom",
+    "dur": 0.4
+   },
+   "sfx": [
+    {
+     "at": 0.15,
+     "name": "blip",
+     "gain": -12
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "id": "s013",
+   "start": 23.8,
+   "end": 25.6,
+   "line": "Mauvais pays, mauvais nom.",
+   "scene": "FREEZE FRAME: COLOMB frozen mid-bite on the beach, particles hanging, cool tint; coral crosses 'MAUVAIS PAYS' then 'MAUVAIS NOM'",
+   "set": "beach",
+   "bars": "scope",
+   "in": {
+    "type": "flash",
+    "dur": 0.4
+   },
+   "sfx": [
+    {
+     "at": 0.0,
+     "name": "freeze",
+     "gain": -10
+    },
+    {
+     "at": 0.15,
+     "name": "impact",
+     "gain": -8
+    },
+    {
+     "at": 1.1,
+     "name": "impact",
+     "gain": -8
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "id": "s014",
+   "start": 25.6,
+   "end": 27.3,
+   "line": "Mais le nom va rester.",
+   "scene": "today: TOI in a kitchen reads a spice jar labelled 'PIMENT' full of red chilies, shrugs with a smile",
+   "set": "kitchen",
+   "bars": null,
+   "in": {
+    "type": "dip",
+    "dur": 0.4
+   },
+   "sfx": [
+    {
+     "at": 0.5,
+     "name": "pop",
+     "gain": -12
+    }
+   ],
+   "notes": "",
+   "amb": {
+    "name": "roomtone",
+    "gain": -26
+   }
+  },
+  {
+   "id": "s015",
+   "start": 27.3,
+   "end": 31.2,
+   "line": "Ensuite, ce sont les marins portugais qui l'emportent partout.",
+   "scene": "3D: Portuguese carrack at a golden harbour, MARIN (blue) carries a crate of red chilies up the plank, other sailors in ink",
+   "set": "sea",
+   "bars": null,
+   "in": {
+    "type": "whip",
+    "dur": 0.4
+   },
+   "sfx": [
+    {
+     "at": 0.0,
+     "name": "whoosh",
+     "gain": -8
+    },
+    {
+     "at": 2.6,
+     "name": "footstep",
+     "gain": -16
+    }
+   ],
+   "notes": "",
+   "amb": {
+    "name": "wind",
+    "gain": -22
+   }
+  },
+  {
+   "id": "s016",
+   "start": 31.2,
+   "end": 32.85,
+   "line": "Le long des côtes d'Afrique…",
+   "scene": "blueprint map: dotted route draws from Lisbon down the African coast, a tiny chili rides the head of the route",
+   "set": "blueprint",
+   "bars": null,
+   "in": {
+    "type": "zoom",
+    "dur": 0.4
+   },
+   "sfx": [
+    {
+     "at": 0.1,
+     "name": "whoosh",
+     "gain": -14
+    }
+   ],
+   "notes": "",
+   "amb": {
+    "name": "wind",
+    "gain": -30
+   }
+  },
+  {
+   "id": "s017",
+   "start": 32.85,
+   "end": 36.5,
+   "line": "jusqu'à Goa, en Inde, au début du seizième siècle.",
+   "scene": "Goa harbour at dusk: the ship at the quay, MARIN hands a basket of chilies to CUISINIERE; pill 'GOA' then gold 'XVIe SIÈCLE'",
+   "set": "goaHarbour",
+   "bars": null,
+   "in": {
+    "type": "cut"
+   },
+   "sfx": [
+    {
+     "at": 0.6,
+     "name": "pop",
+     "gain": -12
+    },
+    {
+     "at": 2.4,
+     "name": "pop",
+     "gain": -12
+    }
+   ],
+   "notes": "",
+   "amb": {
+    "name": "murmur",
+    "gain": -26
+   }
+  },
+  {
+   "id": "s018",
+   "start": 36.5,
+   "end": 38.85,
+   "line": "Avant ça, en Inde, ce qui piquait,",
+   "scene": "dip back in time: dim kitchen, CUISINIERE grinds on a stone, no chili anywhere, she fans her mouth",
+   "set": "kitchen",
+   "bars": null,
+   "in": {
+    "type": "dip",
+    "dur": 0.4
+   },
+   "sfx": [
+    {
+     "at": 1.2,
+     "name": "hit",
+     "gain": -18
+    }
+   ],
+   "notes": "",
+   "amb": {
+    "name": "roomtone",
+    "gain": -24
+   }
+  },
+  {
+   "id": "s019",
+   "start": 38.85,
+   "end": 41.1,
+   "line": "c'était le poivre noir.",
+   "scene": "insert macro: black peppercorns pour into a brass bowl; label 'AVANT : POIVRE NOIR'",
+   "set": "kitchen",
+   "bars": null,
+   "in": {
+    "type": "cut"
+   },
+   "sfx": [
+    {
+     "at": 0.3,
+     "name": "pop",
+     "gain": -12
+    }
+   ],
+   "notes": "",
+   "amb": {
+    "name": "roomtone",
+    "gain": -26
+   }
+  },
+  {
+   "id": "s020",
+   "start": 41.1,
+   "end": 43.6,
+   "line": "Le piment s'installe d'abord dans le sud…",
+   "scene": "blueprint India map: pin 'SUD', chili plants sprout around it",
+   "set": "blueprint",
+   "bars": null,
+   "in": {
+    "type": "zoom",
+    "dur": 0.4
+   },
+   "sfx": [
+    {
+     "at": 1.9,
+     "name": "pop",
+     "gain": -12
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "id": "s021",
+   "start": 43.6,
+   "end": 46.9,
+   "line": "et il lui faudra deux siècles pour atteindre le nord.",
+   "scene": "golden wide landscape: a farmer (ink) walks north carrying a chili basket, sun and moon sweep across the sky (time passing); gold '2 SIÈCLES'; arrow to 'NORD'",
+   "set": "mexField",
+   "bars": null,
+   "in": {
+    "type": "cut"
+   },
+   "sfx": [
+    {
+     "at": 1.0,
+     "name": "counter",
+     "gain": -14
+    },
+    {
+     "at": 2.4,
+     "name": "pop",
+     "gain": -12
+    }
+   ],
+   "notes": "",
+   "amb": {
+    "name": "wind",
+    "gain": -24
+   },
+   "params": {
+    "variant": "india"
+   }
+  },
+  {
+   "id": "s022",
+   "start": 46.9,
+   "end": 49.3,
+   "line": "À Goa, on l'appelait même le « poivre de Pernambouc »,",
+   "scene": "Goa market: CUISINIERE behind a chili crate with a hand-painted sign 'POIVRE DE PERNAMBOUC', shoppers in ink",
+   "set": "goaHarbour",
+   "bars": null,
+   "in": {
+    "type": "cut"
+   },
+   "sfx": [
+    {
+     "at": 2.0,
+     "name": "pop",
+     "gain": -12
+    }
+   ],
+   "notes": "",
+   "amb": {
+    "name": "murmur",
+    "gain": -24
+   }
+  },
+  {
+   "id": "s023",
+   "start": 49.3,
+   "end": 52.5,
+   "line": "du nom d'une région du Brésil.",
+   "scene": "whip to the Brazilian coast: palms, sugar-white beach, a Portuguese ship offshore; pill 'PERNAMBOUC · BRÉSIL'",
+   "set": "beach",
+   "bars": null,
+   "in": {
+    "type": "whip",
+    "dur": 0.4
+   },
+   "sfx": [
+    {
+     "at": 0.0,
+     "name": "whoosh",
+     "gain": -8
+    },
+    {
+     "at": 2.1,
+     "name": "pop",
+     "gain": -12
+    }
+   ],
+   "notes": "",
+   "amb": {
+    "name": "wind",
+    "gain": -24
+   },
+   "params": {
+    "variant": "brazil"
+   }
+  },
+  {
+   "id": "s024",
+   "start": 52.5,
+   "end": 55.3,
+   "line": "Aujourd'hui, l'Inde est le premier producteur,",
+   "scene": "3D wide: today's Indian fields, huge red carpets of drying chilies, workers raking; gold '1er PRODUCTEUR'",
+   "set": "chiliFieldsToday",
+   "bars": null,
+   "in": {
+    "type": "dip",
+    "dur": 0.4
+   },
+   "sfx": [
+    {
+     "at": 1.9,
+     "name": "impact",
+     "gain": -10
+    }
+   ],
+   "notes": "",
+   "amb": {
+    "name": "wind",
+    "gain": -24
+   }
+  },
+  {
+   "id": "s025",
+   "start": 55.3,
+   "end": 56.7,
+   "line": "le premier consommateur",
+   "scene": "medium: TOI at a family table in India, plates of red curry, everyone eating; '1er CONSOMMATEUR'",
+   "set": "kitchen",
+   "bars": null,
+   "in": {
+    "type": "cut"
+   },
+   "sfx": [
+    {
+     "at": 0.3,
+     "name": "impact",
+     "gain": -10
+    }
+   ],
+   "notes": "",
+   "amb": {
+    "name": "murmur",
+    "gain": -26
+   }
+  },
+  {
+   "id": "s026",
+   "start": 56.7,
+   "end": 59.6,
+   "line": "et le premier exportateur de piment au monde.",
+   "scene": "harbour today: sacks of chilies swung onto a cargo ship by crane; '1er EXPORTATEUR', then the three '1er' stack",
+   "set": "goaHarbour",
+   "bars": null,
+   "in": {
+    "type": "cut"
+   },
+   "sfx": [
+    {
+     "at": 0.3,
+     "name": "impact",
+     "gain": -10
+    },
+    {
+     "at": 2.0,
+     "name": "whoosh",
+     "gain": -14
+    }
+   ],
+   "notes": "",
+   "amb": {
+    "name": "city",
+    "gain": -26
+   },
+   "params": {
+    "variant": "today"
+   }
+  },
+  {
+   "id": "s027",
+   "start": 59.6,
+   "end": 62.8,
+   "line": "Alors la prochaine fois qu'un plat te brûle la bouche…",
+   "scene": "giant face TOI biting a red chili, eyes watering, steam from the ears, red glow",
+   "set": "kitchen",
+   "bars": null,
+   "in": {
+    "type": "cut"
+   },
+   "sfx": [
+    {
+     "at": 1.9,
+     "name": "hit",
+     "gain": -12
+    }
+   ],
+   "notes": "",
+   "amb": {
+    "name": "roomtone",
+    "gain": -28
+   }
+  },
+  {
+   "id": "s028",
+   "start": 62.8,
+   "end": 64.4,
+   "line": "remercie le Mexique.",
+   "scene": "Mexican field at sunset: TOI raises a chili toward PAYSAN, who waves back; big 'MERCI, MEXIQUE'",
+   "set": "mexField",
+   "bars": null,
+   "in": {
+    "type": "whip",
+    "dur": 0.4
+   },
+   "sfx": [
+    {
+     "at": 0.0,
+     "name": "whoosh",
+     "gain": -8
+    },
+    {
+     "at": 0.8,
+     "name": "impact",
+     "gain": -8
+    }
+   ],
+   "notes": "",
+   "amb": {
+    "name": "wind",
+    "gain": -24
+   }
+  },
+  {
+   "id": "s029",
+   "start": 64.4,
+   "end": 69.0,
+   "line": "",
+   "scene": "END CARD: chili field dims, The World Menu badge, mustard pill 'Abonne-toi pour le prochain plat', teaser for the next dish; whole cast lined up holding chilies",
+   "set": "endCard",
+   "bars": null,
+   "in": {
+    "type": "fade",
+    "dur": 0.4
+   },
+   "sfx": [
+    {
+     "at": 0.3,
+     "name": "pop",
+     "gain": -12
+    }
+   ],
+   "notes": "",
+   "amb": {
+    "name": "wind",
+    "gain": -30
+   },
+   "captions": false
+  }
+ ]
+}
