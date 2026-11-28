@@ -9,7 +9,8 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "tools"))
 from sfx_samples import SR, load, cut, fit, eq, space, put
 
-B = json.load(open(os.path.join(ROOT, "src", "ketchup", "beats.json")))
+SLUG = sys.argv[1] if len(sys.argv) > 1 else "ketchup"
+B = json.load(open(os.path.join(ROOT, sys.argv[2] if len(sys.argv) > 2 else "src/ketchup/beats.json")))
 DUR = B["duration"]; N = int(DUR * SR)
 amb = np.zeros((N, 2)); fx = np.zeros((N, 2))
 
@@ -37,21 +38,27 @@ bed(2427, 0, DUR, 0.3, hp=150, lp=9000)                                  # soft 
 for i, s in enumerate(S):
     name = s.get("clip") or s["split"][1]
     smp, g = AMB.get(name, (2427, 0.3)); bed(smp, s["t"], ends[i], g, hp=200)
-    if i: whoosh(s["t"], "big" if s.get("split") or i in (2, 8) else ("small" if ends[i] - s["t"] < 1.2 else "mid"), 0.8, 0.3 if i % 2 else -0.3)
+    if i: whoosh(s["t"], "big" if s.get("split") else ("small" if ends[i] - s["t"] < 1.6 else "mid"), 0.8, 0.3 if i % 2 else -0.3)
 
-slam(B["headline"]["in"] + 0.05, 0.9)                                     # the headline card
-for y_t, _ in [(y[0], y[1]) for y in B["years"]]: roll(y_t - 0.05); slam(y_t + 0.68, 0.5)
+hc = B.get("headline") or B.get("hookCard"); slam(hc["in"] + 0.05, 0.9)          # the hook card
+for y in B["years"]:
+    y_t = y["t"] if isinstance(y, dict) else y[0]
+    if isinstance(y, dict): slam(y_t, 0.6)
+    else: roll(y_t - 0.05); slam(y_t + 0.68, 0.5)
+if "nameCard" in B: slam(B["nameCard"]["t"], 0.6)
+if "glass" in B: pop(B["glass"]["t"], 0.8)
+if "counter" in B: roll(B["counter"]["t"], B["counter"]["dur"]); slam(B["counter"]["t"] + B["counter"]["dur"], 0.6)
 for g in B["tags"]: pop(g["t"], 0.7)
 for g in B["labels"]: pop(g["t"], 0.85)
 for w in B["bigWord"]: slam(w["t"], 0.8)
 put(fx, eq(load(2369), hp=900), B["strike"]["t"] + 0.35, 0.5)             # the red strike through POISSON
-put(fx, space(eq(cut(load(2155), 0.6), lp=2500), 0.2), S[10]["t"] + 0.05, 0.5)   # the split opening
-pop(B["ask"]["t"], 0.7)
+split_t = next(s["t"] for s in S if s.get("split")); put(fx, space(eq(cut(load(2155), 0.6), lp=2500), 0.2), split_t + 0.05, 0.5)   # the split opening
+if "ask" in B: pop(B["ask"]["t"], 0.7)
 pop(B["endCard"] + 0.05, 0.6); pop(B["endCard"] + 0.95, 0.75)
 
 f = int(1.2 * SR)
 for b in (amb, fx): b[-f:] *= np.linspace(1, 0, f)[:, None]
-out = os.path.join(ROOT, "public", "ketchup"); os.makedirs(out, exist_ok=True)
+out = os.path.join(ROOT, "public", SLUG); os.makedirs(out, exist_ok=True)
 sf.write(os.path.join(out, "amb.wav"), amb.astype(np.float32), SR, subtype="FLOAT")
 sf.write(os.path.join(out, "sfx.wav"), fx.astype(np.float32), SR, subtype="FLOAT")
-print("wrote public/ketchup amb.wav + sfx.wav", DUR, "s")
+print(f"wrote public/{SLUG} amb.wav + sfx.wav", DUR, "s")

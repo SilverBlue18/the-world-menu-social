@@ -1,0 +1,5 @@
+{"voice": "6F5Zhi321D3Oq7v1oNT4", "lang": "en", "pick": "expressive",
+ "settings": {"stability": 0.45, "similarity_boost": 0.75, "style": 0.2, "use_speaker_boost": true, "speed": 1.05},
+ "seeds": [11, 47],
+ "gaps": {"0": 0.45, "1": 0.35, "2": 0.35, "3": 0.35, "4": 0.35},
+ "spell": {"1": "Your ketchup started life as a Chinese fish sauce. In southern China, they called it keh-tsiap."}}

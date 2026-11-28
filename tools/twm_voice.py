@@ -8,7 +8,7 @@
 import sys, os, json, glob, re, subprocess, difflib, unicodedata, urllib.request
 import numpy as np
 
-VOICE = "iKX6IXB415Hh5bn2eNhP"  # David Tyserre (native French narrator)
+VOICE = "iKX6IXB415Hh5bn2eNhP"  # default: David Tyserre (French). voice_cfg.json can set "voice", "settings", "lang", "pick".
 SETTINGS = {"stability": 0.55, "similarity_boost": 0.75, "style": 0.15, "use_speaker_boost": True, "speed": 1.1}
 SR = 48000
 
@@ -17,6 +17,7 @@ ROOT = f"projects/{slug}"; TAKES = f"{ROOT}/takes"; PUB = f"public/{slug}"
 os.makedirs(TAKES, exist_ok=True); os.makedirs(PUB, exist_ok=True)
 LINES = [l.strip() for l in open(f"{ROOT}/narration.txt", encoding="utf-8") if l.strip()]
 CFG = json.load(open(f"{ROOT}/voice_cfg.json")) if os.path.exists(f"{ROOT}/voice_cfg.json") else {}
+VOICE = CFG.get("voice", VOICE); SETTINGS = CFG.get("settings", SETTINGS); LANG = CFG.get("lang", "fr")
 
 def key():
     k = os.environ.get("ELEVENLABS_API_KEY")
@@ -25,7 +26,7 @@ def key():
     return k
 
 def tts(text, prev, nxt, seed, out):
-    body = {"text": text, "model_id": "eleven_multilingual_v2", "language_code": "fr", "previous_text": prev, "next_text": nxt,
+    body = {"text": text, "model_id": "eleven_multilingual_v2", "language_code": LANG, "previous_text": prev, "next_text": nxt,
             "seed": seed, "voice_settings": SETTINGS}
     req = urllib.request.Request(f"https://api.elevenlabs.io/v1/text-to-speech/{VOICE}?output_format=mp3_44100_128",
                                  data=json.dumps(body).encode(), headers={"xi-api-key": key(), "Content-Type": "application/json"})
@@ -63,12 +64,18 @@ elif cmd == "score":
     res = {}
     for f in sorted(glob.glob(f"{TAKES}/L*_s*.mp3")):
         li = int(re.search(r"L(\d+)_", f).group(1)); a = load(f, 16000)
-        hyp = " ".join(s.text for s in M.transcribe(a, language="fr", beam_size=5)[0]).strip()
+        hyp = " ".join(s.text for s in M.transcribe(a, language=LANG, beam_size=5)[0]).strip()
         sim = difflib.SequenceMatcher(None, norm(hyp), norm(LINES[li])).ratio()
-        res[os.path.basename(f)] = dict(line=li, score=round(sim, 3), dur=round(len(a) / 16000, 2), heard=hyp)
+        # expressiveness (shorts-autopilot rule: keep the most expressive passing take): spread of the loudness envelope in dB
+        fr = a[: len(a) // 800 * 800].reshape(-1, 800); db = 20 * np.log10(np.sqrt((fr ** 2).mean(1)) + 1e-6); db = db[db > db.max() - 35]
+        res[os.path.basename(f)] = dict(line=li, score=round(sim, 3), dur=round(len(a) / 16000, 2), expr=round(float(db.std()), 2), heard=hyp)
         print(f"{os.path.basename(f):<14} {sim:.3f} {len(a)/16000:5.2f}s | {hyp}", flush=True)
     best = {}
-    for k, v in res.items():
+    if CFG.get("pick") == "expressive":            # among takes within 0.03 of the line's best accuracy, the most expressive wins
+        for li in range(len(LINES)):
+            cand = {k: v for k, v in res.items() if v["line"] == li}; top = max(v["score"] for v in cand.values())
+            best[li] = max((k for k, v in cand.items() if v["score"] >= top - 0.03), key=lambda k: cand[k]["expr"])
+    for k, v in (res.items() if CFG.get("pick") != "expressive" else []):
         li = v["line"]
         # best score; on a tie (within 0.01) prefer the shorter take
         if li not in best or v["score"] > res[best[li]]["score"] + 0.01 or (abs(v["score"] - res[best[li]]["score"]) <= 0.01 and v["dur"] < res[best[li]]["dur"]):

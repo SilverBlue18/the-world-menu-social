@@ -6,11 +6,12 @@ from faster_whisper import WhisperModel
 
 slug = sys.argv[1]; R = f"projects/{slug}"
 lines = [l.strip() for l in open(f"{R}/narration.txt", encoding="utf-8") if l.strip()]
-en = [l.strip() for l in open(f"{R}/english.txt", encoding="utf-8") if l.strip()]
+en = [l.strip() for l in open(f"{R}/english.txt", encoding="utf-8") if l.strip()] if os.path.exists(f"{R}/english.txt") else []
+en += [""] * (len(lines) - len(en))
 starts = json.load(open(f"{R}/voice_lines.json"))["line_starts"]
 norm = lambda w: re.sub(r"[^a-z0-9]", "", unicodedata.normalize("NFKD", w.lower()).encode("ascii", "ignore").decode())
 M = WhisperModel(os.environ.get("TWM_WHISPER", "small"), device="cpu", compute_type="int8", cpu_threads=4)
-segs, _ = M.transcribe(f"public/{slug}/voice.wav", language="fr", word_timestamps=True, vad_filter=False)
+segs, _ = M.transcribe(f"public/{slug}/voice.wav", language=os.environ.get("TWM_LANG", "fr"), word_timestamps=True, vad_filter=False)
 hw = [(w.word.strip(), w.start, w.end) for s in segs for w in s.words]
 sw = [(li, w) for li, l in enumerate(lines) for w in l.split()]
 a, b = [norm(w) for _, w in sw], [norm(w[0]) for w in hw]

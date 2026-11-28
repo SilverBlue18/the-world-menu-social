@@ -9,6 +9,7 @@ import { PimentFlow, PIMENT_S } from "./piment/Piment";
 import { PimentStick, STICK_S } from "./pimentStick/PimentStick";
 import { KetchupHook, KetchupCountdown, KetchupSplit, KetchupV2Hook, KetchupV2Body } from "./ketchup/KetchupFrames";
 import { KetchupShort, KETCHUP_S } from "./ketchup/KetchupShort";
+import { KetchupEN, KETCHUP_EN_S } from "./ketchup/KetchupEN";
 import { BrandV2Board, LogoOptions, ClocheAvatars, ProfilePic, LogoLight, LogoDark, ClochePremium, ClocheRefine } from "./brand/BrandV2";
 import * as Concepts from "./concepts/Concepts";
 import { PimentTest3D } from "./three3d/PimentTest3D";
@@ -33,6 +34,7 @@ export const MyComposition = () => (
     <Still id="ClocheAvatars" component={ClocheAvatars} width={1800} height={900} />
     <Still id="LogoOptions" component={LogoOptions} width={1800} height={1000} />
     <Still id="BrandV2Board" component={BrandV2Board} width={1800} height={860} />
+    <Composition id="KetchupEN" component={KetchupEN} durationInFrames={Math.round(KETCHUP_EN_S * 30)} fps={30} width={1080} height={1920} />
     <Composition id="KetchupShort" component={KetchupShort} durationInFrames={Math.round(KETCHUP_S * 30)} fps={30} width={1080} height={1920} />
     <Still id="KetchupV2Hook" component={KetchupV2Hook} width={1080} height={1920} />
     <Still id="KetchupV2Body" component={KetchupV2Body} width={1080} height={1920} />
