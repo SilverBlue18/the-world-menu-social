@@ -13,13 +13,13 @@ const END = 64.9;        // end card over the cast line-up (s029)
 // Social safe zone (TikTok / Reels / Shorts): keep text between y 260 and 1420 and away from the right-side buttons.
 const SAFE_CAP_TOP = 1085;
 
-export const PimentStick: React.FC<{ video?: string }> = ({ video = "piment_stick/stick.mp4" }) => {
+export const PimentStick: React.FC<{ video?: string; audio?: string }> = ({ video = "piment_stick/stick.mp4", audio = "piment_stick/mix.wav" }) => {
   const frame = useCurrentFrame();
   const t = frame / 30;
   return (
     <AbsoluteFill style={{ background: "#0A2E33" }}>
       <OffthreadVideo src={staticFile(video)} muted style={{ width: 1080, height: 1920 }} />
-      <Audio src={staticFile("piment_stick/mix.wav")} />
+      <Audio src={staticFile(audio)} />
       {/* soft shade behind the bottom captions */}
       <div style={{ position: "absolute", left: 0, right: 0, top: 960, height: 960, opacity: t > TITLE_OUT && t < END ? 1 : 0,
         background: "linear-gradient(180deg, rgba(6,20,22,0) 0%, rgba(6,20,22,.6) 22%, rgba(6,20,22,.6) 50%, rgba(6,20,22,.3) 100%)" }} />

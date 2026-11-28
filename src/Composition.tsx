@@ -21,6 +21,8 @@ export const MyComposition = () => (
       <Composition key={look + scene} id={`Test3D-${scene}-${look}`} component={PimentTest3D} defaultProps={{ look, scene }} durationInFrames={scene === "field" ? 240 : 120} fps={30} width={1080} height={1920} />
     )))}
     <Composition id="PimentStick" component={PimentStick} durationInFrames={Math.round(STICK_S * 30)} fps={30} width={1080} height={1920} />
+    {/* style v3 test: first 10.2 s, one continuous camera (growkaz-stickman-studio/projects/piment_v3) */}
+    <Composition id="PimentV3Test" component={PimentStick} durationInFrames={306} fps={30} width={1080} height={1920} defaultProps={{ video: "piment_v3/stick.mp4", audio: "piment_v3/mix.wav" }} />
     <Composition id="PimentFlow" component={PimentFlow} durationInFrames={Math.round(PIMENT_S * 30)} fps={30} width={1080} height={1920} />
     <Composition id="SaleeFlow" component={SaleeFlow} durationInFrames={SALEE_S * 30} fps={30} width={1080} height={1920} />
     <Composition id="ImamFlow" component={ImamFlow} durationInFrames={FLOW_S * 30} fps={30} width={1080} height={1920} />

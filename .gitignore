@@ -32,3 +32,6 @@ public/piment_stick/stick*.mp4
 # shorts-autopilot (friend's PRIVATE repo Yasingumus/shorts-autopilot-skill): never publish in this public repo
 .claude/skills/shorts-autopilot/
 vendor/shorts-autopilot-skill/
+public/piment_v3/stick*.mp4
+public/piment_v3/*.wav
+!public/piment_v3/mix.wav
