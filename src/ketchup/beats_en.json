@@ -1,49 +1,266 @@
 {
-  "_note": "ONE event list for the ENGLISH ketchup pilot (story B, 'Your ketchup started life as a Chinese fish sauce'): video (KetchupEN.tsx) and sound (tools/sound_ketchup.py ketchup_en src/ketchup/beats_en.json) read it. Times = seconds on public/ketchup_en/voice.wav.",
-  "duration": 50.6,
-  "voiceEnd": 46.4,
-  "scenes": [
-    { "t": 0.0,   "clip": "hook",      "from": 14.0, "zoom": [1.12, 1.0] },
-    { "t": 3.5,   "clip": "fishsauce", "from": 6.0,  "zoom": [1.0, 1.1] },
-    { "t": 7.0,   "clip": "boat",      "from": 1.5,  "zoom": [1.05, 1.14] },
-    { "t": 10.6,  "clip": "ship",      "from": 7.0,  "zoom": [1.0, 1.1] },
-    { "t": 13.8,  "clip": "ship",      "from": 15.0, "zoom": [1.15, 1.05] },
-    { "t": 16.6,  "clip": "fishsauce", "from": 12.0, "zoom": [1.1, 1.0], "look": "gray" },
-    { "t": 20.0,  "clip": "mushrooms", "from": 6.0,  "zoom": [1.15, 1.05] },
-    { "t": 21.4,  "clip": "walnuts",   "from": 2.0,  "zoom": [1.1, 1.0] },
-    { "t": 22.9,  "clip": "oysters",   "from": 3.0,  "zoom": [1.12, 1.02] },
-    { "t": 26.9,  "clip": "tomatoes",  "from": 2.0,  "zoom": [1.0, 1.12] },
-    { "t": 30.4,  "clip": "tomatoes",  "from": 7.0,  "zoom": [1.15, 1.05] },
-    { "t": 33.7,  "clip": "bottle",    "from": 2.0,  "zoom": [1.0, 1.08] },
-    { "t": 38.2,  "split": ["fishsauce", "bottle"], "from": [9.0, 8.0] },
-    { "t": 42.4,  "clip": "dip",       "from": 1.0,  "zoom": [1.0, 1.1] }
+ "_note": "ONE event list for the ENGLISH ketchup pilot (story B, 'Your ketchup started life as a Chinese fish sauce'): video (KetchupEN.tsx) and sound (tools/sound_ketchup.py ketchup_en src/ketchup/beats_en.json) read it. Times = seconds on public/ketchup_en/voice.wav.",
+ "duration": 47.3,
+ "voiceEnd": 43.1,
+ "scenes": [
+  {
+   "t": 0.0,
+   "clip": "hook",
+   "from": 14.0,
+   "zoom": [
+    1.12,
+    1.0
+   ]
+  },
+  {
+   "t": 3.357,
+   "clip": "fishsauce",
+   "from": 6.0,
+   "zoom": [
+    1.0,
+    1.1
+   ]
+  },
+  {
+   "t": 7.04,
+   "clip": "boat",
+   "from": 1.5,
+   "zoom": [
+    1.05,
+    1.14
+   ]
+  },
+  {
+   "t": 10.002,
+   "clip": "ship",
+   "from": 7.0,
+   "zoom": [
+    1.0,
+    1.1
+   ]
+  },
+  {
+   "t": 13.357,
+   "clip": "ship",
+   "from": 15.0,
+   "zoom": [
+    1.15,
+    1.05
+   ]
+  },
+  {
+   "t": 16.094,
+   "clip": "fishsauce",
+   "from": 12.0,
+   "zoom": [
+    1.1,
+    1.0
+   ],
+   "look": "gray"
+  },
+  {
+   "t": 19.685,
+   "clip": "mushrooms",
+   "from": 6.0,
+   "zoom": [
+    1.15,
+    1.05
+   ]
+  },
+  {
+   "t": 21.061,
+   "clip": "walnuts",
+   "from": 2.0,
+   "zoom": [
+    1.1,
+    1.0
+   ]
+  },
+  {
+   "t": 22.443,
+   "clip": "oysters",
+   "from": 3.0,
+   "zoom": [
+    1.12,
+    1.02
+   ]
+  },
+  {
+   "t": 25.54,
+   "clip": "tomatoes",
+   "from": 2.0,
+   "zoom": [
+    1.0,
+    1.12
+   ]
+  },
+  {
+   "t": 28.918,
+   "clip": "tomatoes",
+   "from": 7.0,
+   "zoom": [
+    1.15,
+    1.05
+   ]
+  },
+  {
+   "t": 32.303,
+   "clip": "bottle",
+   "from": 2.0,
+   "zoom": [
+    1.0,
+    1.08
+   ]
+  },
+  {
+   "t": 35.43,
+   "split": [
+    "fishsauce",
+    "bottle"
+   ],
+   "from": [
+    9.0,
+    8.0
+   ]
+  },
+  {
+   "t": 39.424,
+   "clip": "dip",
+   "from": 1.0,
+   "zoom": [
+    1.0,
+    1.1
+   ]
+  }
+ ],
+ "hookCard": {
+  "in": 0.0,
+  "out": 3.32,
+  "text": [
+   "KETCHUP WAS",
+   "FISH SAUCE"
+  ]
+ },
+ "captionsFrom": 3.357,
+ "timeline": {
+  "in": 4.463,
+  "out": 35.41,
+  "stops": [
+   [
+    "CHINA",
+    4.68
+   ],
+   [
+    "1700",
+    10.58
+   ],
+   [
+    "1812",
+    26.3
+   ],
+   [
+    "1876",
+    33.56
+   ]
+  ]
+ },
+ "years": [
+  {
+   "t": 10.58,
+   "out": 15.998,
+   "year": "1700"
+  },
+  {
+   "t": 26.3,
+   "out": 30.095,
+   "year": "1812"
+  }
+ ],
+ "tags": [
+  {
+   "t": 4.68,
+   "out": 6.99,
+   "text": "SOUTHERN CHINA"
+  },
+  {
+   "t": 13.66,
+   "out": 15.998,
+   "text": "ASIA → ENGLAND"
+  },
+  {
+   "t": 27.48,
+   "out": 30.095,
+   "text": "PHILADELPHIA"
+  }
+ ],
+ "bigWord": [
+  {
+   "t": 8.72,
+   "out": 9.97,
+   "text": "kê-tsiap"
+  },
+  {
+   "t": 40.62,
+   "out": 43.1,
+   "text": "kê-tsiap → ketchup"
+  }
+ ],
+ "strike": {
+  "t": 17.4,
+  "out": 18.62,
+  "text": "FISH"
+ },
+ "labels": [
+  {
+   "t": 18.72,
+   "out": 19.638,
+   "text": "FAKED",
+   "red": true
+  },
+  {
+   "t": 19.78,
+   "out": 21.012,
+   "text": "MUSHROOM"
+  },
+  {
+   "t": 21.1,
+   "out": 22.395,
+   "text": "WALNUT"
+  },
+  {
+   "t": 22.94,
+   "out": 24.29,
+   "text": "OYSTER"
+  },
+  {
+   "t": 31.06,
+   "out": 32.256,
+   "text": "LOVE APPLES",
+   "red": true
+  }
+ ],
+ "nameCard": {
+  "t": 33.56,
+  "out": 35.39,
+  "name": "Henry J. Heinz",
+  "sub": "PITTSBURGH · 1876"
+ },
+ "counter": {
+  "t": 24.36,
+  "dur": 0.6,
+  "to": 100,
+  "out": 25.513,
+  "suffix": "OYSTERS"
+ },
+ "splitLabels": [
+  [
+   "1700",
+   "FISH"
   ],
-  "hookCard": { "in": 0.08, "out": 3.45, "text": ["KETCHUP WAS", "FISH SAUCE"] },
-  "captionsFrom": 3.5,
-  "timeline": { "in": 4.3, "out": 38.15, "stops": [["CHINA", 4.56], ["1700", 10.96], ["1812", 27.32], ["1876", 34.9]] },
-  "years": [
-    { "t": 10.96, "out": 16.5,  "year": "1700" },
-    { "t": 27.32, "out": 31.6,  "year": "1812" }
-  ],
-  "tags": [
-    { "t": 4.56,  "out": 6.95,  "text": "SOUTHERN CHINA" },
-    { "t": 14.06, "out": 16.5,  "text": "ASIA → ENGLAND" },
-    { "t": 28.58, "out": 31.6,  "text": "PHILADELPHIA" }
-  ],
-  "bigWord": [
-    { "t": 8.6,   "out": 10.55, "text": "kê-tsiap" },
-    { "t": 43.66, "out": 46.4,  "text": "kê-tsiap → ketchup" }
-  ],
-  "strike": { "t": 17.78, "out": 18.9, "text": "FISH" },
-  "labels": [
-    { "t": 19.0,  "out": 19.95, "text": "FAKED", "red": true },
-    { "t": 20.1,  "out": 21.35, "text": "MUSHROOM" },
-    { "t": 21.44, "out": 22.85, "text": "WALNUT" },
-    { "t": 23.3,  "out": 24.85, "text": "OYSTER" },
-    { "t": 32.38, "out": 33.65, "text": "LOVE APPLES", "red": true }
-  ],
-  "nameCard": { "t": 34.9, "out": 38.1, "name": "Henry J. Heinz", "sub": "PITTSBURGH · 1876" },
-  "counter": { "t": 24.92, "dur": 0.6, "to": 100, "out": 26.85, "suffix": "OYSTERS" },
-  "splitLabels": [["1700", "FISH"], ["TODAY", "TOMATO"]],
-  "endCard": 46.5
+  [
+   "TODAY",
+   "TOMATO"
+  ]
+ ],
+ "endCard": 43.2
 }

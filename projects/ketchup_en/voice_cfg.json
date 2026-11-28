@@ -11,6 +11,7 @@
  },
  "seeds": [
   11,
+  29,
   47
  ],
  "gaps": {
@@ -21,5 +22,16 @@
  },
  "spell": {
   "1": "In southern China, people fermented fish into a salty sauce called keh-tsiap. Around 1700, English merchants tasted it in Asia, and wanted it back home."
+ },
+ "say": {
+  "k\u00ea-tsiap": "kaychiap"
+ },
+ "pick_single": "full_a0bcd259_s29.mp3",
+ "heard_ok": {
+  "k\u00ea-tsiap": [
+   "kai chiap",
+   "kaichiap",
+   "kay chiap"
+  ]
  }
 }

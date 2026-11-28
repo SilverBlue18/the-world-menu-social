@@ -11,7 +11,7 @@
   icon only (no text). Lockups: "THE WORLD" Inter 600 letter-spaced + "Menu" Playfair Display 900 in tomato.
   Files: `brand/twm_v2/ProfilePic.png` (1080²), `LogoLight.png`, `LogoDark.png` (re-render: `PNG=1 node scripts/still.mjs brand/twm_v2 ProfilePic LogoLight LogoDark`).
 - **Type:** Playfair Display 900 (titles, "Menu", name cards) · Inter 600/800 (captions, tags, labels).
-- **Voice:** Hank (ElevenLabs `6F5Zhi321D3Oq7v1oNT4`, deep and engaging, American), chosen by ear 2026-11-28 from 10 auditions. Settings: stability .45, similarity .75, style .2, speed 1.05; recorded in chunks of 2-3 sentences, most expressive take kept (`projects/<slug>/voice_cfg.json` → `tools/twm_voice.py`). Sound: still NO MUSIC.
+- **Voice:** Hank (ElevenLabs `6F5Zhi321D3Oq7v1oNT4`, deep and engaging, American), chosen by ear 2026-11-28 from 10 auditions. Settings: stability .45, similarity .75, style .2, speed 1.05; recorded as ONE continuous take of the whole script (3 seeds, best kept: `tools/twm_voice_single.py`), foreign words re-spelled for TTS via `say` in voice_cfg.json, then ALWAYS checked with `tools/voice_qa.py <slug>` (must show 0 flags) before building the video; after a re-record, `tools/retime_beats.py` moves the graphics to the new word times. Sound: still NO MUSIC.
 - Everything below this section is history (French channel, Sahel palette, stickman look) and is superseded.
 
 ---

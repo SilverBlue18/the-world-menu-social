@@ -1,0 +1,20 @@
+{
+ "scores": {
+  "full_a0bcd259_s11.mp3": {
+   "acc": 0.979,
+   "expr": 7.35,
+   "dur": 44.03
+  },
+  "full_a0bcd259_s29.mp3": {
+   "acc": 0.984,
+   "expr": 7.42,
+   "dur": 43.05
+  },
+  "full_a0bcd259_s47.mp3": {
+   "acc": 0.968,
+   "expr": 7.6,
+   "dur": 43.93
+  }
+ },
+ "best": "full_a0bcd259_s47.mp3"
+}

@@ -45,3 +45,4 @@ projects/*/auditions/
 projects/*/auditions_en/
 public/ketchup_en/*.wav
 !public/ketchup_en/mix.wav
+projects/*/delivery/
