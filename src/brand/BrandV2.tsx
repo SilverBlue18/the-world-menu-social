@@ -311,9 +311,10 @@ export const YTBanner: React.FC = () => (
       <div>
         <Wordmark scale={1.75} />
         <div style={{ fontFamily: "Inter", fontWeight: 600, fontSize: 44, color: CH, marginTop: 18 }}>True stories behind the food you eat</div>
-        <div style={{ display: "flex", gap: 16, marginTop: 20 }}>
-          <span style={{ background: O, color: CR, fontFamily: "Inter", fontWeight: 800, fontSize: 30, padding: "8px 22px", borderRadius: 30, letterSpacing: 2 }}>FOOD HISTORY</span>
-          <span style={{ background: T, color: CR, fontFamily: "Inter", fontWeight: 800, fontSize: 30, padding: "8px 22px", borderRadius: 30, letterSpacing: 2 }}>EN · SOUS-TITRES FR</span>
+        <div style={{ display: "flex", alignItems: "center", gap: 22, marginTop: 24 }}>
+          <span style={{ background: T, color: CR, fontFamily: "Inter", fontWeight: 800, fontSize: 40, padding: "14px 34px", borderRadius: 50, display: "flex", alignItems: "center", gap: 14 }}>
+            <svg width="30" height="30" viewBox="0 0 30 30"><path d="M8 5 L25 15 L8 25 Z" fill={CR} /></svg>Subscribe for the next dish</span>
+          <span style={{ fontFamily: "Inter", fontWeight: 600, fontSize: 30, color: O }}>English · sous-titres FR</span>
         </div>
       </div>
     </div>
