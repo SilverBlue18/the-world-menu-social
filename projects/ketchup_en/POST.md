@@ -32,3 +32,8 @@ Sources: National Geographic, HISTORY, Scientific American.
 - YouTube Short: post id 445457555
 - TikTok: post id 445457588
 - Instagram Reel: post id 445457619
+
+## PUBLISHED 2026-11-28 13:53 GMT (moved forward from 14:00 at the user's request)
+- YouTube Short: https://www.youtube.com/shorts/jxSoSy7TdUI
+- TikTok: https://www.tiktok.com/@thworldmenu/video/7713220145501506838
+- Instagram Reel: https://www.instagram.com/reel/DgSaD_1htHx/
