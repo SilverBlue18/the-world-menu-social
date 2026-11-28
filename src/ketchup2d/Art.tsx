@@ -4,6 +4,7 @@
 import React from "react";
 import { K, Grain, JarHero } from "./Hero";
 import { ArtMapChina, ArtMapRoute, ArtMapPhilly } from "./MapArt";
+import { ART2 } from "./Art2";
 
 const F: React.FC<{ bg: string; id: string; children: React.ReactNode; halo?: string }> = ({ bg, id, children, halo }) => (
   <svg width="1080" height="1920" viewBox="0 0 1080 1920" style={{ position: "absolute", inset: 0 }}>
@@ -240,6 +241,7 @@ export const ART: Record<string, React.FC<{ t: number }>> = {
   mushrooms: ArtMushrooms, walnuts: ArtWalnuts, oysters: ArtOysters, tomatoes: ArtTomatoes, loveApple: ArtLoveApple,
   bottle: ArtBottle, dip: ArtDip, splitLeft: ArtSplitLeft, splitRight: ArtSplitRight,
   mapChina: ArtMapChina, mapRoute: ArtMapRoute, mapPhilly: ArtMapPhilly,
+  ...ART2,   // round 3: same scenes with entrances, motion and more detail
 };
 
 // QC board: every illustration at t = 1 s, 0.3 scale
