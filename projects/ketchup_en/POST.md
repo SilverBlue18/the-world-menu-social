@@ -27,3 +27,8 @@ Sources: National Geographic, HISTORY, Scientific American.
 
 ## Facebook Reel
 **Text:** Your ketchup started life as a Chinese fish sauce 🐟➡️🍅 From kê-tsiap in southern China to tomatoes in 1812. Did you know? (Sous-titres FR) · Sources: National Geographic, HISTORY, Scientific American.
+
+## Scheduled 2026-11-28 13:49 GMT via Metricool, publishes 14:00 GMT (no Facebook: user choice)
+- YouTube Short: post id 445457555
+- TikTok: post id 445457588
+- Instagram Reel: post id 445457619
