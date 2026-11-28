@@ -301,3 +301,21 @@ export const ClocheB: React.FC<{ size: number; base?: string; plate?: string }> 
     <rect x="20" y="138" width="160" height="13" rx="6.5" fill={base} /><rect x="48" y="158" width="104" height="8" rx="4" fill={plate} />
   </svg>
 );
+
+// ---------- social kit: YouTube banner 2560x1440 (everything important inside the 1546x423 centre safe area) ----------
+export const YTBanner: React.FC = () => (
+  <AbsoluteFill style={{ background: CR, alignItems: "center", justifyContent: "center" }}>
+    <div style={{ position: "absolute", inset: 0, background: `repeating-linear-gradient(90deg, transparent 0 120px, ${O}0d 120px 122px)` }} />
+    <div style={{ width: 1546, height: 423, display: "flex", alignItems: "center", justifyContent: "center", gap: 56 }}>
+      <div style={{ width: 300, height: 300, borderRadius: "50%", background: T, display: "flex", alignItems: "center", justifyContent: "center" }}><ClocheB size={250} /></div>
+      <div>
+        <Wordmark scale={1.75} />
+        <div style={{ fontFamily: "Inter", fontWeight: 600, fontSize: 44, color: CH, marginTop: 18 }}>True stories behind the food you eat</div>
+        <div style={{ display: "flex", gap: 16, marginTop: 20 }}>
+          <span style={{ background: O, color: CR, fontFamily: "Inter", fontWeight: 800, fontSize: 30, padding: "8px 22px", borderRadius: 30, letterSpacing: 2 }}>FOOD HISTORY</span>
+          <span style={{ background: T, color: CR, fontFamily: "Inter", fontWeight: 800, fontSize: 30, padding: "8px 22px", borderRadius: 30, letterSpacing: 2 }}>EN · SOUS-TITRES FR</span>
+        </div>
+      </div>
+    </div>
+  </AbsoluteFill>
+);
