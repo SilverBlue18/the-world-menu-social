@@ -306,16 +306,13 @@ export const ClocheB: React.FC<{ size: number; base?: string; plate?: string }> 
 export const YTBanner: React.FC = () => (
   <AbsoluteFill style={{ background: CR, alignItems: "center", justifyContent: "center" }}>
     <div style={{ position: "absolute", inset: 0, background: `repeating-linear-gradient(90deg, transparent 0 120px, ${O}0d 120px 122px)` }} />
-    <div style={{ width: 1546, height: 423, display: "flex", alignItems: "center", justifyContent: "center", gap: 56 }}>
-      <div style={{ width: 300, height: 300, borderRadius: "50%", background: T, display: "flex", alignItems: "center", justifyContent: "center" }}><ClocheB size={250} /></div>
-      <div>
-        <Wordmark scale={1.75} />
-        <div style={{ fontFamily: "Inter", fontWeight: 600, fontSize: 44, color: CH, marginTop: 18 }}>True stories behind the food you eat</div>
-        <div style={{ display: "flex", alignItems: "center", gap: 22, marginTop: 24 }}>
-          <span style={{ background: T, color: CR, fontFamily: "Inter", fontWeight: 800, fontSize: 40, padding: "14px 34px", borderRadius: 50, display: "flex", alignItems: "center", gap: 14 }}>
-            <svg width="30" height="30" viewBox="0 0 30 30"><path d="M8 5 L25 15 L8 25 Z" fill={CR} /></svg>Subscribe for the next dish</span>
-          <span style={{ fontFamily: "Inter", fontWeight: 600, fontSize: 30, color: O }}>English · sous-titres FR</span>
-        </div>
+    <div style={{ width: 1546, height: 423, display: "flex", alignItems: "center", justifyContent: "center", gap: 60 }}>
+      <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 14 }}>
+        <div style={{ width: 250, height: 250, borderRadius: "50%", background: T, display: "flex", alignItems: "center", justifyContent: "center" }}><ClocheB size={210} /></div>
+        <Wordmark scale={0.7} stacked />
+      </div>
+      <div style={{ background: T, color: CR, fontFamily: "Inter", fontWeight: 800, fontSize: 150, letterSpacing: 6, padding: "30px 80px", borderRadius: 120, display: "flex", alignItems: "center", gap: 36, boxShadow: "0 14px 0 #9e1528" }}>
+        <svg width="110" height="110" viewBox="0 0 30 30"><path d="M8 4 L26 15 L8 26 Z" fill={CR} /></svg>SUBSCRIBE
       </div>
     </div>
   </AbsoluteFill>
