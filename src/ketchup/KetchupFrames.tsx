@@ -78,3 +78,36 @@ export const KetchupSplit: React.FC = () => (
     <Watermark />
   </AbsoluteFill>
 );
+
+// ---------- v2 layout (shorts-autopilot rules): captions = 3-6 word groups at the TOP (y≈260), active word lit,
+// small EN line + fact tag; graphics live on the footage in the middle; bottom 480 px and right 150 px stay clear. ----------
+const TopCap: React.FC<{ words: string[]; active: number; en: string; tag?: string }> = ({ words, active, en, tag }) => (
+  <div style={{ position: "absolute", left: 80, right: 150, top: 260, textAlign: "center" }}>
+    <div style={{ fontFamily: "Inter", fontWeight: 800, fontSize: 64, lineHeight: 1.12, color: "#fff", letterSpacing: -0.5, textShadow: "0 3px 6px rgba(0,0,0,.9), 0 0 24px rgba(0,0,0,.6)" }}>
+      {words.map((w, i) => <span key={i} style={{ color: i === active ? C.mustard : "#fff", display: "inline-block", transform: i === active ? "scale(1.08)" : undefined }}>{w}{i < words.length - 1 ? " " : ""} </span>)}
+    </div>
+    <div style={{ fontFamily: "Inter", fontWeight: 600, fontSize: 32, color: "#f2e6cc", marginTop: 12, textShadow: "0 2px 6px rgba(0,0,0,.9)" }}>{en}</div>
+    {tag && <div style={{ fontFamily: "Oswald", fontWeight: 500, fontSize: 28, letterSpacing: 7, color: C.mustard, marginTop: 18, textShadow: "0 2px 6px rgba(0,0,0,.9)" }}>{tag}</div>}
+  </div>
+);
+const topShade = { position: "absolute" as const, inset: 0, background: "linear-gradient(180deg, rgba(0,0,0,.72) 0%, rgba(0,0,0,.35) 26%, rgba(0,0,0,0) 42%)" };
+export const KetchupV2Hook: React.FC = () => (
+  <AbsoluteFill style={{ background: "#000" }}>
+    <Img src={staticFile("ketchup/frames/hook.jpg")} style={{ width: 1080, height: 1920, objectFit: "cover", transform: "scale(1.08)" }} />
+    <div style={topShade} />
+    <div style={{ position: "absolute", left: 0, right: 0, top: 300, display: "flex", justifyContent: "center" }}>
+      <div style={{ background: "#fff", borderRadius: 20, padding: "22px 44px", transform: "rotate(-2deg)", boxShadow: "0 18px 50px rgba(0,0,0,.45)",
+        fontFamily: "Oswald", fontWeight: 700, fontSize: 104, lineHeight: 1, color: C.ink }}>POISSON, <span style={{ color: C.red }}>PAS TOMATE</span></div>
+    </div>
+    <Watermark />
+  </AbsoluteFill>
+);
+export const KetchupV2Body: React.FC = () => (
+  <AbsoluteFill style={{ background: "#000" }}>
+    <Img src={staticFile("ketchup/frames/ship.jpg")} style={{ width: 1080, height: 1920, objectFit: "cover" }} />
+    <div style={topShade} />
+    <TopCap words={["des", "marchands", "anglais", "y", "prennent", "goût"]} active={5} en="English merchants get a taste for it" tag="ASIE → ANGLETERRE" />
+    <div style={{ position: "absolute", left: 0, right: 0, top: 760, textAlign: "center", fontFamily: "Oswald", fontWeight: 700, fontSize: 200, color: C.mustard, textShadow: "0 6px 30px rgba(0,0,0,.75)" }}>1700</div>
+    <Watermark />
+  </AbsoluteFill>
+);

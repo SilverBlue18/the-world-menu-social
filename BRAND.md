@@ -1,4 +1,22 @@
-# The World Menu: brand (work in progress)
+# The World Menu: brand
+
+## CURRENT (decided 2026-11-28): English channel, "Fresh editorial" brand, real-food format
+- **Language: ENGLISH narration.** Captions: English on top (spoken word lit up), **French line underneath**. On-screen text in English.
+- **Format:** real food footage (free stock, e.g. Pexels) underneath + animated graphics on top: hook card, century countdown
+  (rolling year + timeline), then-vs-now split, word-synced labels. Pilot: `src/ketchup/` + `src/ketchup/beats.json`.
+  Workflow and rules: `.claude/skills/shorts-autopilot/` (story beats, chunked voice takes, short TOP captions, QA).
+- **Palette "Fresh editorial":** Tomato `#D7263D` (highlight, key words) · Olive `#3E5F3A` (routes, tags, dates) ·
+  Cream `#F6F1E7` (paper, cards) · Charcoal `#2B2B2B` (text, outlines). Source: `src/brand/BrandV2.tsx` (`B2`).
+- **Logo:** the CLOCHE (a serving dome drawn as a globe: "the world, served"). Profile picture = cream cloche on TOMATO,
+  icon only (no text). Lockups: "THE WORLD" Inter 600 letter-spaced + "Menu" Playfair Display 900 in tomato.
+  Files: `brand/twm_v2/ProfilePic.png` (1080²), `LogoLight.png`, `LogoDark.png` (re-render: `PNG=1 node scripts/still.mjs brand/twm_v2 ProfilePic LogoLight LogoDark`).
+- **Type:** Playfair Display 900 (titles, "Menu", name cards) · Inter 600/800 (captions, tags, labels).
+- **Voice:** an English narrator chosen by ear from auditions (to be decided). Sound: still NO MUSIC.
+- Everything below this section is history (French channel, Sahel palette, stickman look) and is superseded.
+
+---
+
+# (history) The World Menu: brand v1
 
 Channel: **The World Menu** (@theworldmenu). Language: French, for a general French-speaking audience worldwide. Topic mix: ~80% world food stories, ~20% West African / Senegalese.
 Visual world: a **geographic world map** (the Earth), one continuous camera, food stories travelling across it.

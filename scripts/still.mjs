@@ -9,6 +9,6 @@ const serveUrl = await bundle({ entryPoint: path.resolve("src/index.ts") });
 for (const id of ids) {
   const composition = await selectComposition({ serveUrl, id });
   const output = path.join(outDir, `${id}.jpg`);
-  await renderStill({ serveUrl, composition, output, imageFormat: "jpeg", jpegQuality: 92 });
+  await renderStill({ serveUrl, composition, output: process.env.PNG ? output.replace(/\.jpg$/, ".png") : output, ...(process.env.PNG ? { imageFormat: "png" } : { imageFormat: "jpeg", jpegQuality: 92 }) });
   console.log("wrote", output);
 }

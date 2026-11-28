@@ -4,7 +4,7 @@
 import React from "react";
 import { AbsoluteFill, Audio, OffthreadVideo, Sequence, staticFile, useCurrentFrame } from "remotion";
 import beats from "./beats.json";
-import capsJson from "../../projects/ketchup/captions.json";
+import capsJson from "../../projects/ketchup/v1/captions.json";
 import { EndCard, TwmCaptions, TwmCap } from "../shared/twm";
 import { Watermark } from "../shared/Watermark";
 import { backOut, clamp, easeOut } from "../imam/lib";

@@ -1,5 +1,8 @@
 # The World Menu studio: playbook for Claude
 
+> **2026-11-28 pivot (overrides the French/stickman rules below):** the channel is now in ENGLISH (narration + English captions with a French line underneath), brand "Fresh editorial" with the cloche logo, real-food-footage format with animated graphics. See the CURRENT section at the top of `BRAND.md`. Follow `.claude/skills/shorts-autopilot/` for script, voice and caption rules.
+
+
 **Channel name: The World Menu** (handle `@theworldmenu` on YouTube, TikTok, Instagram and a Facebook Page).
 
 ### Channel concept (The World Menu)

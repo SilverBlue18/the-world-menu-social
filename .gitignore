@@ -41,3 +41,4 @@ projects/*/footage/
 public/ketchup/clips/
 public/ketchup/*.wav
 !public/ketchup/mix.wav
+projects/*/auditions/
