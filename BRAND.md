@@ -7,7 +7,7 @@
   Workflow and rules: `.claude/skills/shorts-autopilot/` (story beats, chunked voice takes, short TOP captions, QA).
 - **Palette "Fresh editorial":** Tomato `#D7263D` (highlight, key words) · Olive `#3E5F3A` (routes, tags, dates) ·
   Cream `#F6F1E7` (paper, cards) · Charcoal `#2B2B2B` (text, outlines). Source: `src/brand/BrandV2.tsx` (`B2`).
-- **Logo:** the CLOCHE (a serving dome drawn as a globe: "the world, served"). Profile picture = cream cloche on TOMATO,
+- **Logo:** the CLOCHE, final flat version "B · flat shade" (`ClocheB` in `src/brand/BrandV2.tsx`; keep it FLAT, no gradients). Profile picture = cream cloche on TOMATO,
   icon only (no text). Lockups: "THE WORLD" Inter 600 letter-spaced + "Menu" Playfair Display 900 in tomato.
   Files: `brand/twm_v2/ProfilePic.png` (1080²), `LogoLight.png`, `LogoDark.png` (re-render: `PNG=1 node scripts/still.mjs brand/twm_v2 ProfilePic LogoLight LogoDark`).
 - **Type:** Playfair Display 900 (titles, "Menu", name cards) · Inter 600/800 (captions, tags, labels).

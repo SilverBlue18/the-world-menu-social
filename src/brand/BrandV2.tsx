@@ -158,15 +158,146 @@ export const ClocheAvatars: React.FC = () => (
 // ---------- final brand exports (chosen 2026-11-28: cloche mark, profile picture on TOMATO) ----------
 const clocheOnTomato = { dome: CR, lines: T, base: CH, plate: CH };
 export const ProfilePic: React.FC = () => (
-  <AbsoluteFill style={{ background: T, alignItems: "center", justifyContent: "center" }}><div style={{ marginTop: 20 }}><Cloche size={840} {...clocheOnTomato} /></div></AbsoluteFill>
+  <AbsoluteFill style={{ background: T, alignItems: "center", justifyContent: "center" }}><div style={{ marginTop: 20 }}><ClocheB size={860} /></div></AbsoluteFill>
 );
 export const LogoLight: React.FC = () => (
   <AbsoluteFill style={{ background: CR, alignItems: "center", justifyContent: "center" }}>
-    <div style={{ display: "flex", alignItems: "center", gap: 50 }}><Cloche size={340} /><Wordmark scale={1.9} /></div>
+    <div style={{ display: "flex", alignItems: "center", gap: 50 }}><div style={{ width: 360, height: 360, borderRadius: "50%", background: T, display: "flex", alignItems: "center", justifyContent: "center" }}><ClocheB size={290} /></div><Wordmark scale={1.9} /></div>
   </AbsoluteFill>
 );
 export const LogoDark: React.FC = () => (
   <AbsoluteFill style={{ background: CH, alignItems: "center", justifyContent: "center", gap: 30 }}>
-    <Cloche size={420} base={CR} plate={O} /><Wordmark scale={1.7} light stacked />
+    <ClocheB size={440} base={CR} plate={O} /><Wordmark scale={1.7} light stacked />
   </AbsoluteFill>
+);
+
+// ---------- PREMIUM cloche (round 4): engraved lines, perspective, light + shadow ----------
+type Pal = { dome: [string, string, string]; line: string; metal: [string, string]; plate: [string, string]; ink: string };
+const PAL: Record<string, Pal> = {
+  creamOnTomato: { dome: ["#FFFDF7", "#F6F1E7", "#D9CFBD"], line: T, metal: ["#3a3a3a", "#1a1a1a"], plate: ["#2f2f2f", "#151515"], ink: CH },
+  brass: { dome: ["#F7E3A8", "#D9B15E", "#8C6A2A"], line: "#7A5A1E", metal: ["#F2D58A", "#8C6A2A"], plate: ["#E9C877", "#7A5A1E"], ink: "#5a4214" },
+};
+export const ClocheP: React.FC<{ size: number; pal?: keyof typeof PAL; id?: string }> = ({ size, pal = "creamOnTomato", id = "a" }) => {
+  const p = PAL[pal];
+  return (
+    <svg width={size} height={size} viewBox="0 0 200 200">
+      <defs>
+        <linearGradient id={`d${id}`} x1="0" x2="1" y1="0" y2="0.3"><stop offset="0" stopColor={p.dome[0]} /><stop offset=".45" stopColor={p.dome[1]} /><stop offset="1" stopColor={p.dome[2]} /></linearGradient>
+        <linearGradient id={`m${id}`} x1="0" x2="0" y1="0" y2="1"><stop offset="0" stopColor={p.metal[0]} /><stop offset="1" stopColor={p.metal[1]} /></linearGradient>
+        <linearGradient id={`p${id}`} x1="0" x2="0" y1="0" y2="1"><stop offset="0" stopColor={p.plate[0]} /><stop offset="1" stopColor={p.plate[1]} /></linearGradient>
+        <clipPath id={`c${id}`}><path d="M38 142 C38 84 66 54 100 54 C134 54 162 84 162 142 Z" /></clipPath>
+      </defs>
+      <ellipse cx="100" cy="158" rx="90" ry="15" fill={`url(#p${id})`} />
+      <ellipse cx="100" cy="154" rx="78" ry="9" fill="none" stroke={p.metal[0]} strokeOpacity=".5" strokeWidth="1.2" />
+      <path d="M38 142 C38 84 66 54 100 54 C134 54 162 84 162 142 Z" fill={`url(#d${id})`} />
+      <g clipPath={`url(#c${id})`} fill="none" stroke={p.line} strokeLinecap="round">
+        <path d="M100 54 V146" strokeWidth="2.6" />
+        <path d="M100 54 C78 70 70 104 72 146" strokeWidth="2.2" /><path d="M100 54 C122 70 130 104 128 146" strokeWidth="2.2" />
+        <path d="M100 54 C64 72 50 110 50 146" strokeWidth="1.6" /><path d="M100 54 C136 72 150 110 150 146" strokeWidth="1.6" />
+        <path d="M40 120 Q100 134 160 120" strokeWidth="2.2" /><path d="M48 94 Q100 106 152 94" strokeWidth="1.8" /><path d="M64 72 Q100 80 136 72" strokeWidth="1.4" />
+      </g>
+      <path d="M58 128 C56 96 70 72 92 62" fill="none" stroke="#fff" strokeOpacity=".55" strokeWidth="5" strokeLinecap="round" />
+      <ellipse cx="100" cy="143" rx="64" ry="7" fill={`url(#m${id})`} />
+      <rect x="96" y="40" width="8" height="15" rx="3" fill={`url(#m${id})`} />
+      <circle cx="100" cy="37" r="9" fill={`url(#m${id})`} /><circle cx="97" cy="34" r="2.6" fill="#fff" fillOpacity=".6" />
+    </svg>
+  );
+};
+// seal: premium cloche inside a ring with text on a circle
+const Seal: React.FC<{ size: number; bg: string; ring: string; text: string; pal?: keyof typeof PAL; id: string }> = ({ size, bg, ring, text, pal, id }) => (
+  <svg width={size} height={size} viewBox="0 0 300 300">
+    <defs><path id={`t${id}`} d="M150 150 m-112 0 a112 112 0 1 1 224 0 a112 112 0 1 1 -224 0" /></defs>
+    <circle cx="150" cy="150" r="146" fill={bg} />
+    <circle cx="150" cy="150" r="134" fill="none" stroke={ring} strokeWidth="2.5" /><circle cx="150" cy="150" r="92" fill="none" stroke={ring} strokeWidth="1.5" />
+    <text fontFamily="Inter" fontWeight="600" fontSize="19" letterSpacing="7" fill={text}><textPath href={`#t${id}`} startOffset="7%">THE WORLD MENU · TRUE FOOD STORIES · </textPath></text>
+    <foreignObject x="58" y="54" width="184" height="184"><ClocheP size={184} pal={pal} id={id + "c"} /></foreignObject>
+  </svg>
+);
+const PREM: { name: string; el: (d: number) => React.ReactNode }[] = [
+  { name: "P1 · Engraved", el: (d) => <div style={{ width: d, height: d, borderRadius: "50%", background: T, display: "flex", alignItems: "center", justifyContent: "center" }}><ClocheP size={d * 0.8} id={`e${d}`} /></div> },
+  { name: "P2 · Seal", el: (d) => <Seal size={d} bg={T} ring={CR} text={CR} id={`s${d}`} /> },
+  { name: "P3 · Brass on tomato", el: (d) => <div style={{ width: d, height: d, borderRadius: "50%", background: `radial-gradient(circle at 35% 30%, #e23a50, ${T} 55%, #9e1528)`, display: "flex", alignItems: "center", justifyContent: "center" }}><ClocheP size={d * 0.8} pal="brass" id={`b${d}`} /></div> },
+  { name: "P4 · Brass seal on charcoal", el: (d) => <Seal size={d} bg={CH} ring="#D9B15E" text="#E9C877" pal="brass" id={`g${d}`} /> },
+];
+export const ClochePremium: React.FC = () => (
+  <AbsoluteFill style={{ background: "#fff", padding: 50, fontFamily: "Inter" }}>
+    <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 30 }}>
+      {PREM.map((o) => (
+        <div key={o.name} style={{ background: "#fafafa", borderRadius: 24, padding: 26, display: "flex", flexDirection: "column", alignItems: "center", gap: 22 }}>
+          {o.el(320)}
+          <div style={{ display: "flex", alignItems: "flex-end", gap: 22 }}>
+            <div style={{ padding: 4, borderRadius: "50%", background: "conic-gradient(#f9ce34, #ee2a7b, #6228d7, #f9ce34)" }}><div style={{ padding: 3, borderRadius: "50%", background: "#fff", display: "flex" }}>{o.el(110)}</div></div>
+            {o.el(64)}{o.el(36)}
+          </div>
+          <div style={{ fontWeight: 800, fontSize: 28, color: CH }}>{o.name}</div>
+        </div>
+      ))}
+    </div>
+  </AbsoluteFill>
+);
+
+// ---------- round 5: FLAT refinements of the approved cloche (no gradients) ----------
+const R_CREAM = CR, R_SHADE = "#E6DCC8", R_INK = CH;
+const RefA = () => (   // A: better proportions, curved globe lines, rounder knob with a neck
+  <svg viewBox="0 0 200 200" width="100%" height="100%">
+    <path d="M36 140 C36 86 64 58 100 58 C136 58 164 86 164 140 Z" fill={R_CREAM} />
+    <g fill="none" stroke={T} strokeWidth="5" strokeLinecap="round"><path d="M100 60 V138" /><path d="M100 60 C80 74 72 104 74 138" /><path d="M100 60 C120 74 128 104 126 138" /><path d="M42 112 Q100 122 158 112" /><path d="M56 84 Q100 92 144 84" /></g>
+    <rect x="95" y="44" width="10" height="16" rx="4" fill={R_INK} /><circle cx="100" cy="40" r="10" fill={R_INK} />
+    <rect x="20" y="138" width="160" height="13" rx="6.5" fill={R_INK} /><rect x="48" y="158" width="104" height="8" rx="4" fill={R_INK} />
+  </svg>);
+const RefB = () => (   // B: A + one flat shadow tone on the right half and a flat highlight
+  <svg viewBox="0 0 200 200" width="100%" height="100%">
+    <path d="M36 140 C36 86 64 58 100 58 C136 58 164 86 164 140 Z" fill={R_CREAM} />
+    <path d="M100 58 C136 58 164 86 164 140 L100 140 Z" fill={R_SHADE} />
+    <g fill="none" stroke={T} strokeWidth="5" strokeLinecap="round"><path d="M100 60 V138" /><path d="M100 60 C80 74 72 104 74 138" /><path d="M100 60 C120 74 128 104 126 138" /><path d="M42 112 Q100 122 158 112" /><path d="M56 84 Q100 92 144 84" /></g>
+    <path d="M52 124 C50 100 60 82 76 72" fill="none" stroke="#fff" strokeWidth="5" strokeLinecap="round" />
+    <rect x="95" y="44" width="10" height="16" rx="4" fill={R_INK} /><circle cx="100" cy="40" r="10" fill={R_INK} />
+    <rect x="20" y="138" width="160" height="13" rx="6.5" fill={R_INK} /><rect x="48" y="158" width="104" height="8" rx="4" fill={R_INK} />
+  </svg>);
+const RefC = () => (   // C: bolder and simpler: fewer, thicker lines; reads best when tiny
+  <svg viewBox="0 0 200 200" width="100%" height="100%">
+    <path d="M34 142 C34 82 64 52 100 52 C136 52 166 82 166 142 Z" fill={R_CREAM} />
+    <g fill="none" stroke={T} strokeWidth="8" strokeLinecap="round"><path d="M100 56 V140" /><path d="M40 108 Q100 120 160 108" /></g>
+    <g fill="none" stroke={T} strokeWidth="6" strokeLinecap="round"><path d="M100 56 C76 72 68 104 70 140" /><path d="M100 56 C124 72 132 104 130 140" /></g>
+    <circle cx="100" cy="38" r="12" fill={R_INK} />
+    <rect x="16" y="140" width="168" height="16" rx="8" fill={R_INK} />
+  </svg>);
+const RefD = () => (   // D: B + a tomato-red steam curl coming out: "the story is hot"
+  <svg viewBox="0 0 200 200" width="100%" height="100%">
+    <path d="M36 146 C36 92 64 64 100 64 C136 64 164 92 164 146 Z" fill={R_CREAM} />
+    <path d="M100 64 C136 64 164 92 164 146 L100 146 Z" fill={R_SHADE} />
+    <g fill="none" stroke={T} strokeWidth="5" strokeLinecap="round"><path d="M100 66 V144" /><path d="M100 66 C80 80 72 110 74 144" /><path d="M100 66 C120 80 128 110 126 144" /><path d="M42 118 Q100 128 158 118" /><path d="M56 90 Q100 98 144 90" /></g>
+    <rect x="95" y="50" width="10" height="16" rx="4" fill={R_INK} /><circle cx="100" cy="46" r="10" fill={R_INK} />
+    <path d="M138 52 C128 42 146 34 136 22" fill="none" stroke={CR} strokeWidth="5" strokeLinecap="round" /><path d="M154 58 C146 48 162 42 154 32" fill="none" stroke={CR} strokeWidth="4" strokeLinecap="round" />
+    <rect x="20" y="144" width="160" height="13" rx="6.5" fill={R_INK} /><rect x="48" y="164" width="104" height="8" rx="4" fill={R_INK} />
+  </svg>);
+const Cur: React.FC<{ size?: number }> = ({ size = 200 }) => <Cloche size={size} dome={CR} lines={T} base={CH} plate={CH} />;
+const REF: [string, React.FC<{ size?: number }>][] = [["Now (approved)", Cur], ["A · proportions", RefA], ["B · + flat shade", RefB], ["C · bolder, simpler", RefC], ["D · + steam", RefD]];
+const RAv: React.FC<{ d: number; M: React.FC<{ size?: number }> }> = ({ d, M }) => (
+  <div style={{ width: d, height: d, borderRadius: "50%", background: T, display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
+    <div style={{ width: d * 0.8, height: d * 0.8, marginTop: d * 0.02, display: "flex" }}><M size={d * 0.8} /></div>
+  </div>
+);
+export const ClocheRefine: React.FC = () => (
+  <AbsoluteFill style={{ background: "#fff", padding: 44, fontFamily: "Inter", display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 24 }}>
+    {REF.map(([name, M], i) => (
+      <div key={name} style={{ background: i ? "#fafafa" : "#f0f0f0", borderRadius: 24, padding: 22, display: "flex", flexDirection: "column", alignItems: "center", gap: 20 }}>
+        <RAv d={280} M={M} />
+        <div style={{ display: "flex", alignItems: "flex-end", gap: 16 }}><RAv d={110} M={M} /><RAv d={64} M={M} /><RAv d={36} M={M} /></div>
+        <div style={{ fontWeight: 800, fontSize: 26, color: CH }}>{name}</div>
+      </div>
+    ))}
+  </AbsoluteFill>
+);
+
+// ---------- FINAL mark (chosen 2026-11-28, round 5 "B · flat shade") ----------
+export const ClocheB: React.FC<{ size: number; base?: string; plate?: string }> = ({ size, base = CH, plate = CH }) => (
+  <svg width={size} height={size} viewBox="0 0 200 200">
+    <path d="M36 140 C36 86 64 58 100 58 C136 58 164 86 164 140 Z" fill={CR} />
+    <path d="M100 58 C136 58 164 86 164 140 L100 140 Z" fill="#E6DCC8" />
+    <g fill="none" stroke={T} strokeWidth="5" strokeLinecap="round"><path d="M100 60 V138" /><path d="M100 60 C80 74 72 104 74 138" /><path d="M100 60 C120 74 128 104 126 138" /><path d="M42 112 Q100 122 158 112" /><path d="M56 84 Q100 92 144 84" /></g>
+    <path d="M52 124 C50 100 60 82 76 72" fill="none" stroke="#fff" strokeWidth="5" strokeLinecap="round" />
+    <rect x="95" y="44" width="10" height="16" rx="4" fill={base} /><circle cx="100" cy="40" r="10" fill={base} />
+    <rect x="20" y="138" width="160" height="13" rx="6.5" fill={base} /><rect x="48" y="158" width="104" height="8" rx="4" fill={plate} />
+  </svg>
 );

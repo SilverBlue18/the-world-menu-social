@@ -9,7 +9,7 @@ import { PimentFlow, PIMENT_S } from "./piment/Piment";
 import { PimentStick, STICK_S } from "./pimentStick/PimentStick";
 import { KetchupHook, KetchupCountdown, KetchupSplit, KetchupV2Hook, KetchupV2Body } from "./ketchup/KetchupFrames";
 import { KetchupShort, KETCHUP_S } from "./ketchup/KetchupShort";
-import { BrandV2Board, LogoOptions, ClocheAvatars, ProfilePic, LogoLight, LogoDark } from "./brand/BrandV2";
+import { BrandV2Board, LogoOptions, ClocheAvatars, ProfilePic, LogoLight, LogoDark, ClochePremium, ClocheRefine } from "./brand/BrandV2";
 import * as Concepts from "./concepts/Concepts";
 import { PimentTest3D } from "./three3d/PimentTest3D";
 
@@ -25,6 +25,8 @@ export const MyComposition = () => (
     )))}
     <Composition id="PimentStick" component={PimentStick} durationInFrames={Math.round(STICK_S * 30)} fps={30} width={1080} height={1920} />
     {/* new real-food format: style frames for the ketchup pilot */}
+    <Still id="ClocheRefine" component={ClocheRefine} width={1800} height={560} />
+    <Still id="ClochePremium" component={ClochePremium} width={1800} height={640} />
     <Still id="ProfilePic" component={ProfilePic} width={1080} height={1080} />
     <Still id="LogoLight" component={LogoLight} width={2000} height={800} />
     <Still id="LogoDark" component={LogoDark} width={1080} height={1350} />
