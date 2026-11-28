@@ -76,8 +76,8 @@ const HookCard: React.FC<{ t: number }> = ({ t }) => {
   return (
     <div style={{ position: "absolute", left: 0, right: 0, top: 300, display: "flex", justifyContent: "center", opacity: a }}>
       <div style={{ background: B2.cream, borderRadius: 22, padding: "26px 46px", transform: `rotate(-2deg) scale(${0.55 + 0.45 * k})`, boxShadow: "0 18px 50px rgba(0,0,0,.45)", textAlign: "center" }}>
-        <div style={{ fontFamily: "Playfair Display", fontWeight: 900, fontSize: 118, lineHeight: 0.95, color: B2.charcoal }}>{h.text[0]}</div>
-        <div style={{ fontFamily: "Playfair Display", fontWeight: 900, fontSize: 118, lineHeight: 0.95, color: B2.tomato }}>{h.text[1]}</div>
+        <div style={{ fontFamily: "Playfair Display", fontWeight: 900, fontSize: 108, lineHeight: 0.98, color: B2.charcoal }}>{h.text[0]}</div>
+        <div style={{ fontFamily: "Playfair Display", fontWeight: 900, fontSize: 108, lineHeight: 0.98, color: B2.tomato }}>{h.text[1]}</div>
       </div>
     </div>
   );
@@ -119,10 +119,10 @@ const Timeline: React.FC<{ t: number }> = ({ t }) => {
     </div>
   );
 };
-const BigWord: React.FC<{ t: number }> = ({ t }) => {
-  const b = beats.bigWord[0], a = win(t, b.t, b.out); if (a <= 0) return null; const k = pop(t, b.t);
-  return <div style={{ position: "absolute", left: 0, right: 0, top: 760, textAlign: "center", opacity: a, fontFamily: "Playfair Display", fontWeight: 900, fontStyle: "normal", fontSize: 150, color: B2.cream, textShadow: shadow, transform: `scale(${0.5 + 0.5 * k})` }}>{b.text}</div>;
-};
+const BigWord: React.FC<{ t: number }> = ({ t }) => (
+  <>{beats.bigWord.map((b) => { const a = win(t, b.t, b.out); if (a <= 0) return null; const k = pop(t, b.t); const long = b.text.length > 10;
+    return <div key={b.t} style={{ position: "absolute", left: 40, right: 40, top: long ? 800 : 760, textAlign: "center", opacity: a, fontFamily: "Playfair Display", fontWeight: 900, fontSize: long ? 104 : 150, color: B2.cream, textShadow: shadow, transform: `scale(${0.5 + 0.5 * k})` }}>{b.text}</div>; })}</>
+);
 const Strike: React.FC<{ t: number }> = ({ t }) => {
   const s = beats.strike, a = win(t, s.t, s.out); if (a <= 0) return null;
   const k = pop(t, s.t, 0.3), line = easeOut(clamp((t - s.t - 0.3) / 0.3));
@@ -196,7 +196,7 @@ export const KetchupEN: React.FC = () => {
       <NameCard t={t} />
       {beats.tags.map((g) => <Pill key={g.text} t={t} at={g.t} out={g.out} text={g.text} top={1180} />)}
       {beats.labels.map((g) => <Pill key={g.text} t={t} at={g.t} out={g.out} text={g.text} top={800 + ((g as { dy?: number }).dy ?? 0)} big red={(g as { red?: boolean }).red} />)}
-      <Pill t={t} at={beats.glass.t} out={beats.glass.out} text={beats.glass.text} top={800} big />
+      {"glass" in beats && <Pill t={t} at={(beats as any).glass.t} out={(beats as any).glass.out} text={(beats as any).glass.text} top={800} big />}
       <Counter t={t} />
       <Watermark2 t={t} />
       <EndCard2 t={t} />

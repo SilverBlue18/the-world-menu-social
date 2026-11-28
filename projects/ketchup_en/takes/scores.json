@@ -3,94 +3,79 @@
   "L00_s11.mp3": {
    "line": 0,
    "score": 1.0,
-   "dur": 2.0,
-   "expr": 8.87,
-   "heard": "fish, not tomato."
+   "dur": 4.04,
+   "expr": 7.72,
+   "heard": "Your ketchup started life as a Chinese fish sauce."
   },
   "L00_s47.mp3": {
    "line": 0,
    "score": 1.0,
-   "dur": 1.9,
-   "expr": 9.01,
-   "heard": "fish, not tomato."
+   "dur": 3.95,
+   "expr": 7.88,
+   "heard": "Your ketchup started life as a Chinese fish sauce."
   },
   "L01_s11.mp3": {
    "line": 1,
-   "score": 0.778,
-   "dur": 7.8,
-   "expr": 7.34,
-   "heard": "Your catch-up started life as a Chinese fish sauce.  In southern China, they called it Kei-Ci-Ap."
+   "score": 0.962,
+   "dur": 13.47,
+   "expr": 7.65,
+   "heard": "In southern China, people fermented fish into a salty sauce called K. Tsiap.  Around 1700 English merchants tasted it in Asia and wanted it back home."
   },
   "L01_s47.mp3": {
    "line": 1,
-   "score": 0.909,
-   "dur": 8.13,
-   "expr": 7.36,
-   "heard": "Your ketchup started life as a Chinese fish sauce.  In Southern China, they called it Keciap."
+   "score": 0.906,
+   "dur": 13.24,
+   "expr": 6.91,
+   "heard": "In southern China, people fermented fish into a salty sauce called Kei Tsi Up.  Around 1700, English merchants tasted it in Asia and wanted it back home."
   },
   "L02_s11.mp3": {
    "line": 2,
    "score": 1.0,
-   "dur": 12.49,
-   "expr": 7.37,
-   "heard": "Around 1700 English merchants got hooked on it in Asia, but back home there was no such fish,  so they improvised mushrooms, walnuts, oysters."
+   "dur": 10.63,
+   "expr": 8.77,
+   "heard": "but they didn't have the fish.  So they faked it.  Mushroom ketchup, walnut ketchup,  even oyster ketchup with a hundred oysters."
   },
   "L02_s47.mp3": {
    "line": 2,
-   "score": 1.0,
-   "dur": 12.82,
-   "expr": 7.4,
-   "heard": "Around 1700 English merchants got hooked on it in Asia, but back home there was no such fish.  So they improvised mushrooms, walnuts, oysters."
+   "score": 0.809,
+   "dur": 10.03,
+   "expr": 8.46,
+   "heard": "But they didn't have the fish, so they faked it.  Mushroom catch-up, walnut catch-up, even oyster catch-up with a hundred oysters."
   },
   "L03_s11.mp3": {
    "line": 3,
    "score": 1.0,
-   "dur": 11.1,
-   "expr": 8.44,
-   "heard": "Tomato only showed up in 1812 in an American recipe and the bottled stuff a chef of the time called it filthy and putrid"
+   "dur": 11.28,
+   "expr": 7.11,
+   "heard": "Then, in 1812, a Philadelphia scientist tried tomatoes.  He called them love apples.  Decades later, Heinz put it in a bottle."
   },
   "L03_s47.mp3": {
    "line": 3,
    "score": 1.0,
    "dur": 11.52,
-   "expr": 7.62,
-   "heard": "Tomato only showed up in 1812 in an American recipe and the bottled stuff a chef of the time called it filthy and putrid"
+   "expr": 7.28,
+   "heard": "Then in 1812, a Philadelphia scientist tried tomatoes.  He called them love apples.  Decades later, Heinz put it in a bottle."
   },
   "L04_s11.mp3": {
    "line": 4,
-   "score": 0.902,
-   "dur": 12.72,
-   "expr": 7.76,
-   "heard": "Then came Henry Hines, 31 years old and bankrupt.  He started over with ketchup in clear glass  so everyone could see exactly what was inside."
+   "score": 0.927,
+   "dur": 8.45,
+   "expr": 7.4,
+   "heard": "The fish disappeared.  Only the Chinese name survived,  so every time you say catch up,  you're speaking a little Chinese."
   },
   "L04_s47.mp3": {
    "line": 4,
-   "score": 0.902,
-   "dur": 12.77,
-   "expr": 7.53,
-   "heard": "Then came Henry Hines, 31 years old and bankrupt.  He started over with ketchup in clear glass  so everyone could see exactly what was inside."
-  },
-  "L05_s11.mp3": {
-   "line": 5,
-   "score": 1.0,
-   "dur": 9.15,
-   "expr": 8.03,
-   "heard": "By 1905, Heinz had sold five million bottles.  The fish is gone, but its name is still on your table."
-  },
-  "L05_s47.mp3": {
-   "line": 5,
-   "score": 1.0,
-   "dur": 9.2,
-   "expr": 8.22,
-   "heard": "By 1905, Heinz had sold five million bottles.  The fish is gone.  But its name is still on your table."
+   "score": 0.927,
+   "dur": 8.64,
+   "expr": 8.1,
+   "heard": "The fish disappeared.  Only the Chinese name survived.  So every time you say catch up,  you're speaking a little Chinese."
   }
  },
  "order": [
   "L00_s47.mp3",
-  "L01_s47.mp3",
-  "L02_s47.mp3",
-  "L03_s11.mp3",
-  "L04_s11.mp3",
-  "L05_s47.mp3"
+  "L01_s11.mp3",
+  "L02_s11.mp3",
+  "L03_s47.mp3",
+  "L04_s47.mp3"
  ]
 }

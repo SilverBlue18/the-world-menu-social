@@ -1,50 +1,49 @@
 {
-  "_note": "ONE event list for the ENGLISH ketchup pilot: video (KetchupEN.tsx) and sound (tools/sound_ketchup.py ketchup_en src/ketchup/beats_en.json) read it. Times = seconds on public/ketchup_en/voice.wav.",
-  "duration": 56.8,
-  "voiceEnd": 52.5,
+  "_note": "ONE event list for the ENGLISH ketchup pilot (story B, 'Your ketchup started life as a Chinese fish sauce'): video (KetchupEN.tsx) and sound (tools/sound_ketchup.py ketchup_en src/ketchup/beats_en.json) read it. Times = seconds on public/ketchup_en/voice.wav.",
+  "duration": 50.6,
+  "voiceEnd": 46.4,
   "scenes": [
     { "t": 0.0,   "clip": "hook",      "from": 14.0, "zoom": [1.12, 1.0] },
-    { "t": 2.1,   "clip": "fishsauce", "from": 6.0,  "zoom": [1.0, 1.1] },
-    { "t": 5.6,   "clip": "boat",      "from": 1.5,  "zoom": [1.05, 1.14] },
-    { "t": 9.55,  "clip": "ship",      "from": 7.0,  "zoom": [1.0, 1.1] },
-    { "t": 13.9,  "clip": "fishsauce", "from": 12.0, "zoom": [1.1, 1.0], "look": "gray" },
-    { "t": 17.95, "clip": "mushrooms", "from": 6.0,  "zoom": [1.15, 1.05] },
-    { "t": 19.35, "clip": "walnuts",   "from": 2.0,  "zoom": [1.1, 1.0] },
-    { "t": 20.45, "clip": "oysters",   "from": 3.0,  "zoom": [1.12, 1.02] },
-    { "t": 21.45, "clip": "tomatoes",  "from": 2.0,  "zoom": [1.0, 1.12] },
-    { "t": 26.4,  "clip": "bottle",    "from": 9.0,  "zoom": [1.15, 1.05], "look": "grim" },
-    { "t": 32.0,  "clip": "bottle",    "from": 2.0,  "zoom": [1.0, 1.08] },
-    { "t": 36.5,  "clip": "hook",      "from": 20.0, "zoom": [1.1, 1.0] },
-    { "t": 43.9,  "clip": "dip",       "from": 1.0,  "zoom": [1.0, 1.1] },
-    { "t": 48.3,  "split": ["fishsauce", "bottle"], "from": [9.0, 8.0] }
+    { "t": 3.5,   "clip": "fishsauce", "from": 6.0,  "zoom": [1.0, 1.1] },
+    { "t": 7.0,   "clip": "boat",      "from": 1.5,  "zoom": [1.05, 1.14] },
+    { "t": 10.6,  "clip": "ship",      "from": 7.0,  "zoom": [1.0, 1.1] },
+    { "t": 13.8,  "clip": "ship",      "from": 15.0, "zoom": [1.15, 1.05] },
+    { "t": 16.6,  "clip": "fishsauce", "from": 12.0, "zoom": [1.1, 1.0], "look": "gray" },
+    { "t": 20.0,  "clip": "mushrooms", "from": 6.0,  "zoom": [1.15, 1.05] },
+    { "t": 21.4,  "clip": "walnuts",   "from": 2.0,  "zoom": [1.1, 1.0] },
+    { "t": 22.9,  "clip": "oysters",   "from": 3.0,  "zoom": [1.12, 1.02] },
+    { "t": 26.9,  "clip": "tomatoes",  "from": 2.0,  "zoom": [1.0, 1.12] },
+    { "t": 30.4,  "clip": "tomatoes",  "from": 7.0,  "zoom": [1.15, 1.05] },
+    { "t": 33.7,  "clip": "bottle",    "from": 2.0,  "zoom": [1.0, 1.08] },
+    { "t": 38.2,  "split": ["fishsauce", "bottle"], "from": [9.0, 8.0] },
+    { "t": 42.4,  "clip": "dip",       "from": 1.0,  "zoom": [1.0, 1.1] }
   ],
-  "hookCard": { "in": 0.08, "out": 2.05, "text": ["FISH,", "NOT TOMATO"] },
-  "captionsFrom": 2.1,
-  "timeline": { "in": 5.7, "out": 48.25, "stops": [["CHINA", 6.38], ["1700", 9.82], ["1812", 23.2], ["1875", 33.14], ["1905", 44.14]] },
+  "hookCard": { "in": 0.08, "out": 3.45, "text": ["KETCHUP WAS", "FISH SAUCE"] },
+  "captionsFrom": 3.5,
+  "timeline": { "in": 4.3, "out": 38.15, "stops": [["CHINA", 4.56], ["1700", 10.96], ["1812", 27.32], ["1876", 34.9]] },
   "years": [
-    { "t": 9.82,  "out": 13.85, "year": "1700" },
-    { "t": 23.2,  "out": 31.9,  "year": "1812" },
-    { "t": 44.14, "out": 48.2,  "year": "1905" }
+    { "t": 10.96, "out": 16.5,  "year": "1700" },
+    { "t": 27.32, "out": 31.6,  "year": "1812" }
   ],
   "tags": [
-    { "t": 6.38,  "out": 9.5,   "text": "SOUTHERN CHINA" },
-    { "t": 13.16, "out": 13.85, "text": "ASIA → ENGLAND" },
-    { "t": 24.4,  "out": 26.3,  "text": "AMERICA" }
+    { "t": 4.56,  "out": 6.95,  "text": "SOUTHERN CHINA" },
+    { "t": 14.06, "out": 16.5,  "text": "ASIA → ENGLAND" },
+    { "t": 28.58, "out": 31.6,  "text": "PHILADELPHIA" }
   ],
-  "bigWord": [{ "t": 7.96, "out": 9.5, "text": "kê-tsiap" }],
-  "strike": { "t": 16.12, "out": 17.9, "text": "FISH" },
+  "bigWord": [
+    { "t": 8.6,   "out": 10.55, "text": "kê-tsiap" },
+    { "t": 43.66, "out": 46.4,  "text": "kê-tsiap → ketchup" }
+  ],
+  "strike": { "t": 17.78, "out": 18.9, "text": "FISH" },
   "labels": [
-    { "t": 18.04, "out": 19.3,  "text": "MUSHROOMS" },
-    { "t": 19.42, "out": 20.4,  "text": "WALNUTS" },
-    { "t": 20.54, "out": 21.4,  "text": "OYSTERS" },
-    { "t": 21.54, "out": 23.1,  "text": "TOMATO", "red": true },
-    { "t": 29.8,  "out": 31.9,  "text": "FILTHY", "red": true, "dy": -70 },
-    { "t": 30.62, "out": 31.9,  "text": "PUTRID", "red": true, "dy": 70 },
-    { "t": 35.58, "out": 36.45, "text": "BANKRUPT", "red": true, "dy": 230 }
+    { "t": 19.0,  "out": 19.95, "text": "FAKED", "red": true },
+    { "t": 20.1,  "out": 21.35, "text": "MUSHROOM" },
+    { "t": 21.44, "out": 22.85, "text": "WALNUT" },
+    { "t": 23.3,  "out": 24.85, "text": "OYSTER" },
+    { "t": 32.38, "out": 33.65, "text": "LOVE APPLES", "red": true }
   ],
-  "nameCard": { "t": 33.14, "out": 36.45, "name": "Henry J. Heinz", "sub": "PITTSBURGH · 1875" },
-  "glass": { "t": 38.7, "out": 43.8, "text": "CLEAR GLASS" },
-  "counter": { "t": 46.38, "dur": 0.9, "to": 5000000, "out": 48.2, "suffix": "BOTTLES" },
+  "nameCard": { "t": 34.9, "out": 38.1, "name": "Henry J. Heinz", "sub": "PITTSBURGH · 1876" },
+  "counter": { "t": 24.92, "dur": 0.6, "to": 100, "out": 26.85, "suffix": "OYSTERS" },
   "splitLabels": [["1700", "FISH"], ["TODAY", "TOMATO"]],
-  "endCard": 52.7
+  "endCard": 46.5
 }

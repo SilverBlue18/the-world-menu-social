@@ -1,0 +1,96 @@
+{
+ "scores": {
+  "L00_s11.mp3": {
+   "line": 0,
+   "score": 1.0,
+   "dur": 2.0,
+   "expr": 8.87,
+   "heard": "fish, not tomato."
+  },
+  "L00_s47.mp3": {
+   "line": 0,
+   "score": 1.0,
+   "dur": 1.9,
+   "expr": 9.01,
+   "heard": "fish, not tomato."
+  },
+  "L01_s11.mp3": {
+   "line": 1,
+   "score": 0.778,
+   "dur": 7.8,
+   "expr": 7.34,
+   "heard": "Your catch-up started life as a Chinese fish sauce.  In southern China, they called it Kei-Ci-Ap."
+  },
+  "L01_s47.mp3": {
+   "line": 1,
+   "score": 0.909,
+   "dur": 8.13,
+   "expr": 7.36,
+   "heard": "Your ketchup started life as a Chinese fish sauce.  In Southern China, they called it Keciap."
+  },
+  "L02_s11.mp3": {
+   "line": 2,
+   "score": 1.0,
+   "dur": 12.49,
+   "expr": 7.37,
+   "heard": "Around 1700 English merchants got hooked on it in Asia, but back home there was no such fish,  so they improvised mushrooms, walnuts, oysters."
+  },
+  "L02_s47.mp3": {
+   "line": 2,
+   "score": 1.0,
+   "dur": 12.82,
+   "expr": 7.4,
+   "heard": "Around 1700 English merchants got hooked on it in Asia, but back home there was no such fish.  So they improvised mushrooms, walnuts, oysters."
+  },
+  "L03_s11.mp3": {
+   "line": 3,
+   "score": 1.0,
+   "dur": 11.1,
+   "expr": 8.44,
+   "heard": "Tomato only showed up in 1812 in an American recipe and the bottled stuff a chef of the time called it filthy and putrid"
+  },
+  "L03_s47.mp3": {
+   "line": 3,
+   "score": 1.0,
+   "dur": 11.52,
+   "expr": 7.62,
+   "heard": "Tomato only showed up in 1812 in an American recipe and the bottled stuff a chef of the time called it filthy and putrid"
+  },
+  "L04_s11.mp3": {
+   "line": 4,
+   "score": 0.902,
+   "dur": 12.72,
+   "expr": 7.76,
+   "heard": "Then came Henry Hines, 31 years old and bankrupt.  He started over with ketchup in clear glass  so everyone could see exactly what was inside."
+  },
+  "L04_s47.mp3": {
+   "line": 4,
+   "score": 0.902,
+   "dur": 12.77,
+   "expr": 7.53,
+   "heard": "Then came Henry Hines, 31 years old and bankrupt.  He started over with ketchup in clear glass  so everyone could see exactly what was inside."
+  },
+  "L05_s11.mp3": {
+   "line": 5,
+   "score": 1.0,
+   "dur": 9.15,
+   "expr": 8.03,
+   "heard": "By 1905, Heinz had sold five million bottles.  The fish is gone, but its name is still on your table."
+  },
+  "L05_s47.mp3": {
+   "line": 5,
+   "score": 1.0,
+   "dur": 9.2,
+   "expr": 8.22,
+   "heard": "By 1905, Heinz had sold five million bottles.  The fish is gone.  But its name is still on your table."
+  }
+ },
+ "order": [
+  "L00_s47.mp3",
+  "L01_s47.mp3",
+  "L02_s47.mp3",
+  "L03_s11.mp3",
+  "L04_s11.mp3",
+  "L05_s47.mp3"
+ ]
+}
