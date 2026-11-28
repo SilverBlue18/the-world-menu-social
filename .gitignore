@@ -35,3 +35,9 @@ vendor/shorts-autopilot-skill/
 public/piment_v3/stick*.mp4
 public/piment_v3/*.wav
 !public/piment_v3/mix.wav
+
+# downloaded stock footage (Pexels licence) stays local
+projects/*/footage/
+public/ketchup/clips/
+public/ketchup/*.wav
+!public/ketchup/mix.wav

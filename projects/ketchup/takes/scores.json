@@ -1,0 +1,97 @@
+{
+ "scores": {
+  "L00_s11.mp3": {
+   "line": 0,
+   "score": 1.0,
+   "dur": 4.64,
+   "heard": "Le premier ketchup n'avait aucune tomate.  C'était du poisson fermenté."
+  },
+  "L00_s29.mp3": {
+   "line": 0,
+   "score": 1.0,
+   "dur": 4.78,
+   "heard": "Le premier ketchup n'avait aucune tomate, c'était du poisson fermenté."
+  },
+  "L01_s11.mp3": {
+   "line": 1,
+   "score": 0.87,
+   "dur": 4.09,
+   "heard": "Dans le sud de la Chine, cette sauce s'appelait « Ketiyap »."
+  },
+  "L01_s29.mp3": {
+   "line": 1,
+   "score": 0.87,
+   "dur": 3.9,
+   "heard": "Dans le sud de la Chine, cette sauce s'appelait kétiap."
+  },
+  "L02_s11.mp3": {
+   "line": 2,
+   "score": 0.778,
+   "dur": 5.48,
+   "heard": "Au début des années 1700, des marchands anglais l'agoutent dans nazis et rapportent l'idée chez eux."
+  },
+  "L02_s29.mp3": {
+   "line": 2,
+   "score": 0.889,
+   "dur": 5.62,
+   "heard": "Au début des années 1700, des marchands anglais l'agoutent en Asie et rapportent l'idée chez eux."
+  },
+  "L03_s11.mp3": {
+   "line": 3,
+   "score": 0.75,
+   "dur": 5.48,
+   "heard": "Sans ce poisson, ils improvisent.  Ketchup au champignon, au noix, aux huîtres."
+  },
+  "L03_s29.mp3": {
+   "line": 3,
+   "score": 0.75,
+   "dur": 5.76,
+   "heard": "Sans ce poisson, ils improvisent.  Ketchup au champignon, au noix, aux huîtres."
+  },
+  "L04_s11.mp3": {
+   "line": 4,
+   "score": 1.0,
+   "dur": 6.55,
+   "heard": "En 1812, un scientifique de Philadelphie écrit la première recette.  À la tomate!"
+  },
+  "L04_s29.mp3": {
+   "line": 4,
+   "score": 1.0,
+   "dur": 6.04,
+   "heard": "En 1812, un scientifique de Philadelphie écrit la première recette à la tomate."
+  },
+  "L05_s11.mp3": {
+   "line": 5,
+   "score": 1.0,
+   "dur": 6.41,
+   "heard": "En 1876, Heinz la met en bouteille.  Le poisson a disparu, mais le nom est resté."
+  },
+  "L05_s29.mp3": {
+   "line": 5,
+   "score": 1.0,
+   "dur": 5.99,
+   "heard": "En 1876, Heinz la met en bouteille.  Le poisson a disparu, mais le nom est resté."
+  },
+  "L06_s11.mp3": {
+   "line": 6,
+   "score": 1.0,
+   "dur": 2.74,
+   "heard": "Et toi, tu aurais goûté le ketchup d'origine."
+  },
+  "L06_s29.mp3": {
+   "line": 6,
+   "score": 1.0,
+   "dur": 2.51,
+   "heard": "Et toi, tu aurais goûté le ketchup d'origine."
+  }
+ },
+ "order": [
+  "L00_s11.mp3",
+  "L01_s29.mp3",
+  "L02_s29.mp3",
+  "L03_s11.mp3",
+  "L04_s29.mp3",
+  "L05_s29.mp3",
+  "L06_s29.mp3"
+ ]
+}

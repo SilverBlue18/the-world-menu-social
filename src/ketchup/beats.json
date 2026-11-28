@@ -1,0 +1,40 @@
+{
+  "_note": "ONE event list for the ketchup pilot: the video (KetchupShort.tsx) and the sound (tools/sound_ketchup.py) both read it. Times in seconds on the final voice (public/ketchup/voice.wav).",
+  "duration": 38.6,
+  "voiceEnd": 36.2,
+  "scenes": [
+    { "t": 0.0,   "clip": "hook",      "from": 14.0, "zoom": [1.12, 1.0] },
+    { "t": 5.45,  "clip": "fishsauce", "from": 6.0, "zoom": [1.0, 1.1] },
+    { "t": 9.15,  "clip": "boat",      "from": 1.5, "zoom": [1.05, 1.12] },
+    { "t": 12.2,  "clip": "ship",      "from": 7.0, "zoom": [1.0, 1.08] },
+    { "t": 15.1,  "clip": "fishsauce", "from": 12.0, "zoom": [1.1, 1.0], "gray": true },
+    { "t": 17.85, "clip": "mushrooms", "from": 6.0, "zoom": [1.15, 1.05] },
+    { "t": 18.72, "clip": "walnuts",   "from": 2.0, "zoom": [1.1, 1.0] },
+    { "t": 19.36, "clip": "oysters",   "from": 3.0, "zoom": [1.12, 1.02] },
+    { "t": 20.35, "clip": "tomatoes",  "from": 2.0, "zoom": [1.0, 1.12] },
+    { "t": 26.3,  "clip": "bottle",    "from": 2.0, "zoom": [1.08, 1.0] },
+    { "t": 29.5,  "split": ["fishsauce", "bottle"], "from": [9.0, 8.0] },
+    { "t": 32.5,  "clip": "dip",       "from": 1.0, "zoom": [1.0, 1.1] }
+  ],
+  "headline": { "in": 0.12, "out": 5.3 },
+  "captionsFrom": 2.55,
+  "timeline": { "in": 5.6, "out": 29.45, "stops": [["ORIGINE", 5.6], ["1700", 9.88], ["1812", 20.52], ["1876", 26.48]] },
+  "years": [[9.88, 1700], [20.52, 1812], [26.48, 1876]],
+  "bigWord": [{ "t": 8.2, "out": 9.1, "text": "KÊ-TSIAP" }],
+  "tags": [
+    { "t": 6.32,  "out": 9.1,   "text": "CHINE DU SUD" },
+    { "t": 12.3,  "out": 15.0,  "text": "ASIE  →  ANGLETERRE" },
+    { "t": 22.2,  "out": 25.3,  "text": "PHILADELPHIE" },
+    { "t": 27.88, "out": 29.4,  "text": "HEINZ" }
+  ],
+  "strike": { "t": 15.56, "out": 17.8, "text": "POISSON" },
+  "labels": [
+    { "t": 18.05, "out": 18.7,  "text": "CHAMPIGNONS" },
+    { "t": 18.82, "out": 19.34, "text": "NOIX" },
+    { "t": 19.46, "out": 20.3,  "text": "HUÎTRES" },
+    { "t": 25.4,  "out": 26.25, "text": "TOMATE", "red": true }
+  ],
+  "splitLabels": [["1700", "POISSON"], ["2026", "TOMATE"]],
+  "ask": { "t": 34.5, "text": "DIS-LE EN COMMENTAIRE" },
+  "endCard": 36.3
+}

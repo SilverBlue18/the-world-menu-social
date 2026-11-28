@@ -59,7 +59,7 @@ if cmd == "takes":
 
 elif cmd == "score":
     from faster_whisper import WhisperModel
-    M = WhisperModel("bin/whisper-large-v3-ct2", device="cpu", compute_type="int8", cpu_threads=4)
+    M = WhisperModel(os.environ.get("TWM_WHISPER", "bin/whisper-large-v3-ct2"), device="cpu", compute_type="int8", cpu_threads=4)
     res = {}
     for f in sorted(glob.glob(f"{TAKES}/L*_s*.mp3")):
         li = int(re.search(r"L(\d+)_", f).group(1)); a = load(f, 16000)
