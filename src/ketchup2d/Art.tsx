@@ -3,6 +3,7 @@
 // (years, labels, cards at y 700–1000) and the top captions stay readable. Each takes t = seconds since the scene started.
 import React from "react";
 import { K, Grain, JarHero } from "./Hero";
+import { ArtMapChina, ArtMapRoute, ArtMapPhilly } from "./MapArt";
 
 const F: React.FC<{ bg: string; id: string; children: React.ReactNode; halo?: string }> = ({ bg, id, children, halo }) => (
   <svg width="1080" height="1920" viewBox="0 0 1080 1920" style={{ position: "absolute", inset: 0 }}>
@@ -238,6 +239,7 @@ export const ART: Record<string, React.FC<{ t: number }>> = {
   hook: ArtHook, jar: ArtJar, junk: ArtJunk, ship: ArtShip, shipNight: (p) => <ArtShip {...p} night />, jarEmpty: ArtJarEmpty,
   mushrooms: ArtMushrooms, walnuts: ArtWalnuts, oysters: ArtOysters, tomatoes: ArtTomatoes, loveApple: ArtLoveApple,
   bottle: ArtBottle, dip: ArtDip, splitLeft: ArtSplitLeft, splitRight: ArtSplitRight,
+  mapChina: ArtMapChina, mapRoute: ArtMapRoute, mapPhilly: ArtMapPhilly,
 };
 
 // QC board: every illustration at t = 1 s, 0.3 scale

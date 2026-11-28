@@ -5,99 +5,115 @@
  "scenes": [
   {
    "t": 0.0,
+   "art": "hook",
    "zoom": [
     1.12,
     1.0
-   ],
-   "art": "hook"
+   ]
   },
   {
    "t": 3.357,
+   "art": "mapChina",
+   "zoom": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "t": 5.6,
+   "art": "jar",
    "zoom": [
     1.0,
     1.1
-   ],
-   "art": "jar"
+   ]
   },
   {
-   "t": 7.04,
+   "t": 8.4,
+   "art": "junk",
    "zoom": [
     1.05,
     1.14
-   ],
-   "art": "junk"
+   ]
   },
   {
    "t": 10.002,
+   "art": "ship",
    "zoom": [
     1.0,
     1.1
-   ],
-   "art": "ship"
+   ]
   },
   {
-   "t": 13.357,
+   "t": 12.4,
+   "art": "mapRoute",
    "zoom": [
-    1.15,
-    1.05
-   ],
-   "art": "shipNight"
+    1.0,
+    1.0
+   ]
   },
   {
    "t": 16.094,
+   "art": "jarEmpty",
    "zoom": [
     1.1,
     1.0
-   ],
-   "art": "jarEmpty"
+   ]
   },
   {
    "t": 19.685,
+   "art": "mushrooms",
    "zoom": [
     1.15,
     1.05
-   ],
-   "art": "mushrooms"
+   ]
   },
   {
    "t": 21.061,
+   "art": "walnuts",
    "zoom": [
     1.1,
     1.0
-   ],
-   "art": "walnuts"
+   ]
   },
   {
    "t": 22.443,
+   "art": "oysters",
    "zoom": [
     1.12,
     1.02
-   ],
-   "art": "oysters"
+   ]
   },
   {
    "t": 25.54,
+   "art": "tomatoes",
    "zoom": [
     1.0,
     1.12
-   ],
-   "art": "tomatoes"
+   ]
+  },
+  {
+   "t": 27.3,
+   "art": "mapPhilly",
+   "zoom": [
+    1.0,
+    1.0
+   ]
   },
   {
    "t": 28.918,
+   "art": "loveApple",
    "zoom": [
     1.15,
     1.05
-   ],
-   "art": "loveApple"
+   ]
   },
   {
    "t": 32.303,
+   "art": "bottle",
    "zoom": [
     1.0,
     1.08
-   ],
-   "art": "bottle"
+   ]
   },
   {
    "t": 35.43,
@@ -149,7 +165,7 @@
  "years": [
   {
    "t": 10.58,
-   "out": 15.998,
+   "out": 12.35,
    "year": "1700"
   },
   {
@@ -158,23 +174,7 @@
    "year": "1812"
   }
  ],
- "tags": [
-  {
-   "t": 4.68,
-   "out": 6.99,
-   "text": "SOUTHERN CHINA"
-  },
-  {
-   "t": 13.66,
-   "out": 15.998,
-   "text": "ASIA → ENGLAND"
-  },
-  {
-   "t": 27.48,
-   "out": 30.095,
-   "text": "PHILADELPHIA"
-  }
- ],
+ "tags": [],
  "bigWord": [
   {
    "t": 8.72,
