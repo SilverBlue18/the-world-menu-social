@@ -10,6 +10,10 @@ import { PimentStick, STICK_S } from "./pimentStick/PimentStick";
 import { KetchupHook, KetchupCountdown, KetchupSplit, KetchupV2Hook, KetchupV2Body } from "./ketchup/KetchupFrames";
 import { KetchupShort, KETCHUP_S } from "./ketchup/KetchupShort";
 import { KetchupEN, KETCHUP_EN_S } from "./ketchup/KetchupEN";
+import { Frame2D_China, Frame2D_Kitchen } from "./ketchup2d/Scenes";
+import { Frame2B_Jar, Frame2B_Map } from "./ketchup2d/Hero";
+import { ArtBoard } from "./ketchup2d/Art";
+import { Ketchup2D, KETCHUP_2D_S } from "./ketchup2d/Ketchup2D";
 import { BrandV2Board, LogoOptions, ClocheAvatars, ProfilePic, LogoLight, LogoDark, ClochePremium, ClocheRefine, YTBanner } from "./brand/BrandV2";
 import * as Concepts from "./concepts/Concepts";
 import { PimentTest3D } from "./three3d/PimentTest3D";
@@ -35,6 +39,12 @@ export const MyComposition = () => (
     <Still id="ClocheAvatars" component={ClocheAvatars} width={1800} height={900} />
     <Still id="LogoOptions" component={LogoOptions} width={1800} height={1000} />
     <Still id="BrandV2Board" component={BrandV2Board} width={1800} height={860} />
+    <Composition id="Ketchup2D" component={Ketchup2D} durationInFrames={Math.round(KETCHUP_2D_S * 30)} fps={30} width={1080} height={1920} />
+    <Still id="ArtBoard" component={ArtBoard} width={1620} height={1728} />
+    <Still id="Frame2BJar" component={Frame2B_Jar} width={1080} height={1920} />
+    <Still id="Frame2BMap" component={Frame2B_Map} width={1080} height={1920} />
+    <Still id="Frame2DChina" component={Frame2D_China} width={1080} height={1920} />
+    <Still id="Frame2DKitchen" component={Frame2D_Kitchen} width={1080} height={1920} />
     <Composition id="KetchupEN" component={KetchupEN} durationInFrames={Math.round(KETCHUP_EN_S * 30)} fps={30} width={1080} height={1920} />
     <Composition id="KetchupShort" component={KetchupShort} durationInFrames={Math.round(KETCHUP_S * 30)} fps={30} width={1080} height={1920} />
     <Still id="KetchupV2Hook" component={KetchupV2Hook} width={1080} height={1920} />

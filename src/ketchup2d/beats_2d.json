@@ -1,0 +1,249 @@
+{
+ "_note": "2D version of the English ketchup pilot: same voice, captions and graphics events as beats_en.json; each scene shows a code-drawn food illustration (src/ketchup2d/Art.tsx) instead of footage.",
+ "duration": 47.3,
+ "voiceEnd": 43.1,
+ "scenes": [
+  {
+   "t": 0.0,
+   "zoom": [
+    1.12,
+    1.0
+   ],
+   "art": "hook"
+  },
+  {
+   "t": 3.357,
+   "zoom": [
+    1.0,
+    1.1
+   ],
+   "art": "jar"
+  },
+  {
+   "t": 7.04,
+   "zoom": [
+    1.05,
+    1.14
+   ],
+   "art": "junk"
+  },
+  {
+   "t": 10.002,
+   "zoom": [
+    1.0,
+    1.1
+   ],
+   "art": "ship"
+  },
+  {
+   "t": 13.357,
+   "zoom": [
+    1.15,
+    1.05
+   ],
+   "art": "shipNight"
+  },
+  {
+   "t": 16.094,
+   "zoom": [
+    1.1,
+    1.0
+   ],
+   "art": "jarEmpty"
+  },
+  {
+   "t": 19.685,
+   "zoom": [
+    1.15,
+    1.05
+   ],
+   "art": "mushrooms"
+  },
+  {
+   "t": 21.061,
+   "zoom": [
+    1.1,
+    1.0
+   ],
+   "art": "walnuts"
+  },
+  {
+   "t": 22.443,
+   "zoom": [
+    1.12,
+    1.02
+   ],
+   "art": "oysters"
+  },
+  {
+   "t": 25.54,
+   "zoom": [
+    1.0,
+    1.12
+   ],
+   "art": "tomatoes"
+  },
+  {
+   "t": 28.918,
+   "zoom": [
+    1.15,
+    1.05
+   ],
+   "art": "loveApple"
+  },
+  {
+   "t": 32.303,
+   "zoom": [
+    1.0,
+    1.08
+   ],
+   "art": "bottle"
+  },
+  {
+   "t": 35.43,
+   "split": [
+    "splitLeft",
+    "splitRight"
+   ]
+  },
+  {
+   "t": 39.424,
+   "zoom": [
+    1.0,
+    1.1
+   ],
+   "art": "dip"
+  }
+ ],
+ "hookCard": {
+  "in": 0.0,
+  "out": 3.32,
+  "text": [
+   "KETCHUP WAS",
+   "FISH SAUCE"
+  ]
+ },
+ "captionsFrom": 3.357,
+ "timeline": {
+  "in": 4.463,
+  "out": 35.41,
+  "stops": [
+   [
+    "CHINA",
+    4.68
+   ],
+   [
+    "1700",
+    10.58
+   ],
+   [
+    "1812",
+    26.3
+   ],
+   [
+    "1876",
+    33.56
+   ]
+  ]
+ },
+ "years": [
+  {
+   "t": 10.58,
+   "out": 15.998,
+   "year": "1700"
+  },
+  {
+   "t": 26.3,
+   "out": 30.095,
+   "year": "1812"
+  }
+ ],
+ "tags": [
+  {
+   "t": 4.68,
+   "out": 6.99,
+   "text": "SOUTHERN CHINA"
+  },
+  {
+   "t": 13.66,
+   "out": 15.998,
+   "text": "ASIA → ENGLAND"
+  },
+  {
+   "t": 27.48,
+   "out": 30.095,
+   "text": "PHILADELPHIA"
+  }
+ ],
+ "bigWord": [
+  {
+   "t": 8.72,
+   "out": 9.97,
+   "text": "kê-tsiap"
+  },
+  {
+   "t": 40.62,
+   "out": 43.1,
+   "text": "kê-tsiap → ketchup"
+  }
+ ],
+ "strike": {
+  "t": 17.4,
+  "out": 18.62,
+  "text": "FISH"
+ },
+ "labels": [
+  {
+   "t": 18.72,
+   "out": 19.638,
+   "text": "FAKED",
+   "red": true
+  },
+  {
+   "t": 19.78,
+   "out": 21.012,
+   "text": "MUSHROOM"
+  },
+  {
+   "t": 21.1,
+   "out": 22.395,
+   "text": "WALNUT",
+   "red": true
+  },
+  {
+   "t": 22.94,
+   "out": 24.29,
+   "text": "OYSTER"
+  },
+  {
+   "t": 31.06,
+   "out": 32.256,
+   "text": "LOVE APPLES",
+   "red": true
+  }
+ ],
+ "nameCard": {
+  "t": 33.56,
+  "out": 35.39,
+  "name": "Henry J. Heinz",
+  "sub": "PITTSBURGH · 1876"
+ },
+ "counter": {
+  "t": 24.36,
+  "dur": 0.6,
+  "to": 100,
+  "out": 25.513,
+  "suffix": "OYSTERS"
+ },
+ "splitLabels": [
+  [
+   "1700",
+   "FISH"
+  ],
+  [
+   "TODAY",
+   "TOMATO"
+  ]
+ ],
+ "endCard": 43.2
+}
